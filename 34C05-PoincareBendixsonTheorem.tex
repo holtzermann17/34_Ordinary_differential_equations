@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareBendixsonTheorem}
+\pmcreated{2013-03-22 13:18:40}
+\pmmodified{2013-03-22 13:18:40}
+\pmowner{jarino}{552}
+\pmmodifier{jarino}{552}
+\pmtitle{Poincare-Bendixson theorem}
+\pmrecord{4}{33817}
+\pmprivacy{1}
+\pmauthor{jarino}{552}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C05}
+\pmclassification{msc}{34D23}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $M$ be an open subset of $\mathbb{R}^2$, and $f\in C^1(M,\mathbb{R}^2)$. Consider the planar differential equation
+\[
+x'=f(x)
+\]
+Consider a fixed $x\in M$. Suppose that the omega limit set $\omega(x)\neq\emptyset$ is compact, connected, and contains only finitely many equilibria. Then one of the following holds:
+\begin[roman]{enumerate}
+\item $\omega(x)$ is a fixed orbit (a periodic point with period zero, i.e., an equilibrium).
+\item $\omega(x)$ is a regular periodic orbit.
+\item $\omega(x)$ consists of (finitely many) equilibria $\{x_j\}$ and non-closed orbits $\gamma(y)$ such that $\omega(y)\in \{x_j\}$ and $\alpha(y)\in\{x_j\}$ (where $\alpha(y)$ is the alpha limit set of $y$).
+\end{enumerate}
+The same result holds when replacing omega limit sets by alpha limit sets.
+
+
+Since $f$ was chosen such that existence and unicity hold, and that the system is planar, the Jordan curve theorem implies that it is not possible for orbits of the system satisfying the hypotheses to have complicated behaviors.
+Typical use of this theorem is to prove that an equilibrium is globally asymptotically stable (after using a Dulac type result to rule out periodic orbits).
+%%%%%
+%%%%%
+\end{document}

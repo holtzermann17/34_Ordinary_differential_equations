@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SystemOfOrdinaryDifferentialEquations}
+\pmcreated{2014-03-07 16:37:51}
+\pmmodified{2014-03-07 16:37:51}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{system of ordinary differential equations}
+\pmrecord{8}{88048}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmclassification{msc}{34A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In many problems one would have to find the functions 
+$y_1(x)$, $y_2(x)$, $\ldots$, $y_n(x)$ satisfying the differential equation 
+system of the form
+\begin{align}
+\begin{cases}
+  \frac{dy_1}{dx} \;=\; f_1(x,y_1,y_2,\ldots,y_n),\\
+  \frac{dy_2}{dx} \;=\; f_2(x,y_1,y_2,\ldots,y_n),\\
+   \ldots\qquad\ldots\qquad\ldots\\
+  \frac{dy_n}{dx} \;=\; f_n(x,y_1,y_2,\ldots,y_n).             
+\end{cases}
+\end{align}
+Such a system is called {\it normal system.}\, The functions $f_i$ are supposed 
+to be differentiable.\, Usually there are also 
+given some initial conditions
+\begin{align}
+y_1(x_0) = y_{01}, \quad y_2(x_0) = y_{02}, \;\;\ldots,\; y_n(x_0) = y_{0n}.
+\end{align}
+
+The solving procedure may be as follows.
+
+First we differentiate the first equation (1) with respect to the argument $x$:
+$$\frac{d^2y_1}{dx^2} \;=\; \frac{\partial f_1}{\partial x}
++\frac{\partial f_1}{\partial y_1}\frac{dy_1}{dx}+\ldots
++\frac{\partial f_1}{\partial y_n}\frac{dy_n}{dx}$$
+Here one substitutes the derivatives $\frac{dy_i}{dx}$ as they 
+are given by the equations (1), getting the equation of the 
+form
+$$\frac{d^2y_1}{dx^2} \;=\; F_2(x,y_1,\ldots,y_n).$$ 
+When one differentiates this equation and makes the substitutions 
+as above, the result has the form
+$$\frac{d^3y_1}{dx^3} \;=\; F_3(x,y_1,\ldots,y_n).$$ 
+Then one can continue similarly and will finally come to the 
+system
+\begin{align}
+\begin{cases}
+  \frac{dy_1}{dx} \;=\; f_1(x,y_1,y_2,\ldots,y_n),\\
+  \frac{d^2y_1}{dx^2} \;=\; F_2(x,y_1,y_2,\ldots,y_n),\\
+   \ldots\qquad\ldots\qquad\ldots\\
+  \frac{d^ny_1}{dx^n} \;=\; F_n(x,y_1,y_2,\ldots,y_n).             
+\end{cases}
+\end{align}
+The $n\!-\!1$ first equations (3) determine $y_2,y_3,\ldots,y_n$ 
+as functions of $x$, $y_1$, $y_1',\ldots,y_1^{(n-1)}$:
+\begin{align}
+\begin{cases}
+  y_2 \;=\; \varphi_2(x,y_1,y_1',\ldots,y_1^{(n-1)}),\\
+  y_3 \;=\; \varphi_3(x,y_1,y_1',\ldots,y_1^{(n-1)}),\\
+   \ldots\qquad\ldots\qquad\ldots\\
+  y_n \;=\; \varphi_n(x,y_1,y_1',\ldots,y_1^{(n-1)}).             
+\end{cases}
+\end{align}
+These expressions of $y_2,y_3,\ldots,y_n$ are put into the last 
+of the equations (3), and then one has an $n$'th order 
+differential equation for solving $y_1$:
+\begin{align}
+  \frac{d^ny_1}{dx^n} \;=\; \Phi(x,y_1,y_1',\ldots,y_1^{(n-1)}).
+\end{align}
+Solving this gives the function
+\begin{align}
+  y_1 \;=\; \psi(x,C_1,C_2,\ldots,C_n)}.
+\end{align}
+Differentiating this $n\!-\!1$ times yields the derivatives 
+$\frac{dy_1}{dx},\frac{d^2y_1}{dx^2},\ldots,
+\frac{d^{n-1}y_1}{dx^{n-1}}$ as functions of 
+$x,C_1,C_2,\ldots,C_n$.\, These derivatives are put into the 
+equations (4), giving the functions $y_2,y_3,\ldots,y_n$:
+\begin{align}
+\begin{cases}
+  y_2 \;=\; \psi_2(x,C_1,C_2,\ldots,C_n),\\
+   \ldots\qquad\ldots\qquad\ldots\\
+  y_n \;=\; \psi_n(x,C_1,C_2,\ldots,C_n).            
+\end{cases}
+\end{align}
+In the solution (6) and (7), one has still to consider the initial 
+conditions (2); then the constants $C_i$ of integration attain 
+certain values.\\
+
+\textbf{Remark.}\, If the system (1) is linear, then also the 
+equation (5) is linear.\\
+
+
+\textbf{Example.}\, Solve the functions $y(x)$ and $z(x)$ from the pair 
+of differential equations
+\begin{align}
+\begin{cases}
+  \frac{dy}{dx} \;=\; \,x\!+\!y\!+\!z,\\
+  \frac{dz}{dx} \;=\; 2x\!-\!4y\!-\!3z
+\end{cases}
+\end{align}
+subject to the initial conditions\, $y(0) = 1$\, and\, 
+$z(0) =0.$
+
+Differentiation of the first equation with respect to $x$ gives
+$$\frac{d^2y}{dx^2} \;=\; 1+\frac{dy}{dx}+\frac{dz}{dx}.$$
+Setting to this the first derivatives from (8) turns it into
+\begin{align}
+ \frac{d^2y}{dx^2} \;=\; 3x-3y-2z+1. 
+\end{align}
+Into this we put the expression
+\begin{align}
+ z \;=\; \frac{dy}{dx}\!-\!x\!-\!y
+\end{align}
+ got 
+from the first equation (8), obtaing the second order linear 
+differential equation
+$$\frac{d^2y}{dx^2}+2\frac{dy}{dx}+y \;=\; 5x\!+\!1$$
+with constant coefficients.
+The general solution of this last equation is
+\begin{align}
+  y = (C_1+C_2x)e^{-x}+5x-9, 
+\end{align}
+and by (10) this yields
+\begin{align}
+  z \;=\;  (C_2-2C_1-2C_2x)e^{-x}-6x-14. 
+\end{align}
+The initial conditions give from (11) and (12)
+$$C_1-9 \;=\; 1, \qquad C_2-2C_1+14 \;=\; 0,$$
+whence\, $C_1 = 10$\, and\, $C_2 = 6$\, and thus the 
+particular solution in question is
+\begin{align*}
+\begin{cases}
+  y \;=\; (6x+10)e^{-x}+5x-9,\\
+  z \;=\; -(12x+14)e^{-x}-6x+14.
+\end{cases}
+\end{align*}
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja 
+integraalarvutus k\~{o}rgematele tehnilistele 
+\~{o}ppeasutustele. Teine k\"{o}ide.} Viies tr\"{u}kk.\, 
+Kirjastus Valgus, Tallinn  (1966).
+\end{thebibliography}\\
+
+
+
+
+\end{document}

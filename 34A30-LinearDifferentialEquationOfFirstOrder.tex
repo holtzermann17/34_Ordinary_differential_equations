@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LinearDifferentialEquationOfFirstOrder}
+\pmcreated{2013-03-22 16:32:09}
+\pmmodified{2013-03-22 16:32:09}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{linear differential equation of first order}
+\pmrecord{13}{38717}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+\pmsynonym{linear ordinary differential equation of first order}{LinearDifferentialEquationOfFirstOrder}
+\pmrelated{SeparationOfVariables}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+An ordinary linear differential equation of first order has the form
+\begin{align}
+  \frac{dy}{dx}+P(x)y \;=\; Q(x),
+\end{align}
+where $y$ means the unknown function, $P$ and $Q$ are two known continuous functions.\\
+
+For finding the solution of (1), we may seek a function $y$ which is product of two functions:
+\begin{align}
+  y(x) \;=\; u(x)v(x)
+\end{align}
+One of these two can be chosen freely; the other is determined according to (1).
+
+We substitute (2) and the derivative \,$\frac{dy}{dx} = u\frac{dv}{dx}+v\frac{du}{dx}$\, in (1), getting\, 
+$u\frac{dv}{dx}+v\frac{du}{dx}+Puv = Q$,\, or
+\begin{align}
+  u\left(\frac{dv}{dx}+Pv\right)+v\frac{du}{dx} \;=\; Q.
+\end{align}
+If we chose the function $v$ such that
+$$\frac{dv}{dx}+Pv \;=\; 0,$$
+this condition may be written
+$$\frac{dv}{v} \;=\; -P\,dx.$$
+Integrating here both sides gives\, $\ln{v} = -\int P\,dx$\, or
+$$v \;=\; e^{-\int Pdx},$$
+where the exponent means an arbitrary antiderivative of\, $-P$.\, Naturally, $v(x) \neq 0$.\,
+
+Considering the chosen property of $v$ in (3), this equation can be written
+$$v\frac{du}{dx} \;=\; Q,$$
+i.e. 
+$$\frac{du}{dx} \;=\; \frac{Q(x)}{v(x)},$$
+whence
+$$u \;=\; \int\frac{Q(x)}{v(x)}\,dx+C \;=\; C+\!\int Qe^{\int Pdx}dx.$$
+
+So we have obtained the solution
+\begin{align}
+  y \;=\; e^{-\int P(x)dx}\left[C+\!\int Q(x)e^{\int P(x)dx}dx\right]
+\end{align}
+of the given differential equation (1).
+
+The result (4) presents the general solution of (1), since the arbitrary \PMlinkescapetext{constant} $C$ may be always chosen so that any given initial condition
+$$y \;=\; y_0 \quad \mathrm{when}\quad x \;=\; x_0$$
+is fulfilled.
+
+%%%%%
+%%%%%
+\end{document}

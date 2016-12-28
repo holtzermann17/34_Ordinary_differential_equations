@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfSolvingAFunctionalEquation}
+\pmcreated{2013-03-22 15:30:00}
+\pmmodified{2013-03-22 15:30:00}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of solving a functional equation}
+\pmrecord{14}{37359}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+\pmclassification{msc}{39B05}
+\pmrelated{ChainRule}
+\pmrelated{AdditionFormula}
+\pmrelated{SubtractionFormula}
+\pmrelated{DefinitionsInTrigonometry}
+\pmrelated{GoniometricFormulae}
+\pmrelated{DifferenceOfSquares}
+\pmrelated{AdditionFormulas}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let's determine all twice differentiable real functions $f$ which satisfy the functional equation
+\begin{align}
+f(x\!+\!y) \cdot f(x\!-\!y) = [f(x)]^2\!-\![f(y)]^2
+\end{align}
+for all real values of $x$ and $y$.
+
+Substituting first\, $y = 0$ in (1) we see that\, $f(x)^2 = f(x)^2\!-\!f(0)^2$\, or\, $f(0) = 0$.\, The substitution\, $x = 0$\, gives\, $f(y)f(-y) = -f(y)^2$,\, whence\, $f(-y) = -f(y)$.\, So $f$ is an odd function.
+
+We differentiate both sides of (1) with respect to $y$ and the result with respect to $x$:
+     $$f'(x\!+\!y)f(x\!-\!y)\!-\!f'(x\!-\!y)f(x\!+\!y) = -2f(y)f'(y)$$
+ $$f''(x\!+\!y)f(x\!-\!y)\!+\!f'(x\!-\!y)f'(x\!+\!y)\!-\! f''(x\!-\!y)f(x\!+\!y)\!-\!f'(x\!+\!y)f'(x\!-\!y) = 0$$
+The result is simplified to\, $f''(x\!+\!y)f(x\!-\!y) = f''(x\!-\!y)f(x\!+\!y)$,\, i.e.                      
+              $$f''(x\!+\!y)/f(x\!+\!y) = f''(x\!-\!y)/f(x\!-\!y).$$
+Denoting\, $x\!+\!y := u$,\, $x\!-\!y := v$\, we obtain the equation
+                     $$\frac{f''(u)}{f(u)} = \frac{f''(v)}{f(v)}$$
+for all real values of $u$ and $v$.\, This is not possible unless the proportion  $\frac{f''(u)}{f(u)}$ has a \PMlinkescapetext{constant value, independent} on $u$.\, Thus the \PMlinkescapetext{second order} homogeneous linear differential equation\, $f''(t)/f(t) = \pm{k}^2$ or
+                   $$f''(t) = \pm{k}^2f(t),$$
+with $k$ some \PMlinkescapetext{constant}, is valid.
+
+There are three cases:
+\begin{enumerate}
+  \item $k = 0$.\, Now\, $f''(t) \equiv 0$\, and consequently\, $f(t) \equiv Ct$.\, If one especially \PMlinkescapetext{chooses the constant} $C$ equal to 1, the solution is the \PMlinkname{identity function}{IdentityMap}\, $f:t\mapsto{t}$.\, This yields from (1) the well-known ``memory formula''
+                $$(x\!+\!y)(x\!-\!y) = x^2\!-\!y^2.$$
+
+  \item $f''(t) = -k^2f(t)$\, with\, $k\neq 0$.\, According to the oddness one  obtains for the general solution the sine function\, $f:t\mapsto{C\sin{kt}}$.\, The special case\, $C = k = 1$\, means in (1) the \PMlinkescapetext{formula}
+          $$\sin(x\!+\!y)\sin(x\!-\!y) = \sin^2x-\sin^2y,$$
+which is easy to verify by using the \PMlinkname{addition and subtraction formulae}{AdditionFormula} of sine.
+
+  \item $f''(t) = k^2f(t)$\, with\, $k\neq{0}$.\, According to the oddness we  obtain for the general solution the \PMlinkname{hyperbolic sine}{HyperbolicFunctions} function\, $f:t\mapsto{C\sinh{kt}}$.\, The special case\, $C = k = 1$\, gives from (1) the \PMlinkescapetext{formula}
+          $$\sinh(x\!+\!y)\sinh(x\!-\!y) = \sinh^2x-\sinh^2y.$$
+
+\end{enumerate}
+
+The solution method of (1) is due to andik and perucho.
+%%%%%
+%%%%%
+\end{document}

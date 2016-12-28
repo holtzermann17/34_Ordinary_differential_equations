@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBendixsonsNegativeCriterion}
+\pmcreated{2013-03-22 13:31:07}
+\pmmodified{2013-03-22 13:31:07}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{proof of Bendixson's negative criterion}
+\pmrecord{5}{34105}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\newcommand{\ud}{\mathrm{d}}
+Suppose that there exists a periodic solution called $\Gamma$ which has a period of $T$ and lies in $E$.  Let the interior of $\Gamma$ be denoted by $D$.  Then by Green's Theorem we can observe that
+\begin{eqnarray*}
+\int\!\!\!\int_D \nabla \cdot \textbf{f}\: \ud x\, \ud y & = & \int\!\!\!\int_D \frac{\partial \textbf{X}}{\partial x}+\frac{\partial \textbf{Y}}{\partial y}\: \ud x\, \ud y\\
+& = & \oint_{\Gamma} (\textbf{X} \: \ud y - \textbf{Y} \: \ud x)\\
+& = & \int_0^T (\textbf{X}\dot{y} - \textbf{Y}\dot{x})\: \ud t\\
+& = & \int_0^T (\textbf{XY} - \textbf{YX})\: \ud t\\
+& = & 0
+\end{eqnarray*}
+Since $\nabla \cdot \textbf{f}$ is not identically zero by hypothesis and is of one sign, the double integral on the left must be non zero and of that sign.  This leads to a contradiction since the right hand side is equal to zero.  Therefore there does not exists a periodic solution in the simply connected region $E$.
+%%%%%
+%%%%%
+\end{document}

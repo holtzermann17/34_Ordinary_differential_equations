@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DifferentialEquationOfCircles}
+\pmcreated{2013-03-22 18:59:26}
+\pmmodified{2013-03-22 18:59:26}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{differential equation of circles}
+\pmrecord{5}{41857}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A34}
+\pmclassification{msc}{51-00}
+%\pmkeywords{parametre}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+All circles of the plane form a three-parametric family
+$$(x-a)^2+(y-b)^2 \;=\; r^2.$$
+The parametres $a,\,b,\,r$ may be eliminated by using successive differentiations, when one gets
+$$x-a+(y-b)y' \;=\; 0,$$ 
+$$1+y'^{\,2}+(y-b)y'' = 0,$$
+$$3y'y''+(y-b)y''' \;=\; 0.$$
+The two last equations allow to eliminate also $b$, yielding
+the differential equation of all circles of the plane:
+$$(1+y'^{\,2})y'''-3y'y''^{\,2} \;=\; 0$$
+It is of \PMlinkescapetext{order} three, corresponding the number of parametres.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PeanosTheorem}
+\pmcreated{2013-03-22 15:20:21}
+\pmmodified{2013-03-22 15:20:21}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Peano's theorem}
+\pmrecord{6}{37157}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{planar}
+\PMlinkescapeword{domain}
+If
+\begin{eqnarray}\label{eq}
+\frac{dy}{dx}&=&f(x,y)
+\end{eqnarray}
+is an ordinary differential equation where $f(x,y)$ is continuous 
+on a planar domain $E$, then (\ref{eq}) has at least one integral 
+curve for each $(x_0,y_0)$ of $E$.\cite{KF,T}
+
+\begin{thebibliography}{1}
+\bibitem[KF]{KF} 
+{\scshape Kolmogorov, A.N. \& Fomin, S.V.},
+\emph{Introductory Real Analysis, Translated \& Edited by Richard A. Silverman}, Dover Publications, Inc. New York, 1970.
+\bibitem[T]{T}
+{\scshape Teschl, Gerald},
+\emph{\PMlinkescapetext{Ordinary Differential Equations and Dynamical System}}
+\PMlinkexternal{http://www.mat.univie.ac.at/~gerald/ftp/book-ode/index.html}{http://www.mat.univie.ac.at/~gerald/ftp/book-ode/index.html}, 2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

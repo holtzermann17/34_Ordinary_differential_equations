@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LandauRamanujanConstant}
+\pmcreated{2014-03-06 12:39:16}
+\pmmodified{2014-03-06 12:39:16}
+\pmowner{Filipe}{28191}
+\pmmodifier{Filipe}{28191}
+\pmtitle{Landau-Ramanujan Constant}
+\pmrecord{2}{88049}
+\pmprivacy{1}
+\pmauthor{Filipe}{28191}
+\pmtype{Definition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $N$ be a natural number. Consider the equation
+$$x^2+y^2=N$$
+Let $L(N)$ denote the number of naturals $z \leq N$ such that the equation $x^2+y^2=z$ has at least one integer solution $(x,y)$.
+The Laudau-Ramanujan constant is defined as the limit
+$$\lim_{N\rightarrow \infty} \frac{L(N)\sqrt{\log(N)}}{N}\approx 0.76422365358922066299069873125$$
+\end{document}

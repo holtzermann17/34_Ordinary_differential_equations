@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ODETypesSolvableByTwoQuadratures}
+\pmcreated{2015-03-20 17:04:58}
+\pmmodified{2015-03-20 17:04:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ODE types solvable by two quadratures}
+\pmrecord{13}{41329}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A05}
+\pmsynonym{second order ODE types solvable by quadratures}{ODETypesSolvableByTwoQuadratures}
+\pmrelated{ODETypesReductibleToTheVariablesSeparableCase}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The second order ordinary differential equation
+\begin{align}
+\frac{d^2y}{dx^2} \;=\; f\!\left(x,\,y,\,\frac{dy}{dx}\right)
+\end{align}
+may in certain special cases be solved by using two quadratures, sometimes also by reduction to a \PMlinkname{first order differential equation}{ODE} and a quadrature.\\
+
+If the right hand side of (1) contains at most one of the quantities $x$, $y$ and $\frac{dy}{dx}$, the general solution solution is obtained by two quadratures.\\
+
+\begin{itemize}
+
+\item The equation
+\begin{align}
+\frac{d^2y}{dx^2} \,=\, f(x)
+\end{align}
+is considered \PMlinkname{here}{EquationYFx}.\\
+
+\item The equation
+\begin{align}
+\frac{d^2y}{dx^2} \,=\, f(y)
+\end{align}
+has as constant solutions all real roots of the equation \,$f(y) = 0$.\, The other solutions can be gotten from the normal system 
+\begin{align}
+\frac{dy}{dx} \,=\, z, \qquad \frac{dz}{dx} \,=\, f(y)
+\end{align}
+of (3).\, Dividing the equations (4) we get now\, $\frac{dz}{dy} = \frac{f(y)}{z}$.\, By separation of variables and integration we may write
+$$\frac{z^2}{2} = \int\!f(y)\,dy +C_1,$$
+whence the first equation of (4) reads
+$$\frac{dy}{dx} \,=\, \sqrt{2\!\int\!f(y)\,dy+C_1}.$$
+\PMlinkescapetext{Separating} here the variables and integrating give the general integral of (3) in the form
+\begin{align}
+\int\!\frac{dy}{\sqrt{2\!\int\!f(y)\,dy+C_1}} \;=\; x+C_2.
+\end{align}
+The \PMlinkname{integration constant}{SolutionsOfOrdinaryDifferentialEquation} $C_1$ has an influence on the form of the integral curves, but $C_2$ only translates them in the direction of the $x$-axis.\\
+
+\item The equation
+\begin{align}
+\frac{d^2y}{dx^2} \,=\, f(\frac{dy}{dx})
+\end{align}
+is \PMlinkname{equivalent}{Equivalent3} with the normal system
+\begin{align}
+\frac{dy}{dx} \,=\, z, \quad \frac{dz}{dx} \,=\, f(z).
+\end{align}
+If the equation\, $f(z) = 0$\,  has real roots\, $z_1,\,z_2,\,\ldots$,\, these satisfy the latter of the equations (7), and thus, according to the former of them, the differential equation (6) has the solutions\, $y := z_1x+C_1$,\, $y := z_2x+C_2,\;\ldots$.
+
+The other solutions of (6) are obtained by separating the variables and integrating:
+\begin{align}
+x \,=\, \int\!\frac{dz}{f(z)}+C.
+\end{align}
+If this antiderivative is expressible in closed form and if then the equation (8) can be solved for $z$, we may write
+$$z \,=\, \frac{dy}{dx} \,=\, g(x\!-\!C).$$
+Accordingly we have in this case the general solution of the ODE (6):
+\begin{align}
+y \;=\; \int\!g(x\!-\!C)\,dx+C'.
+\end{align}
+In other cases, we express also $y$ as a function of $z$.\, By the chain rule, the normal system (7) yields
+$$\frac{dy}{dz} \,=\, \frac{dy}{dx}\cdot\frac{dx}{dz} \,=\, \frac{z}{f(z)},$$
+whence
+$$y = \int\frac{z\,dz}{f(z)}+C'.$$
+Thus the general solution of (6) reads now in a parametric form as
+\begin{align}
+x \,=\, \int\!\frac{dz}{f(z)}+C, \qquad y = \int\frac{z\,dz}{f(z)}+C'.
+\end{align}
+The equations 10 show that a translation of any integral curve yields another integral curve.
+
+\end{itemize}
+
+
+%%%%%
+%%%%%
+\end{document}

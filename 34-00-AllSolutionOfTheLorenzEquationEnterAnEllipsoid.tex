@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AllSolutionOfTheLorenzEquationEnterAnEllipsoid}
+\pmcreated{2013-03-22 15:15:28}
+\pmmodified{2013-03-22 15:15:28}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{all solution of the Lorenz equation enter an ellipsoid}
+\pmrecord{4}{37042}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmclassification{msc}{65P20}
+\pmclassification{msc}{65P30}
+\pmclassification{msc}{65P40}
+\pmclassification{msc}{65P99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+If $\sigma, \tau, \beta >0$ then all solutions of the Lorenz equation
+\begin{eqnarray*}
+\dot{x} & = & \sigma(y-x)\\
+\dot{y} & = & x(\tau - z) -y\\
+\dot{z} & = & xy - \beta z
+\end{eqnarray*}
+will enter an ellipsoid centered at $(0,0,2\tau )$ in finite time.  
+In addition the solution will remain inside the ellipsoid once it 
+has entered. To observe this we define a Lyapunov function
+$$V(x,y,z)=\tau x^2 + \sigma y^2 + \sigma (z-2\tau )^2.$$  It then
+follows that
+\begin{eqnarray*}
+\dot{V} & = & 2\tau x\dot{x} + 2\sigma y\dot{y} + 2\sigma (z-2\tau )\dot{z}\\
+& = & 2\tau x\sigma(y-x) + 2\sigma y(x(\tau - z) -y) + 2\sigma (z-2\tau )(xy - \beta z)\\
+& = & -2\sigma (\tau x^2 + y^2 + \beta(z -r)^2 -b\tau^2).
+\end{eqnarray*}
+We then choose an ellipsoid which all the solutions will enter and 
+remain inside.  This is done by choosing a constant $C>0$ such that
+the ellipsoid
+$$\tau x^2 + y^2 + \beta(z -r)^2 = b\tau^2$$
+is strictly contained in the ellipsoid
+$$\tau x^2 + \sigma y^2 + \sigma (z-2\tau )^2=C.$$
+Therefore all solution will eventually enter and remain inside the above ellipsoid since $\dot{V}<0$ when a solution is located at the exterior of the 
+ellipsoid.
+%%%%%
+%%%%%
+\end{document}

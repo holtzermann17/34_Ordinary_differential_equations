@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UsingLaplaceTransformToSolveInitialValueProblems}
+\pmcreated{2015-05-29 15:21:45}
+\pmmodified{2015-05-29 15:21:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{using Laplace transform to solve initial value problems}
+\pmrecord{10}{40922}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+\pmclassification{msc}{44A10}
+\pmrelated{TableOfLaplaceTransforms}
+\pmrelated{LaplaceTransform}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Since the Laplace transforms of the derivatives of $f(t)$ are 
+polynomials in the transform parameter $s$ (see table of Laplace 
+transforms), forming the Laplace transform of a linear differential 
+equation with constant coefficients and initial conditions at\, 
+$t = 0$ yields generally a simple equation 
+(\PMlinkname{image equation}{imageequation}) for solving the transformed function $F(s)$.\, Since the initial conditions can be taken into consideration instantly, one needs not to determine the general solution of the differential equation.
+
+For example, transforming the equation
+$$f''(t)+2f'(t)+f(t) = e^{-t} 
+\qquad (f(0) = 0,\;\; f'(0) = 1)$$
+gives
+$$[s^2F(s)-sf(0)-f'(0)]+2[sF(s)-f(0)]+F(s) = \frac{1}{s+1},$$
+i.e. 
+$$(s^2+2s+1)F(s) = 1+\frac{1}{s+1},$$
+whence
+$$F(s) = \frac{1}{(s+1)^2}+\frac{1}{(s+1)^3}.$$
+Taking the inverse Laplace transform produces the result
+$$f(t) \,=\, te^{-t}+\frac{t^2e^{-t}}{2} \;=\; \frac{e^{-t}}{2}(t^2+2t).$$
+
+
+%%%%%
+%%%%%
+\end{document}

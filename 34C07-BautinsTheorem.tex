@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BautinsTheorem}
+\pmcreated{2013-03-22 14:28:46}
+\pmmodified{2013-03-22 14:28:46}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Bautin's theorem}
+\pmrecord{5}{36011}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{type}
+\PMlinkescapeword{focus}
+
+There are at most three limit cycles which can appear in the following quadratic system
+\begin{eqnarray*}
+\dot{x} = p(x,y) &=&\sum_{i+j=0}^2 a_{ij}x^iy^j \\
+\dot{y} = q(x,y) &=& \sum_{i+j=0}^2 b_{ij}x^iy^j
+\end{eqnarray*}
+from a singular point, if its type is either a focus or a center.  \\
+
+In 1939 N.N. Bautin claimed the above result and in 1952 submitted the proof \cite{BNN1}. \cite{GAV}
+\begin{thebibliography}{1}
+\bibitem[GAV]{GAV} Gaiko, A., Valery: Global Bifurcation Theory and Hilbert's Sixteenth Problem. Kluwer Academic Publishers, London, 2003.
+\bibitem[BNN1]{BNN1} Bautin, N.N.: On the number of limit cycles appearing from an equilibrium point of the focus or center type under varying coefficients. Matem. SB., 30:181-196, 1952. (written in Russian)
+\bibitem[BNN2]{BNN2} Bautin, N.N.: On the number of limit cycles appearing from an equilibrium point of the focus or center type under varying coefficients. Translation of the American Mathematical Society, 100, 1954. 
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

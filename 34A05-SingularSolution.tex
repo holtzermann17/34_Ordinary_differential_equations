@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SingularSolution}
+\pmcreated{2013-03-22 18:05:58}
+\pmmodified{2013-03-22 18:05:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{singular solution}
+\pmrecord{10}{40641}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A05}
+\pmsynonym{singular solution of differential equation}{SingularSolution}
+%\pmkeywords{first order ordinary differential equation}
+\pmrelated{DeterminingEnvelope}
+\pmrelated{ClairautsEquation}
+\pmrelated{SeparationOfVariables}
+\pmdefines{general integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let the general solution $y$ of the differential equation
+\begin{align}
+F(x,\,y,\,\frac{dx}{dy}) = 0
+\end{align}
+be given by the equation
+\begin{align}
+G(x,\,y,\,C) = 0,
+\end{align}
+the so-called {\em general integral} of (1); herein $C$ means an arbitrary \PMlinkescapetext{constant}.\, 
+
+Suppose that the family (2) of the integral curves of (1) has an envelope.\, In any point of the envelope, the tangent line is also the tangent of one integral curve.\, Thus in such a point, all the three values $x,\, y,\,\frac{dy}{dx}$ are same for the envelope curve and the integral curve.\, But these values satisfy the equation (1).\, Accordingly, this equation is satisfied also by the abscissa, ordinate and slope of the envelope.\, This means that the envelope is an integral curve of the differential equation (1).\, Because the envelope does not belong to the family (2), it cannot be obtained from the equation (2) with any value of $C$.
+
+A solution of the differential equation (1) which cannot be obtained from the general integral, is called a {\em singular solution} of equation.
+
+An envelope of the integral curves means always a singular solution, but sometimes a singular solution is only the locus of the singular points of the curves (e.g. for the equation\, $3y'\sqrt{y} = 1$).\\
+
+\textbf{Note.}\, If the family (2) has an envelope, it may be found by eliminating $C$ from the pair
+\[
+G(x,\,y,\,C) = 0, \quad G\,'_C(x,\,y,\,C) = 0.\\
+\]
+
+\textbf{Example.}\, Find the singular solution of the equation
+\begin{align}
+y^2(1+y'\,^2) = R^2.
+\end{align}
+We can separate the variables, getting
+\[
+dx = \pm\frac{y\;dy}{\sqrt{R^2-y^2}}.
+\]
+Integrating this yields 
+\[
+(x\!-\!C)^2+y^2 = R^2,
+\]
+which represents the family of circles with radius $R$ and centres on the $x$-axis.\, The family has as envelope the double line \,$y = \pm R$;\, the functions \,$y \mapsto \pm R$\, satisfy also the differental equation (3) and thus are singular solutions of it.
+
+
+
+%%%%%
+%%%%%
+\end{document}

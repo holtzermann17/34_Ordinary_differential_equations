@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CauchyInitialValueProblem}
+\pmcreated{2013-03-22 14:57:18}
+\pmmodified{2013-03-22 14:57:18}
+\pmowner{paolini}{1187}
+\pmmodifier{paolini}{1187}
+\pmtitle{Cauchy initial value problem}
+\pmrecord{14}{36650}
+\pmprivacy{1}
+\pmauthor{paolini}{1187}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+\pmsynonym{Cauchy problem}{CauchyInitialValueProblem}
+\pmsynonym{initial value problem}{CauchyInitialValueProblem}
+\pmrelated{InitialValueProblem}
+\pmrelated{DifferentialEquation}
+\pmrelated{CauchyKowalewskiTheorem}
+\pmdefines{solution to the Cauchy problem}
+\pmdefines{solution to the initial value problem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\R}{\mathbb R}
+\begin{document}
+Let $D$ be a subset of $\R^n\times \R$, $(x_0,t_0)$ a point of $D$, and $f\colon D\to \R$ be a function.
+
+We say that a function $x(t)$ is a solution to the Cauchy (or initial value) problem
+\begin{equation}
+\begin{cases}
+x'(t)=f(x(t),t)\\
+x(t_0)=x_0
+\end{cases}
+\end{equation} 
+if
+\begin{enumerate}
+\item $x$ is a differentiable function $x\colon I\to \R^n$ defined on a interval $I\subset \R$;
+\item one has $(x(t),t)\in D$ for all $t\in I$ and $t_0\in I$;
+\item one has $x(t_0)=x_0$ and $x'(t)=f(x(t),t)$ for all $t\in I$.
+\end{enumerate}
+
+We say that a solution $x\colon I\to\R^n$ is a \emph{maximal solution} if it cannot be extended to a bigger interval. More precisely given any other solution $y\colon J\to \R^n$ defined on an interval $J\supset I$ and such that $y(t)=x(t)$ for all $t\in I$, one has $I=J$ (and hence $x$ and $y$ are the same function).
+
+We say that a solution $x\colon I\to\R^n$ is a \emph{global solution} if $D\subset=\R^n \times I$. 
+
+We say that a solution $x\colon I\to\R^n$ is \emph{unique} if given any other solution $y\colon I\to\R^n$ one has $x(t)=y(t)$ for all $t\in I$ (i.e.\ $x$ is the unique solution defined on the interval $I$).
+
+\subsection{Notation}
+Usually the differential equation in (1) is simply written as $x'=f(x,t)$. 
+Also, depending on the topics, the name chosen for the function and for the variable, can change. Other common choices are $y'=f(y,t)$ or $y'=f(y,x)$.
+It is also common to write $\dot x=f(x,t)$ when the independent variable represents a time value.
+
+\subsection{Examples}
+\begin{enumerate}
+\item
+The function $x(t)=\log t$ defined on $I=(0,+\infty)$ is the unique maximal solution to the Cauchy problem:
+\[
+\begin{cases}
+x'(t) = 1/t\\
+x(1)=0.
+\end{cases}
+\]
+In this case $f(x,t)=1/t$, $D=\{(x,t)\colon t\neq 0\}$, $t_0=1$, $x_0=0$.
+
+\item
+The function $x(t)=e^t$ is a global (and hence maximal), unique solution to the Cauchy problem:
+\[
+\begin{cases}
+x'(t) = x(t)\\
+x(0)=1.
+\end{cases}
+\]
+
+\item
+Consider the Cauchy problem
+\[
+\begin{cases}
+x'(t) = \frac 3 2 \sqrt[3] x\\
+x(0)=0.
+\end{cases}
+\]
+The function $x(t)=0$ defined on $I=\R$ is a global solution. 
+However the function $y(t)=\sqrt{t^3}$ defined on $I=[0,+\infty)$ is also a  solution and so are the functions
+\[
+  z(t)=\begin{cases} \sqrt{(t-c)^3}&\text{if $t\ge c$} \\ 0 &\text{if $t < c$}.\end{cases}
+\]
+for every $c\ge 0$.
+So there are no unique solutions. Moreover $y$ is not a maximal solution.
+
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

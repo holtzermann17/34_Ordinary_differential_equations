@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LorenzEquation}
+\pmcreated{2013-03-22 13:42:21}
+\pmmodified{2013-03-22 13:42:21}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Lorenz equation}
+\pmrecord{19}{34383}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmclassification{msc}{65P40}
+\pmclassification{msc}{65P30}
+\pmclassification{msc}{65P20}
+\pmclassification{msc}{65P99}
+\pmsynonym{Lorenz attractor}{LorenzEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\subsection{The history}
+The Lorenz equation was published in 1963 by a meteorologist and mathematician from MIT called Edward N. Lorenz.  The paper containing the equation was  titled ``Deterministic non-periodic flows'' and was published in the Journal of Atmospheric Science.  What drove Lorenz to find the set of three dimensional ordinary differential equations was the search for an equation that would ``model some of the unpredictable behavior which we normally associate with the weather''\cite{2}.  The Lorenz equation represent the convective motion of fluid cell which is warmed from below and cooled from above.\cite{2} The same system can also apply to dynamos and laser.  In addition some of its popularity can be attributed to the beauty of its solution.  It is also important to state that the Lorenz equation has enough properties and interesting behavior that whole books are written analyzing results.  
+
+\subsection{The equation}
+The Lorenz equation is commonly defined as three coupled ordinary differential equation like 
+\begin{eqnarray*}
+\frac{dx}{dt} & = & \sigma(y-x)\\
+\frac{dy}{dt} & = & x(\tau - z) -y\\
+\frac{dz}{dt} & = & xy - \beta z
+\end{eqnarray*}
+where the three parameter $\sigma$, $\tau$, $\beta$ are positive and are called the Prandtl number, the Rayleigh number, and a physical proportion, respectively.  It is important to note that the $x$, $y$, $z$ are not spacial coordinate.  The ''$x$ is proportional to the intensity of the convective motion, while $y$ is proportional to the temperature difference between the ascending and descending currents, similar signs of $x$ and $y$ denoting that warm fluid is rising and cold fluid is descending.  The variable $z$ is proportional to the distortion of vertical temperature profile from linearity, a positive value indicating that the strongest gradients occur near the boundaries.'' \cite{1}\\
+
+\subsection{Properties of the Lorenz equations}
+\begin{itemize}
+\item \textbf{\PMlinkescapetext{Symmetry}}\\
+The Lorenz equation has the following symmetry of ordinary differential equation:$$(x,y,z) \to (-x,-y,z)$$  This symmetry is present for all parameters of the Lorenz equation \textit{(see natural symmetry of the Lorenz equation)}.
+\item \textbf{\PMlinkescapetext{Invariance}}\\
+The $z$-axis is invariant, meaning that a solution that starts on the $z$-axis \textit{(i.e. $x=y=0$)} will remain on the $z$-axis.  In addition the solution will tend toward the origin if the initial condition are on the $z$-axis. 
+\item \textbf{\PMlinkescapetext{Equilibrium points}}\\
+To solve for the equilibrium points we let 
+$\dot{\textbf{x}} = f(\textbf{x}) = \begin{bmatrix}
+\sigma(y-x) \\
+x(\tau - z) -y \\
+xy - \beta z
+\end{bmatrix}$
+and we solve $f(\textbf{x})=0$.  It is clear that one of those equilibrium point is $\mathbf{x}_0 = (0,0,0)$ and with some algebraic manipulation we detemine that $\mathbf{x}_{C_1} = (\sqrt{\beta(\tau-1)}, \sqrt{\beta(\tau-1)}, \tau-1)$ and $\mathbf{x}_{C_2} = (-\sqrt{\beta(\tau-1)}, -\sqrt{\beta(\tau-1)}, \tau-1)$ are equilibrium points and real when $\tau>1$.
+
+
+\item \textbf{\PMlinkescapetext{Solutions stay close to origin}}\\
+If $\sigma, \tau, \beta >0$ then all solution of the Lorenz equation will 
+enter an ellipsoid centered at $(0,0,2\tau )$ in finite time.  In addition 
+the solution will remain inside the ellipsoid once it has entered.  It follows 
+by definition that the ellipsoid is an attracting set.
+\textit{(see all solution of the Lorenz equation enter an ellipsoid)}
+
+\end{itemize}
+\subsection{An example}
+\begin{center}
+\begin{figure}
+\includegraphics[scale=1]{lorenzx.eps}\\
+\end{figure}
+\textit{(The $x$ solution with respect to time.)}
+\begin{figure}
+\includegraphics[scale=1]{lorenzy.eps}\\
+\end{figure}
+\textit{(The $y$ solution with respect to time.)}
+\begin{figure}
+\includegraphics[scale=1]{lorenzz.eps}\\
+\end{figure}
+\textit{(The $z$ solution with respect to time.)}
+\begin{figure}
+\includegraphics[scale=1]{lorenz.eps}\\
+\end{figure}
+\end{center}
+the above is the solution of the Lorenz equation with parameters $\sigma = 10$, $\tau = 28$ and $\beta = 8/3$\text{(which is the classical example)}.  The inital condition of the system is $(x_0,y_0,z_0)= (3,15,1)$.\\
+
+\subsection{Experimenting with octave}
+By changing the parameters and initial condition one can observe that some solution will be drastically different. \textit{(This is in no way rigorous but can give an idea of the qualitative property of the Lorenz equation.)}
+\begin{verbatim}
+\PMlinkescapetext{function} y = lorenz (x, t)
+y = [10*(x(2) - x(1));
+     x(1)*(28 - x(3)) - x(2);
+     x(1)*x(2) - 8/3*x(3)];
+endfunction
+solution = lsode ("lorenz", [3; 15; 1], (0:0.01:50)');
+
+gset parametric
+gset xlabel "x"
+gset ylabel "y"
+gset zlabel "\PMlinkescapetext{z}"
+gset nokey
+gsplot solution
+\end{verbatim}
+
+\begin{thebibliography}{1}
+\bibitem[LNE]{1} Lorenz, N. Edward: Deterministic non-periodic flows. Journal of Atmospheric Science, 1963.
+\bibitem[MM]{3} Marsden, E. J. McCracken, M.: The Hopf Bifurcation and Its Applications.  Springer-Verlag, New York, 1976. 
+\bibitem[SC]{2} Sparow, Colin: The Lorenz Equations: Bifurcations, Chaos and Strange Attractors.  Springer-Verlag, New York, 1982. 
+\end{thebibliography}
+
+\subsection{See also}
+\begin{itemize}
+\item Paul Bourke, \PMlinkexternal{The Lorenz Attractor in 3D}{http://astronomy.swin.edu.au/\~pbourke/fractals/lorenz/}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

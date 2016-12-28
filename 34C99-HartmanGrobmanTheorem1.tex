@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HartmanGrobmanTheorem}
+\pmcreated{2013-03-22 13:18:37}
+\pmmodified{2013-03-22 13:18:37}
+\pmowner{jarino}{552}
+\pmmodifier{jarino}{552}
+\pmtitle{Hartman-Grobman theorem}
+\pmrecord{4}{33816}
+\pmprivacy{1}
+\pmauthor{jarino}{552}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the differential equation
+\begin{equation}
+x'=f(x)
+\label{eq}
+\end{equation}
+where $f$ is a $C^1$ vector field. Assume that $x_0$ is a hyperbolic equilibrium of $f$. Denote $\Phi_t(x)$ the flow of (\ref{eq}) through $x$ at time $t$. Then there exists a homeomorphism $\varphi(x)=x+h(x)$ with $h$ bouded, such that
+\[
+\varphi\circ e^{tDf(x_0)}=\Phi_t\circ\varphi
+\]
+is a sufficiently small neighboorhood of $x_0$.
+
+This fundamental theorem in the qualitative analysis of nonlinear differential equations states that, in a small neighborhood of $x_0$, the flow of the nonlinear equation (\ref{eq}) is qualitatively similar to that of the linear system $x'=Df(x_0)x$.
+%%%%%
+%%%%%
+\end{document}

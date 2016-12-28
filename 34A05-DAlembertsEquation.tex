@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DAlembertsEquation}
+\pmcreated{2013-03-22 14:31:05}
+\pmmodified{2013-03-22 14:31:05}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{d'Alembert's equation}
+\pmrecord{16}{36058}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A05}
+\pmsynonym{Lagrange equation}{DAlembertsEquation}
+\pmrelated{ClairautsEquation}
+\pmrelated{ContraharmonicProportion}
+\pmrelated{DerivativeAsParameterForSolvingDifferentialEquations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The first \PMlinkescapetext{order} differential equation
+          $$y = \varphi(\frac{dy}{dx})\cdot x+\psi(\frac{dy}{dx})$$
+is called {\em d'Alembert's differential equation}; here $\varphi$ and $\psi$ \PMlinkescapetext{mean} some known differentiable real functions.
+
+If we denote \,$\frac{dy}{dx} := p$, the equation is
+                      $$y = \varphi(p)\cdot x+\psi(p).$$
+We take $p$ as a new variable and derive the equation with respect to $p$, getting
+           $$p-\varphi(p) = [x\varphi'(p)+\psi'(p)]\frac{dp}{dx}.$$
+If the equation \,$p-\varphi(p) = 0$\, has the roots \,$p = p_1$, $p_2$, ..., $p_k$, then we have \,$\frac{dp_{\nu}}{dx} = 0$\, for all $\nu$'s, and therefore there are the special solutions 
+                $$y = p_{\nu}x+\psi(p_{\nu}) \quad (\nu = 1, 2, ..., k)$$
+for the original equation. \,If  \,$\varphi(p) \not\equiv p$, then the derived equation may be written as
+ $$\frac{dx}{dp} = \frac{\varphi'(p)}{p-\varphi(p)}x+\frac{\psi'(p)}{p-\varphi(p)},$$
+which linear differential equation has the solution \,$x = x(p, C)$\, with the integration constant $C$. \,Thus we get the general solution of d'Alembert's equation as a parametric \PMlinkescapetext{representation}
+\[\begin{cases}       
+        x = x(p, C),\\
+        y = \varphi(p)x(p, C)+\psi(p)
+\end{cases}\]
+of the integral curves.
+%%%%%
+%%%%%
+\end{document}

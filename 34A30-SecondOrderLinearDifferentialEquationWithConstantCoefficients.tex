@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondOrderLinearDifferentialEquationWithConstantCoefficients}
+\pmcreated{2013-03-22 13:24:49}
+\pmmodified{2013-03-22 13:24:49}
+\pmowner{Mathprof}{13753}
+\pmmodifier{Mathprof}{13753}
+\pmtitle{second order linear differential equation with constant coefficients}
+\pmrecord{9}{33960}
+\pmprivacy{1}
+\pmauthor{Mathprof}{13753}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+\pmclassification{msc}{34-01}
+\pmclassification{msc}{34C05}
+\pmrelated{GeneralSolutionOfLinearDifferentialEquation}
+\pmrelated{TelegraphEquation}
+\pmdefines{characteristic equation}
+\pmdefines{source}
+\pmdefines{sink}
+\pmdefines{center}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the second order homogeneous linear differential equation
+\begin{equation}
+x''+bx'+cx=0,
+\label{eq}
+\end{equation}
+where $b$ and $c$ are real constants. 
+
+The explicit solution is easily found using the characteristic equation method. This method, introduced by Euler, consists in seeking solutions of the form $x(t)=e^{rt}$ for (\ref{eq}). Assuming a solution of this form, and substituting it into (\ref{eq}) gives
+\[
+r^2 e^{rt}+bre^{rt}+ce^{rt}=0.
+\]
+Thus
+\begin{equation}
+r^2+br+c=0
+\label{char_eq}
+\end{equation}
+which is called the \emph{characteristic equation} of (\ref{eq}). Depending on the nature of the \PMlinkname{roots}{Equation} $r_1$ and $r_2$ of (\ref{char_eq}), there are three cases.
+\begin{itemize}
+\item If the roots are real and distinct, then two linearly independent solutions of (\ref{eq}) are
+\[
+x_1(t)=e^{r_1t},\quad x_2(t)=e^{r_2t}.
+\]
+\item If the roots are real and equal, then two linearly independent solutions of (\ref{eq}) are
+\[
+x_1(t)=e^{r_1t},\quad x_2(t)=te^{r_1t}.
+\]
+\item If the roots are complex conjugates of the form $r_{1,2}=\alpha\pm i\beta$, then two linearly independent solutions of (\ref{eq}) are
+\[
+x_1(t)=e^{\alpha t}\cos \beta t,\quad x_2(t)=e^{\alpha t}\sin \beta t.
+\]
+\end{itemize}
+The general solution to (\ref{eq}) is then constructed from these linearly independent solutions, as
+\begin{equation}
+\phi(t)=C_1x_1(t)+C_2x_2(t).
+\label{sol}
+\end{equation}
+
+Characterizing the behavior of (\ref{sol}) can be accomplished by studying the two-dimensional linear system obtained from (\ref{eq}) by defining $y=x'$:
+\begin{align}
+x'&=y \\
+y'&=-by-cx.
+\label{sys}
+\end{align}
+Remark that the roots of (\ref{char_eq}) are the eigenvalues of the Jacobian matrix of (\ref{sys}). This generalizes to the characteristic equation of a differential equation of order $n$ and the $n$-dimensional system associated to it. 
+
+Also note that the only equilibrium of (\ref{sys}) is the origin $(0,0)$. Suppose that $c\neq 0$. Then $(0,0)$ is called a
+\begin[roman]{enumerate}
+\item \emph{source} iff $b<0$ and $c>0$,
+\item \emph{spiral source} iff it is a source and $b^2-4c<0$,
+\item \emph{sink} iff $b>0$ and $c>0$,
+\item \emph{spiral sink} iff it is a sink and $b^2-4c<0$,
+\item \emph{\PMlinkescapetext{saddle}} iff $c<0$,
+\item \emph{center} iff $b=0$ and $c>0$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

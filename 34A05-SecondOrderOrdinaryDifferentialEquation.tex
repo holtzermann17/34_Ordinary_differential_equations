@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondOrderOrdinaryDifferentialEquation}
+\pmcreated{2013-03-22 18:35:39}
+\pmmodified{2013-03-22 18:35:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{second order ordinary differential equation}
+\pmrecord{5}{41322}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A05}
+\pmdefines{normal system}
+\pmdefines{normal system of second order}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A second order ordinary differential equation\, $F(x,\,y,\,\frac{dy}{dx},\,\frac{d^2y}{dx^2}) = 0$\, can often be written in the form
+\begin{align}
+\frac{d^2y}{dx^2} \;=\; f\left(x,\,y,\,\frac{dy}{dx}\right).
+\end{align}
+By its general solution one means a function \; $x \mapsto y = y(x)$\; which is at least on an interval twice differentiable and satisfies
+\[y''(x) \;\equiv\; f(x,\,y(x),\,y'(x)).\]
+By setting\, $\frac{dy}{dx} := z$,\, one has\, $\frac{d^2y}{dx^2} = \frac{dz}{dx}$,\, and the equation (1) reads\, 
+$\frac{dz}{dx} = f(x,\,y,\,z)$.\, It is easy to see that solving (1) is \PMlinkname{equivalent}{Equivalent3} with solving the system of simultaneous \PMlinkname{first order}{ODE} differential equations
+\begin{align}
+\begin{cases}
+\frac{dy}{dx} = z,\\
+\frac{dz}{dx} = f(x,\,y,\,z),
+\end{cases}
+\end{align}
+the so-called {\em normal system} of (1).\\
+
+The system (2) is a special case of the general {\em normal system of second order}, which has the form
+\begin{align}
+\begin{cases}
+\frac{dy}{dx} = \varphi(x,\,y,\,z),\\
+\frac{dz}{dx} = \psi(x,\,y,\,z),
+\end{cases}
+\end{align}
+where $y$ and $z$ are unknown functions of the variable $x$.\, The existence theorem of the solution
+\begin{align}
+\begin{cases}
+y = y(x),\\
+z = z(x)
+\end{cases}
+\end{align}
+is as follows; cf. the \PMlinkname{Picard--Lindel\"of theorem}{PicardsTheorem2}.
+
+\textbf{Theorem.}\, If the functions $\varphi$ and $\psi$ are continuous and have continuous partial derivatives with respect to $y$ and $z$ in a neighbourhood of a point \,$(x_0,\,y_0,\,z_0)$,\, then the normal system (3) has one and (as long as $|x\!-\!x_0|$ does not exceed a certain \PMlinkescapetext{bound}) only one solution (4)
+which satisfies the initial conditions \, $y(x_0) = y_0,\;\, z(x_0) = z_0$.\; The functions (4) are continuously differentiable in a neighbourhood of $x_0$.
+
+\begin{thebibliography}{9}
+\bibitem{3L}{\sc E. Lindel\"of:} {\em Differentiali- ja integralilasku III 1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

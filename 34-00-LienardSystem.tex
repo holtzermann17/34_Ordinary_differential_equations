@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LienardSystem}
+\pmcreated{2013-03-22 15:20:45}
+\pmmodified{2013-03-22 15:20:45}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Lienard system}
+\pmrecord{6}{37166}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmdefines{Lienard equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{equivalent}
+
+A \emph{Lienard system} is a planar ordinary differential equation
+\begin{eqnarray*}
+\dot{x} & = & y -f(x)\\
+\dot{y} & = & -g(x)
+\end{eqnarray*}
+with conditions on the smoothness of $f$ and $g$.  It is equivalent 
+to the following second order ordinary differential equation
+$$\ddot{x}+f'(x)\dot{x}+g(x)=0.$$
+\textbf{Example:}
+\begin{itemize}
+\item van der Pol equation
+\end{itemize}
+
+\begin{thebibliography}{1}
+\bibitem[P]{P}
+{\scshape Perko, Lawrence},
+\emph{Differential Equations and Dynamical Systems},
+Springer, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

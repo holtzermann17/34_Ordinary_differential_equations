@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetryOfASolutionOfAnOrdinaryDifferentialEquation}
+\pmcreated{2013-03-22 13:42:26}
+\pmmodified{2013-03-22 13:42:26}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{symmetry of a solution of an ordinary differential equation}
+\pmrecord{11}{34385}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmsynonym{symmetry of a periodic solution solution of an ordinary differential equation}{SymmetryOfASolutionOfAnOrdinaryDifferentialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{lemma}
+
+Let $\gamma$ be a \PMlinkname{symmetry of the ordinary differential equation}{SymmetryOfAnOrdinaryDifferentialEquation} and $x_0$ be a steady state solution of $\dot{x} = f(x)$.  If $$\gamma x_0 = x_0$$ then $\gamma$ is called a \emph{symmetry of the solution of $x_0$}.\\
+
+Let $\gamma$ be a symmetry of the ordinary differential equation and $x_0(t)$ be a periodic solution of $\dot{x} = f(x)$.  If $$\gamma x_0(t-t_0) = x_0(t)$$ for a certain $t_0$ then $(\gamma, t_0)$ is called a \emph{symmetry of the periodic solution of $x_0(t)$}.\\\\
+\textbf{lemma:} If $\gamma$ is a symmetry of the ordinary differential equation and let $x_0(t)$ be a solution\textit{(either steady state or periodic)} of $\dot{x} = f(x)$.  Then $\gamma x_0(t)$ is a solution of $\dot{x} = f(x)$.\\
+\textit{proof:}  If $x_0(t)$ is a solution of $\frac{d x}{dt} = f(x)$ implies $\frac{d x_0(t)}{dt} = f(x_0(t))$.  Let's now verify that $\gamma x_0(t)$ is a solution, with a substitution into $\frac{d x}{dt} = f(x)$.  The left hand side of the equation becomes $\frac{d\gamma x_0(t)}{dt} = \gamma \frac{dx_0(t)}{dt}$ and the right hand side of the equation becomes $f(\gamma x_0(t))= \gamma f(x_0(t))$ since $\gamma$ is a symmetry of the differential equation.  Therefore we have that the left hand side equals the right hand side since $\frac{dx_0(t)}{dt} = f(x_0(t))$.
+qed
+\begin{thebibliography}{1}
+\bibitem[GSS]{1} Golubitsky, Martin. Stewart, Ian. Schaeffer, G. David: Singularities and Groups in Bifurcation Theory \textit{(Volume II)}. Springer-Verlag, New York, 1988.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

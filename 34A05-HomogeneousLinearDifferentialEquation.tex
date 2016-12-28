@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomogeneousLinearDifferentialEquation}
+\pmcreated{2014-02-27 10:07:04}
+\pmmodified{2014-02-27 10:07:04}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{homogeneous linear differential equation}
+\pmrecord{3}{88039}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmclassification{msc}{34A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The linear differential equation
+\begin{align}
+a_n(x)y^{(n)}+a_{n-1}(x)y^{(n-1)}+\ldots+a_1(x)y'+a_0(x)y \;=\; b(x)
+\end{align}
+is called 
+\PMlinkname{{\it homogeneous}}{HomogeneousLinearDifferentialEquation} 
+iff\, $b(x) \equiv 0$.\, If\, $b(x) \not\equiv 0$, 
+the equation (1) is {\it inhomogeneous}.\\
+If (1) is \PMlinkname{homogeneous}{HomogeneousLinearDifferentialEquation}, 
+then the sum of any solutions is a solution and any solution 
+multiplied by a constant is a solution.\\
+
+The special case 
+$$c_nx^ny^{(n)}+c_{n-1}x^{n-1}y^{(n-1)}+\ldots+c_1xy'+c_0y \;=\; 0$$
+of (1), where the $c_i$'s are constants, can via the 
+substitution\, $x = e^t$\, be transformed into a homogeneous 
+linear differential equation of the same order but with 
+constant coefficients.\\
+
+\end{document}

@@ -1,0 +1,140 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VanDerPolEquation}
+\pmcreated{2013-03-22 16:06:42}
+\pmmodified{2013-03-22 16:06:42}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{van der Pol equation}
+\pmrecord{13}{38177}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C25}
+\pmclassification{msc}{34C07}
+\pmclassification{msc}{34-00}
+\pmsynonym{van der Pol oscillator}{VanDerPolEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+%\usepackage{subfigure}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{circuit}
+\PMlinkescapeword{second order}
+\PMlinkescapeword{order}
+\PMlinkescapeword{planar}
+\PMlinkescapeword{term}
+\PMlinkescapeword{model}
+\PMlinkescapeword{representation}
+\PMlinkescapeword{focus}
+
+In 1920 the Dutch physicist Balthasar van der Pol studied a differential equation that describes the circuit of a vacuum tube. 
+It has been used
+to model other phenomenon such as the human heartbeat by
+Johannes van der Mark\cite{C}.\\
+
+The \emph{van der Pol equation} 
+equation is a case of a Lienard system and is expressed as
+a second order ordinary differential equation
+$$\frac{d^2x}{dt^2}-\mu(1-x^2)\frac{dx}{dt}+x=0$$
+or a first order planar ordinary differential equation
+\begin{eqnarray*}
+\dot{x} & = & y + \mu(x-x^3)\\
+\dot{y} & = & -x
+\end{eqnarray*}
+where $\mu$ is a real parameter.  
+The parameter $\mu$ is usually considered to be positive since
+the the term $-\mu(1-x^2)$ adds to the model a nonlinear damping. \cite{C}
+
+\textbf{Properties:}
+\begin{itemize}
+\item If $\mu=0$ then the origin is a center. In fact, if $\mu=0$ then
+$$\frac{d^2x}{dt^2}+x=0$$ 
+and if we suppose that the initial condition are
+$(x_0,\dot{x}_0)$ then the solution to the system is 
+$$x(t)=x_0\cos t + \dot{x}_0\sin t.$$ All
+solutions except the origin are periodic and circles.  See phase portrait below. 
+\item If $\mu>0$ the system has a unique limit cycle, and the limit
+cycle is attractive.  This follows directly from Lienard's theorem. \cite{P}
+\item The system is sometimes given under the form
+\begin{eqnarray*}
+\dot{X} &=& -Y\\
+\dot{Y} &=& X + \mu(1-X^2)Y
+\end{eqnarray*}
+which equivalent to the previous planar system 
+under the change of coordinate $(X, Y)= (\sqrt{3}x,-\sqrt{3}(y+\mu(x-x^3)))$.\cite{C}
+\end{itemize}
+
+\textbf{Example:}\\
+The geometric representation of the phase portrait is done 
+by taking initial condition from
+an equally spaced grid and calculating the solution for positive and
+negative time.  
+
+For the parameter $\mu=1$, the system has 
+an attractive limit cycle and the origin is a repulsive focus.
+\begin{center}
+\includegraphics[scale=0.5]{vanderpol_mu1.eps}\\
+\small Phase portrait when $\mu=1$.
+\end{center}
+When the parameter $\mu=0$ the origin is a center.
+\begin{center}
+\includegraphics[scale=0.5]{vanderpol_mu0.eps}\\
+\small Phase portrait when $\mu=0$.
+\end{center}
+For the parameter
+$\mu=-1$, the system has a repulsive limit cycle and the origin is
+an attractive focus.
+\begin{center}
+\includegraphics[scale=0.5]{vanderpol_mum1.eps}\\
+\small Phase portrait when $\mu=-1$.
+\end{center}
+
+\begin{thebibliography}{1}
+\bibitem[C]{C}
+{\scshape Chicone, Carmen},
+\emph{Ordinary Differential Equations with Applications},
+Springer, New York, 1999.
+
+\bibitem[P]{P}
+{\scshape Perko, Lawrence},
+\emph{Differential Equations and Dynamical Systems},
+Springer, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

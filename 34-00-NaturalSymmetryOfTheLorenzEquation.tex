@@ -1,0 +1,105 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NaturalSymmetryOfTheLorenzEquation}
+\pmcreated{2013-03-22 13:44:12}
+\pmmodified{2013-03-22 13:44:12}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{natural symmetry of the Lorenz equation}
+\pmrecord{5}{34428}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmclassification{msc}{65P20}
+\pmclassification{msc}{65P30}
+\pmclassification{msc}{65P40}
+\pmclassification{msc}{65P99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The Lorenz equation has a natural symmetry defined by 
+\begin{equation}
+(x,y,z) \mapsto (-x,-y,z). \label{eq:sym}
+\end{equation}
+To verify that (\ref{eq:sym}) is a symmetry of an ordinary differential equation (Lorenz equation) there must exist a $3\times3$ matrix which commutes with the differential equation.  This can be easily verified by observing that the symmetry is associated with the matrix $R$ defined as
+\begin{equation}
+R = \begin{bmatrix}
+-1 & 0 & 0  \\
+0 & -1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}.
+\end{equation}
+Let
+\begin{equation}
+\dot{\textbf{x}} = f(\textbf{x}) = \begin{bmatrix}
+\sigma(y-x)  \\
+x(\tau - z) -y \\
+xy - \beta z
+\end{bmatrix}
+\end{equation}
+where $f(\textbf{x})$ is the Lorenz equation and $\textbf{x}^T = (x,y,z)$.  We proceed by showing that $Rf(\textbf{x}) = f(R\textbf{x})$. Looking at the left hand side
+\begin{eqnarray*}
+Rf(\textbf{x}) & = & \begin{bmatrix}
+-1 & 0 & 0  \\
+0 & -1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix} 
+\begin{bmatrix}
+\sigma(y-x)  \\
+x(\tau - z) -y \\
+xy - \beta z
+\end{bmatrix}\\
+& = & \begin{bmatrix}
+\sigma(x-y)  \\
+x(z - \tau ) + y \\
+xy - \beta z
+\end{bmatrix}
+\end{eqnarray*}
+and now looking at the right hand side
+\begin{eqnarray*}
+f(R\textbf{x}) & = & f(\begin{bmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & 1 
+\end{bmatrix}\begin{bmatrix}
+x \\
+y \\
+z
+\end{bmatrix})\\
+& = & f(\begin{bmatrix}
+-x \\
+-y \\
+z
+\end{bmatrix})\\
+& = & \begin{bmatrix}
+\sigma(x-y)  \\
+x(z - \tau ) + y \\
+xy - \beta z
+\end{bmatrix}.
+\end{eqnarray*}
+Since the left hand side is equal to the right hand side then (\ref{eq:sym}) is a symmetry of the Lorenz equation.
+%%%%%
+%%%%%
+\end{document}

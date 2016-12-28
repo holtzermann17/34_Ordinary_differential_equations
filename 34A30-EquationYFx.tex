@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquationYFx}
+\pmcreated{2013-03-22 18:35:33}
+\pmmodified{2013-03-22 18:35:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equation $y'' = f(x)$}
+\pmrecord{10}{41320}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+\pmclassification{msc}{34-01}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{simple}
+A simple special case of the second order linear differential equation with constant coefficients is
+\begin{align}
+\frac{d^2y}{dx^2} \;=\; f(x)
+\end{align}
+where $f$ is continuous.\, We obtain immediately\, $\displaystyle\frac{dy}{dx} = C_1+\!\int\!f(x)\,dx$,
+\begin{align}
+ y \;=\; C_1x+C_2+\!\int\!\left(\int f(x)\,dx\right)dx.
+\end{align}
+
+A particular solution $y(x)$ of (1) satisfying the initial conditions
+$$y(x_0) = y_0, \quad y'(x_0) = y_0'$$
+is obtained more simply by integrating (1) twice between the \PMlinkname{limits}{DefiniteIntegral} $x_0$ and $x$, thus getting
+$$y(x) = y_0+y_0'\!\cdot\!(x\!-\!x_0)+\!\int_{x_0}^x\!\left(\int_{x_0}^x f(x)\,dx\right)dx.$$\\
+But here, the two first addends are the first terms of the Taylor polynomial of $y(x)$, expanded by the powers of 
+$x-x_0$, whence the double integral is the corresponding \PMlinkname{remainder term}{RemainderVariousFormulas}
+$$\int_{x_0}^x y''(x)(x\!-\!t)\,dt \;=\; \int_{x_0}^x f(t)(x\!-\!t)\,dt.$$
+Hence the particular solution can be written with the simple integral as
+\begin{align}
+y(x) \;=\; y_0+y_0'\!\cdot\!(x\!-\!x_0)+\int_{x_0}^x f(t)(x\!-\!t)\,dt.
+\end{align}
+The result may be generalised for the $n^\mathrm{th}$ \PMlinkname{order}{ODE} differential equation 
+\begin{align}
+\frac{d^ny}{dx^n} \;=\; f(x)
+\end{align}
+with corresponding $n$ initial conditions:
+\begin{align}
+y(x) \,=\, y_0\!+\!y_0'\!\cdot\!(x\!-\!x_0)\!+\!\frac{y_0''}{2!}(x\!-\!x_0)^2\!+\ldots
++\!\frac{y_0^{(n-1)}}{(n\!-\!1)!}(x\!-\!x_0)^{n-1}
+\!+\!\frac{1}{(n\!-\!1)!}\int_{x_0}^x f(t)(x\!-\!t)^{n-1}\,dt.
+\end{align}
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

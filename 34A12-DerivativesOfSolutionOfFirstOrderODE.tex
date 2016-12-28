@@ -1,0 +1,83 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativesOfSolutionOfFirstOrderODE}
+\pmcreated{2013-03-22 18:59:14}
+\pmmodified{2013-03-22 18:59:14}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivatives of solution of first order ODE}
+\pmrecord{10}{41853}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+\pmclassification{msc}{34-00}
+\pmrelated{SolutionsOfOrdinaryDifferentialEquation}
+\pmrelated{InflexionPoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{order}
+
+Suppose that $f$ is a continuously differentiable function defined on an open subset $E$ of $\mathbb{R}^2$, i.e. it has on $E$ the continuous partial derivatives \,$f_x'(x,\,y)$\, and\, $f_y'(x,\,y)$.
+
+If $y(x)$ is a solution of the \PMlinkescapetext{first order} ordinary differential equation
+\begin{align}
+\frac{dy}{dx} \;=\; f(x,\,y),
+\end{align}
+then we have
+\begin{align}
+y'(x) \;=\; f(x,\,y(x)), 
+\end{align}
+\begin{align}
+y''(x) \;=\; f_x'(x,\,y(x))+f_y'(x,\,y(x))\,y'(x)
+\end{align}
+(see the \PMlinkid{general chain rule}{2798}).\, Thus there exists on $E$ the second derivative $y''(x)$ which is also continuous.\, More generally, we can infer the
+
+\textbf{Theorem.}\, If\, $f(x,\,y)$\, has in $E$ the continuous partial derivatives up to the order $n$, then any solution $y(x)$ of the differential equation (1) has on $E$ the continuous derivatives $y^{(i)}(x)$ up to the \PMlinkname{order}{OrderOfDerivative} $n\!+\!1$.\\
+
+\textbf{Note 1.}\, The derivatives $y^{(i)}(x)$ are got from the equation (1) via succesive differentiations.\, Two first ones are (2) and (3), and the next two ones, with a simpler notation:
+$$y''' \;=\; f_{xx}''+2f_{xy}''y'+f_{yy}''y'^2+f_y'y'',$$
+$$y^{(4)} \;=\; f_{xxx}'''+3f_{xxy}'''y'+3f_{xyy}'''y'^2+f_{yyy}'''y'^3+3f_{xy}''y''+3f_{yy}''y'y''+f_y'y'''$$
+
+\textbf{Note 2.}\, It follows from (3) that the curve
+\begin{align}
+f_x'(x,\,y)+f_y'(x,\,y)f(x,\,y) \;=\; 0
+\end{align}
+is the locus of the inflexion points of the integral curves of (1), or more exactly, the locus of the points where the integral curves have with their tangents a \PMlinkname{contact of order}{OrderOfContact} more than one.\, The curve (4) is also the locus of the points of tangency of the integral curves and their isoclines.
+
+\begin{thebibliography}{9}
+\bibitem{3L}{\sc E. Lindel\"of:} {\em Differentiali- ja integralilasku III 1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

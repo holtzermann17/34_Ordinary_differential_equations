@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FuchsianSingularity}
+\pmcreated{2013-03-22 14:47:26}
+\pmmodified{2013-03-22 14:47:26}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Fuchsian singularity}
+\pmrecord{14}{36442}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A25}
+\pmsynonym{Fuchsian singular point}{FuchsianSingularity}
+\pmsynonym{regular singular point}{FuchsianSingularity}
+\pmsynonym{regular singularity}{FuchsianSingularity}
+\pmrelated{FrobeniusMethod}
+\pmdefines{irregular singular point}
+\pmdefines{irregular singularity}
+\pmdefines{Hamburger equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose that $D$ is an open subset of $\mathbb{C}$ and that the $n$ functions $c_k 
+\colon D \to \mathbb{C}, \quad k = 0, \ldots, n-1$ are meromorphic.  Consider the ordinary differential equation
+ $${d^n w \over dz^n} + \sum_{k=0}^{n-1} c_k (z) {d^k w \over dz^k} = 0$$
+A point $p \in D$ is said to be a \emph{regular singular point} or a \emph{Fuchsian singular point} of this equation if at least one of the functions $c_k$ has a pole at $p$ and, for every value of $k$ between $0$ and $n$, either $c_k$ is regular at $p$ or has a pole of order not greater than $n-k$.  
+
+If $p$ is a Fuchsian singular point, then the differential equation may be rewritten as a system of first order equations
+ $${d v_i \over dz} = {1 \over z} \sum_{j=1}^{n} b_{ij}(z) v_j (z)$$
+in which the coefficient functions $b_{ij}$ are analytic at $z$.  This fact helps explain the restiction on the orders of the poles of the $c_k$'s.
+
+If an equation has a Fuchsian singularity, then the solution can be expressed as a Frobenius series in a neighborhood of this point.
+
+A singular point of a differential equation which is not a regular singular point is known as an irregular singular point.
+
+{\bf Examples}
+
+The Bessel equation
+ $$w'' +  {1 \over z} w' + {z^2 - 1 \over z^2} w = 0$$
+has a Fuchsian singularity at $z=0$ since the coefficient of $w'$ has a pole of order $1$ and the coefficient of $w$ has a pole of order $2$.
+
+On the other hand, the \emph{Hamburger equation}
+ $$w'' + {2 \over z} w' + {z^2 - 1 \over z^4} w = 0$$
+has an irregular singularity at $z=0$ since the coefficient of $w$ has a pole of order $4$.
+%%%%%
+%%%%%
+\end{document}

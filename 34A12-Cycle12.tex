@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Cycle12}
+\pmcreated{2013-03-22 15:00:51}
+\pmmodified{2013-03-22 15:00:51}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{cycle}
+\pmrecord{6}{36721}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+\pmclassification{msc}{34C07}
+\pmsynonym{periodic solution}{Cycle12}
+\pmsynonym{stable periodic solution}{Cycle12}
+\pmsynonym{unstable periodic solution}{Cycle12}
+\pmsynonym{asymptotically stable periodic solution}{Cycle12}
+\pmdefines{period}
+\pmdefines{stable cycle}
+\pmdefines{unstable cycle}
+\pmdefines{asymptotically stable cycle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{example}
+
+Let 
+$$\dot{x}=f(x)$$
+be an autonomous ordinary differential equation defined by the vector field $f\colon V \to V$ then $x(t)\in V$ a solution of the system is a \emph{cycle}\textit{(or \emph{periodic solution})} if it is a closed solution which is not an equilibrium point.  The \emph{period} of a cycle is the smallest positive $T$ such that $x(t)=x(t+T)$.\\
+Let $\phi_t(x)$ be the flow defined by the above ODE and $d$ be the metric of $V$ then:\\
+A cycle, $\Gamma$, is a \emph{stable cycle} if for all $\epsilon>0$ there exists a neighborhood $U$ of $\Gamma$ such that for all $x\in U$, $d(\phi_t(x),\Gamma)< \epsilon$.\\
+A cycle, $\Gamma$, is \emph{unstable cycle} if it is not a stable cycle.\\
+A cycle, $\Gamma$, is \emph{asymptotically stable cycle} if for all $x\in U$ where $U$ is a neighborhood of $\Gamma$, $\lim_{t\to\infty}d(\phi_t(x),\Gamma)=0$.\cite{PL}\\
+
+\textbf{example:}\\
+Let
+\begin{eqnarray*}
+\dot{x} & = & -y\\
+\dot{y} & = & x
+\end{eqnarray*}
+then the above autonomous ordinary differential equations with initial value condition $(x(0),y(0))=(1,0)$ has a solution which is a stable cycle.  Namely the solution defined by
+\begin{eqnarray*}
+x(t) & = & \cos t\\
+y(t) & = & \sin t
+\end{eqnarray*}
+which has a period of $2\pi$.
+
+\begin{thebibliography}{2}
+\bibitem[PL]{PL} Perko, Lawrence: Differential Equations and Dynamical Systems \textit{(Third Edition)}. Springer, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

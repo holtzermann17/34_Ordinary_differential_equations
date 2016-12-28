@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PicardsTheorem}
+\pmcreated{2013-03-22 14:59:57}
+\pmmodified{2013-03-22 14:59:57}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Picard's theorem}
+\pmrecord{6}{36706}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+\pmsynonym{Picard-Lindel\"of theorem}{PicardsTheorem}
+\pmrelated{ExistenceAndUniquenessOfSolutionOfOrdinaryDifferentialEquations}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}[Picard's theorem \cite{KF}]
+Let $E$ be an open subset of $\mathbb{R}^2$ and a continuous function $f(x,y)$ defined as $f\colon E \to \mathbb{R}$.  If $(x_0,y_0)\in E$ and $f$ satisfies the Lipschitz condition in the variable $y$ in $E$:
+$$|f(x,y)-f(x,y_1)| \leq M| y-y_1|$$
+where $M$ is a constant.  Then the ordinary differential equation defined as
+$$\frac{dy}{dx} = f(x,y)$$
+with the initial condition
+$$y(x_0) = y_0$$
+has a unique solution $y(x)$ on some interval $|x- x_0| \leq\delta$.
+\end{thm}
+
+The above theorem is also named the \emph{Picard-Lindel\"of theorem} and can be generalized to a system of first order ordinary differential equations
+
+\begin{thm}[generalization of Picard's theorem \cite{KF}]
+Let $E$ be an open subset of $\mathbb{R}^{n+1}$ and a continuous function $f(x,y_1,\ldots,y_n)$ defined as $f=(f_1,\ldots,f_n)\colon E \to \mathbb{R}^n$.  If $(t_0,y_{10},\ldots,y_{n0})\in E$ and $f$ satisfies the Lipschitz condition in the variable $y_1,\ldots,y_n$ in $E$:
+$$|f_i(x,y_1,\dots,y_n)-f_i(x,y_1'\ldots,y_n')| \leq M \max_{1\leq j\leq n}| y_j-y_j'|$$
+where $M$ is a constant.  Then the system of ordinary differential equation defined as
+\begin{align*}
+\frac{dy_1}{dx} & =  f_1(x,y_1,\ldots,y_n)\\
+& \vdots \\
+\frac{dy_n}{dx} & =  f_n(x,y_1,\ldots,y_n)
+\end{align*}
+with the initial condition
+$$y_1(x_0) = y_{10},\ldots, y_n(x_0) = y_{n0}$$
+has a unique solution
+$$y_1(x) ,\ldots, y_n(x)$$
+on some interval $|x- x_0| \leq\delta$.
+\end{thm}
+
+\textbf{see also:}
+\begin{itemize}
+\item the entry existence and uniqueness of solution of ordinary differential equations
+\end{itemize}
+
+\begin{thebibliography}{1}
+\bibitem[KF]{KF} Kolmogorov, A.N. \& Fomin, S.V.: Introductory Real Analysis, Translated \& Edited by Richard A. Silverman. Dover Publications, Inc. New York, 1970.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

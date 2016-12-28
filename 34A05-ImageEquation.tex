@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ImageEquation}
+\pmcreated{2014-03-20 20:16:56}
+\pmmodified{2014-03-20 20:16:56}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{image equation }
+\pmrecord{13}{88056}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmclassification{msc}{34A05}
+\pmclassification{msc}{44A10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+In solving an initial value problem leading to an ordinary differential 
+equation, the Laplace transform offers often a way to simplify the equation:  
+both sides are Laplace transformed.\, The transformed equation, the so-called 
+{\it image equation}, is in many cases simplier than the original differential 
+equation, since it does not contain the derivatives of the unknown function 
+$y(t)$.\, From the image equation one may solve the Laplace transform $Y(s)$ of 
+$y(t)$ and then inverse transform $Y(s)$ getting $y(t)$.\\
+
+Let's consider e.g. the ordinary $n$'th order linear 
+differential equation
+\begin{align}
+ a_0\frac{d^ny}{dt}+a_1\frac{d^{n-1}y}{dx^{n-1}}+\ldots
+ +a_{n-1}\frac{dy}{dt}+a_ny(t) \;=\; f(t)
+\end{align}
+subject to the initial conditions
+\begin{align}
+y(0)=y_0,\quad y'(0)=y_0',\quad\ldots, y^{n-1}(0)=y_0^{(n-1)}.
+\end{align}
+Due to the linearity of the Laplace transform the image equation 
+of (1) is
+\begin{align}
+ a_0\mathcal{L}\{\frac{d^ny}{dx^n}\}
+ +a_1\mathcal{L}\{\frac{d^{n-1}y}{dx^{n-1}}\}+\ldots
+ +a_n\mathcal{L}\{y(t)\} \;=\; \mathcal{L}\{f(t)\}.
+\end{align}
+Denote\, $\mathcal{L}\{y(t)\} =: Y(s)$\, and\, 
+$\mathcal{L}\{f(t)\} =: F(s)$.\, We put into (3) the expressions
+of the Laplace transforms of the derivatives on the left hand side (see ``\PMlinkname{Laplace transforms of derivatives}{LaplaceTransformsOfDerivatives}'') 
+getting
+\begin{align*}
+ a_0[s^nY(s)-(s^{n-1}y_0+s^{n-2}y_0'+\ldots+y_0^{(n-1)})]\\
+ +a_1[s^{n-1}Y(s)-(s^{n-2}y_0+s^{n-3}y_0'+\ldots+y_0^{(n-2)})]\\
+ +\ldots\qquad\ldots\qquad\ldots\qquad\ldots\\
+ +a_{n-1}[sY(s)-(y_0)]\\
+ = \quad F(s).
+\end{align*}
+This equation is simplified to
+\begin{align*}
+ (a_0s^n+a_1s^{n-1}+\ldots+a_{n-1}s+a_n)Y(s) \;=\\
+ a_0[y_0s^{n-1}+y_0's^{n-2}+\ldots+y_0^{(n-1)}]+\\
+ +a_1[y_0s^{n-2}+y_0's^{n-3}+\ldots+y_0^{(n-2)}]+\\
+ +\ldots\qquad\ldots\qquad\ldots\qquad\ldots+\\
+ +a_{n-2}[y_0s+y_0']+a_{n-1}[y_0]+F(s).\\
+ \end{align*}
+For brevity, denote in the last equation the polynomial 
+multiplier of $Y(s)$ by $\varphi(s)$ and the sum preceding $F(s)$ 
+by $\psi(s)$.\, Then the equation can be written as
+$$\varphi(s)Y(s) \;=\; \psi(s)+F(s),$$
+i.e.
+\begin{align}
+Y(s) \;=\; \frac{\psi(s)}{\varphi(s)}+\frac{F(s)}{\varphi(s)}.
+\end{align}
+The function $Y(s)$ defined by (4) is the Laplace transform of 
+the solution $y(t)$ of the differential equation (1) which 
+satisfies the initial conditions (2).\, If we now find a function 
+$y^*(t)$ the Laplace transform of which is the function $Y(s)$ 
+defined by (4), then $y^*(t)$ will do for $y(t)$ due to the 
+uniqueness property of Laplace transform expressed in the entry 
+``\PMlinkname{Mellin's inverse formula}{MellinsInverseFormula}''.\\
+If we seek the solution of (1) satisfying the {\it zero initial 
+conditions}
+$$x_0 = x_0' = x_0'' = \ldots = x_0^{(n-1)} = 0,$$
+then\, $\psi(s) \equiv 0$\, and
+$$Y(s) \;=\; \frac{F(s)}{\varphi(s)},$$
+i.e.
+$$Y(s) \;=\; \frac{F(s)}{a_0s^n+a_1s^{n-1}+\ldots+a_n}.$$\\
+
+\textbf{Example.}\, The 4'th order differential equation
+\begin{align}
+y''''(t)+y(t) \;=\; 0
+\end{align}
+should be solved with the initial conditions
+$$y(0) = y'''(0) = 1, \;\;\; y'(0) = y''(0) = 0.$$
+The image equation of (5) is
+$$s^4Y(s)-s^3y(0)-s^2y'(0)-sy''(0)-y'''(0)+Y(s) \;=\; 0,$$
+i.e.
+$$(s^4\!+\!1)Y(s) \;=\; s^3\!+\!1.$$
+
+
+Thus one needs to determine the inverse Laplace transform of
+\begin{align}
+Y(s) \;\;=\;\; \frac{1}{4}\!\cdot\!\frac{4s^3}{s^4+1}+\frac{1}{s^4+1}.
+\end{align}
+The zeroes of the numerator $s^4\!+\!1$ are the eighth roots of unity 
+$e^{i\frac{\pi}{4}}$, $e^{i\frac{3\pi}{4}}$, $e^{i\frac{5\pi}{4}}$, 
+$e^{i\frac{7\pi}{4}}$, in other words the complex numbers
+$\frac{\pm 1\pm i}{\sqrt{2}}$.\, By the special case (3) of 
+the Heaviside formula, the first addend of (6) 
+corresponds the original function
+$$\frac{1}{4}\sum_\pm e^{\frac{\pm 1\pm i}{\sqrt{2}}t} \;\;=\;\;
+\frac{e^{\frac{t}{\sqrt{2}}}+e^{-\frac{t}{\sqrt{2}}}}{2}
+\cdot
+\frac{e^{i\frac{t}{\sqrt{2}}}+e^{-i\frac{t}{\sqrt{2}}}}{2}
+\;\;=\;\;
+\cosh\frac{t}{\sqrt{2}}\;\cos\frac{t}{\sqrt{2}}.$$
+Utilizing also the general 
+\PMlinkname{Heaviside formula}{HeavisideFormula} (1), one can 
+get from (6) the result
+$$y(t) \;\;:=\;\; 
+\cosh{\frac{t}{\sqrt{2}}}\;\cos{\frac{t}{\sqrt{2}}}+
+\frac{1}{\sqrt{2}}(\cosh{\frac{t}{\sqrt{2}}}\;\sin{\frac{t}{\sqrt{2}}}
+-\sinh{\frac{t}{\sqrt{2}}}\;\cos{\frac{t}{\sqrt{2}}}).$$\\
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja 
+integraalarvutus k\~{o}rgematele tehnilistele 
+\~{o}ppeasutustele. Teine k\"{o}ide.} Viies tr\"{u}kk.\, 
+Kirjastus Valgus, Tallinn  (1966).
+\end{thebibliography}\\
+
+
+
+
+\end{document}

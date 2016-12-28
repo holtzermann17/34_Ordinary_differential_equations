@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MethodOfUndeterminedCoefficients}
+\pmcreated{2013-03-22 12:52:55}
+\pmmodified{2013-03-22 12:52:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{method of undetermined coefficients}
+\pmrecord{10}{33224}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmrelated{ODE}
+\pmrelated{DifferentialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+%\PMlinkescapeword{theory}
+\begin{document}
+Given a (usually non-homogeneous) ordinary differential equation $$F(x,f(x),f^\prime(x),\ldots,f^{(n)}(x))=0,$$ the \emph{method of undetermined coefficients} is a way of finding an exact solution when a guess can be made as to the general form of the solution.
+
+In this method, the form of the solution is guessed with unknown coefficients left as variables.  A typical guess might be of the form $Ae^{2x}$ or $Ax^2+Bx+C$.  This can then be substituted into the differential equation and solved for the coefficients.  Obviously the method requires knowing the approximate form of the solution, but for many problems this is a feasible requirement.
+
+This method is most commonly used when the formula is some combination of exponentials, polynomials, $\sin$ and $\cos$.
+
+\subsection*{Example}
+
+Suppose we have the following second order non-homogeneous equation $$f^{\prime\prime}(x)-2f^\prime(x)+f(x)=2e^{2x}.$$  If we guess that the soution is of the form $f(x)=Ae^{2x}$, then, by substitution, we get $$4Ae^{2x}-4Ae^{2x}+Ae^{2x}-2e^{2x}=0$$ and therefore $Ae^{2x}=2e^{2x}$, so $A=2$, giving $f(x)=2e^{2x}$ as a solution.
+%%%%%
+%%%%%
+\end{document}

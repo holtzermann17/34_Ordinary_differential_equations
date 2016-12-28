@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FitzHughNagumoEquation}
+\pmcreated{2013-03-22 14:29:45}
+\pmmodified{2013-03-22 14:29:45}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{FitzHugh-Nagumo equation}
+\pmrecord{5}{36031}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmsynonym{Bonhoeffer - van der Pol model}{FitzHughNagumoEquation}
+\pmsynonym{BVP}{FitzHughNagumoEquation}
+\pmsynonym{FitzHugh-Nagumo model}{FitzHughNagumoEquation}
+\pmdefines{spatially distributed FitzHugh-Nagumo model}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{represents}
+\PMlinkescapeword{represent}
+\PMlinkescapeword{formulas}
+\PMlinkescapeword{intersection}
+\PMlinkescapeword{current}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{cell}
+\PMlinkescapeword{cells}
+\PMlinkescapeword{flow}
+\PMlinkescapeword{model}
+
+\section{The History}
+
+The FitzHugh-Nagumo equation is a simplification of the Hodgkin-Huxley model devised in 1952.  The Hodgkin-Huxley has four variables and the FitzHugh-Nagumo equation is a reduction of that model.  The reduction is from four variables to two variables where phase plane techniques may be used for the analysis of the model.  The variables kept in the reduction of the model are the \emph{excitable variable} and the \emph{recovery variable} which are characterized as being the fast and slow variables respectively.  The FitzHugh-Nagumo model was called, by FitzHugh, the \emph{Bonhoeffer - van der Pol model (BVP)}.  FitzHugh explains that the BVP was devised in the same way as the van der Pol equation ``Its solution does not, to be sure, give an accurate fit to curves obtained from many physical oscillators.  The equation was intended rather to represent the qualitative properties of a wide class of such oscillators, its algebraic form being chosen to be as simple as possible''.\cite{FR}  The name of Nagumo is added to FitzHugh by being able to represent the BVP model as an electrical device \cite{NAY}. The BVP model ``consists of three components, a capacitor representing the membrane capacitance, a nonlinear current-voltage device for the fast current, and a resistor, inductor, and battery in series for the recovery current.''\cite{KS}
+
+
+
+\section{The Application}
+
+The application of the FitzHugh-Nagumo equation is to model the same phenomenon as the Hodgkin-Huxley model.  The phenomenon that is modelled is the control of the electrical potential across cell membrane.  This control is done by the change of flow of the ionic channels of the cell membrane.  This results in the change in potential which is used to send electrical signals between cells.  This is readily observed in muscle and other excitable cells.  For example the FitzHugh-Nagumo equation is used to model electrical waves of the heart.\cite{KS}  
+
+
+
+
+
+\section{The Model}
+
+The \emph{FitzHugh-Nagumo model} is defined by the following system of differential equations:
+
+\begin{eqnarray*}
+\dot{x} & = & \epsilon(y+x-x^3+I)\\
+\dot{y} & = & \frac{-1}{\epsilon}(x-\beta+\gamma y)
+\end{eqnarray*}
+
+where $1-2\gamma/3<\beta<1$, $0<\gamma<1$, and $\gamma<\epsilon^2$.\cite{FR} There are many equivalent forms of the system, the more popular ones can be found in \cite{RGG} with conversion for the different forms.  A more general FitzHugh-Nagumo model is defined by the following system of differential equations:
+
+\begin{eqnarray*}
+\epsilon\dot{x} & = & f(x,y) + I\\
+\dot{y} & = & g(x,y)
+\end{eqnarray*}
+
+where $f(x,y)=0$ resembles a cubic shape and $g(x,y)=0$ only has one intersection with $f(x,y)=0$.\cite{KS}  In the above two formulas the $I$ is the external current applied to the system. The following system is known as the \emph{spatially distributed FitzHugh-Nagumo model} where diffusion is added to the general FitzHugh-Nagumo model.
+
+\begin{eqnarray*}
+\epsilon\frac{\partial v}{\partial t} & = & \epsilon^2\frac{\partial^2 v}{\partial x^2}+f(v,w)+I\\
+\frac{\partial w}{\partial t} & = & g(v,w)
+\end{eqnarray*}
+
+The above model has different travelling waves depending on the choice of parameter of the system.
+
+\begin{thebibliography}{20}
+
+\bibitem[FR]{FR} FitzHugh, Richard: Impulses and Physiological States in Theoretical Models of Nerve Membrane. Biophysical Journal, Volume 1, 1961.
+
+\bibitem[HK]{HK} Hale, Jack H. \& Ko\,cak, H\"useyin: Dynamics and Bifurcations.  Springer-Verlag, New York, 1991.
+
+\bibitem[IF]{IF} Izhikevich, Eugene M., FitzHugh, Richard: \PMlinkexternal{FitzHugh-Nagumo Model}{http://www.scholarpedia.org/article/FitzHugh-Nagumo_Model}. \PMlinkexternal{Scholarpedia}{http://www.scholarpedia.org/}, 2006.
+
+\bibitem[KS]{KS} Keener, James \& Sneyd, James: Mathematical Physiology.  Springer-Verlag, New York, 1998.
+
+\bibitem[NAY]{NAY} Nagumo, J., S. Arimoto, and S. Yoshizawa:  An active pulse transmission line simulating nerve axon, Proc IRE. 50: 2061-2070, 1964.
+
+\bibitem[RGG]{RGG} Rocs\,oreanu, C., Georgescu, A. \& Giurgit\,eanu, N.:  The FitzHugh-Nagumo Model: Bifurcation and Dynamics.  Kluwer Academic Publishers, Boston, 2000.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

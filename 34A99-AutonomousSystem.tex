@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AutonomousSystem}
+\pmcreated{2013-03-22 13:37:26}
+\pmmodified{2013-03-22 13:37:26}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{autonomous system}
+\pmrecord{6}{34260}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A99}
+\pmsynonym{autonomous}{AutonomousSystem}
+\pmsynonym{autonomous equation}{AutonomousSystem}
+\pmsynonym{nonautonomous}{AutonomousSystem}
+\pmsynonym{nonautonomous equation}{AutonomousSystem}
+\pmrelated{TimeInvariant}
+\pmrelated{SystemDefinitions}
+\pmdefines{nonautonomous system}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A system of ordinary differential equation is \emph{autonomous} when it does not depend on time \textit{(does not depend on the independent variable)} i.e. $\dot{x}=f(x)$.  In contrast \emph{nonautonomous} is when the system of ordinary differential equation does depend on time \textit{(does depend on the independent variable)} i.e. $\dot{x}=f(x,t)$.\\
+
+It can be noted that every nonautonomous system can be converted to an autonomous system by adding a dimension. i.e. If $\dot{\textbf{x}}=\textbf{f}(\textbf{x},t)$ $\textbf{x} \in \mathbb{R}^n$ then it can be written as an autonomous system with $\textbf{x} \in \mathbb{R}^{n+1}$ and by doing a substitution with $x_{n+1} = t$ and $\dot{x}_{n+1}=1$.
+%%%%%
+%%%%%
+\end{document}

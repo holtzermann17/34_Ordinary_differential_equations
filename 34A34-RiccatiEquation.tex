@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RiccatiEquation}
+\pmcreated{2013-03-22 18:05:43}
+\pmmodified{2013-03-22 18:05:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Riccati equation}
+\pmrecord{12}{40635}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A34}
+\pmclassification{msc}{34A05}
+\pmsynonym{Riccati differential equation}{RiccatiEquation}
+\pmrelated{BernoulliEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The nonlinear differential equation
+\begin{align}
+\frac{dy}{dx} \;=\; f(x)+g(x)y+h(x)y^2
+\end{align}
+is called {\em Riccati equation}.\, If\, $h(x) \equiv 0$,\, it is a question of a linear differential equation; if\, $f(x) \equiv 0$,\, of a Bernoulli equation.\, There is no general method for integrating explicitely the equation (1), but 
+via the substitution
+$$y \;:=\; -\frac{w'(x)}{h(x)w(x)}$$
+one can convert it to a \PMlinkescapetext{second order} homogeneous linear differential equation with non-constant coefficients.\\
+
+If one can find a particular solution \,$y_0(x)$,\, then one can easily verify that the substitution
+\begin{align}
+y \;:=\; y_0(x)+\frac{1}{w(x)}
+\end{align}
+converts (1) to
+\begin{align}
+\frac{dw}{dx}+[g(x)\!+\!2h(x)y_0(x)]\,w+h(x) \;=\; 0,
+\end{align}
+which is a linear differential equation of first order with respect to the function \,$w =w(x)$.\\
+
+\textbf{Example.}\, The Riccati equation
+\begin{align}
+\frac{dy}{x} \;=\; 3+3x^2y-xy^2
+\end{align}
+has the particular solution\, $y := 3x$.\, Solve the equation.
+
+We substitute\, $y := 3x+\frac{1}{w(x)}$\, to (4), getting
+$$\frac{dw}{dx}-3x^2w-x \;=\; 0.$$
+For solving this \PMlinkname{first order equation}{LinearDifferentialEquationOfFirstOrder} we can put\, $w = uv$,\, $w' = uv'+u'v$,\, writing the equation as
+\begin{align}
+u\cdot(v'-3x^3v)+u'v \;:=\; x,
+\end{align}
+where we choose the value of the expression in parentheses equal to 0:
+$$\frac{dv}{dx}-3x^2v \;=\; 0$$
+After separation of variables and integrating, we obtain from here a solution\, $v = e^{x^3}$,\, which is set to the equation (5):
+$$\frac{du}{dx}e^{x^3} \;=\; x$$  
+Separating the variables yields
+$$du \;=\; \frac{x}{e^{x^3}}\,dx$$
+and integrating:
+$$u \;=\; C+\int xe^{-x^3}\,dx.$$
+Thus we have
+$$w \;=\; w(x) \;=\; uv \;=\; e^{x^3}\left[C+\int xe^{-x^3}\,dx\right],$$
+whence the general solution of the Riccati equation (4) is
+$$\displaystyle y \;=\; 3x+\frac{e^{-x^3}}{C+\int xe^{-x^3}\,dx}.\\$$
+
+
+It may be proved that if one knows three different solutions of Riccati equation (1), the each other solution may be expresses as a rational function of them.
+ 
+ 
+
+
+%%%%%
+%%%%%
+\end{document}

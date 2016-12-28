@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GrammianDeterminant}
+\pmcreated{2013-03-22 17:37:33}
+\pmmodified{2013-03-22 17:37:33}
+\pmowner{slider142}{78}
+\pmmodifier{slider142}{78}
+\pmtitle{Grammian determinant}
+\pmrecord{6}{40046}
+\pmprivacy{1}
+\pmauthor{slider142}{78}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+\pmrelated{WronskianDeterminant}
+\pmrelated{GramDeterminant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The Grammian determinant provides a necessary and sufficient method of determining whether a set of continuous functions ${f_1, f_2, \dotsc, f_n}$ is linearly independent on an interval $I = [a, b]$ with respect to the inner product 
+$$\langle f_i | f_j\rangle = \int_I f_if_j$$ 
+It is defined as:
+\[
+G(f_1, f_2, \dotsc, f_n) = \left\lvert\begin{array}{@{}cccc@{}}
+\int_I (f_1)^2 & \int_I f_1f_2 & \cdots & \int_I f_1f_n\\
+\int_I f_2f_1 & \int_I (f_2)^2 & \cdots & \int_I f_2f_n\\
+\vdots & \vdots & \ddots & \vdots\\
+\int_I f_nf_1 & \int_I f_nf_2 & \cdots & \int_I (f_n)^2\\
+\end{array}\right\rvert
+\]
+If the functions are continuous on $I$, then $G = 0$ if and only if the set of functions is linearly dependent. Note that the Grammian determinant is a special case of the more general Gram determinant.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoryForSeparationOfVariables}
+\pmcreated{2013-03-22 18:37:43}
+\pmmodified{2013-03-22 18:37:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{theory for separation of variables}
+\pmrecord{15}{41366}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A09}
+\pmclassification{msc}{34A05}
+%\pmkeywords{separation of variables}
+\pmrelated{InverseFunctionTheorem}
+\pmrelated{ODETypesReductibleToTheVariablesSeparableCase}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The \PMlinkname{first order}{ODE} ordinary differential equation where one can separate the variables has the form where $\displaystyle\frac{dy}{dx}$ may be expressed as \PMlinkname{a product or a quotient of two functions}{ProductOfFunctions}, one of which depends only on $x$ and the other on $y$.\, Such an equation may be written e.g. as
+\begin{align}
+\frac{dy}{dx} \;=\; \frac{Y(y)}{X(x)} \quad \mbox{or} \quad \frac{dx}{dy} \;=\; \frac{X(x)}{Y(y)}.
+\end{align}
+
+
+We notice first that if $Y(y)$ has real \PMlinkname{zeroes}{ZeroOfAFunction} $y_1,\,y_2,\,\ldots$, then the equation (1) has the constant solutions \,$y := y_1,\; y := y_2,\; \ldots$\; and thus the lines \,$y = y_1,\; y = y_2,\; \ldots$\; are integral curves.\, Similarly, if $X(x)$ has real zeroes \,$x_1,\,x_2,\,\ldots$, one has to include the lines\, $y = y_1,\; y = y_2,\; \ldots$\; to the integral curves.\, All those lines \PMlinkescapetext{divide} the $xy$-plane into the rectangular regions.\, One can obtain other integral curves only inside such regions where the derivative $\displaystyle\frac{dy}{dx}$ attains real values.
+
+Let $R$ be such a region, defined by
+$$a < x < b, \quad c < y < d,$$
+and let us assume that the $X(x)$ and $Y(y)$ are real, continuous and distinct from zero in $R$.\, We will show that any integral curve of the differential equation (1) is accessible by two quadratures.\\
+
+Let $\gamma$ be an integral curve passing through the point \,$(x_0,\,y_0)$\, of the region $R$.\, By the above assumptions, the derivative $\displaystyle\frac{dy}{dx}$ maintains its sign on the curve $\gamma$ so long $\gamma$ is inside $R$, which is true on a neighbourhood $N$ of \,$x_0$, contained in\, $[a,\,b]$.\, This implies that as $x$ runs the interval \,$N$,\, it defines the ordinate $y$ of $\gamma$ uniquely as a monotonic function \,$y \mapsto y(x)$\, which satisfies the equation (1):
+$$y'(x) \;=\; \frac{Y(y(x))}{X(x)}$$
+The last equation may be written 
+\begin{align}
+\frac{y'(x)}{Y(y(x))} \,=\, \frac{1}{X(x)}.
+\end{align}
+Since $X$ and $Y$ don't vanish in $R$, the denominators $Y(y(x))$ and $X(x)$ are distinct from 0 on the interval $N$.\, Therefore one can integrate both sides of (2) from $x_0$ to an arbitrary value $x$ on $N$, getting
+\begin{align}
+\int_{x_0}^x\frac{y'(x)\,dx}{Y(y(x))} \,=\, \int_{x_0}^x\frac{dx}{X(x)}.
+\end{align}
+Because \,$y = y(x)$\, is continuous and monotonic on the interval $N$, it can be taken as \PMlinkname{new variable of integration}{SubstitutionForIntegration} in the left hand side of (3): \,substitute\, $y(x) := y$,\; $y'(x)\,dx := dy$\, and change the \PMlinkescapetext{limits} to\, $y(x_0) = y_0$\, and\, $y(x) = y$.\\
+
+\begin{itemize}
+
+\item Accordingly, the equality
+\begin{align}
+\int_{y_0}^y\frac{dy}{Y(y)} \;=\; \int_{x_0}^x\frac{dx}{X(x)}
+\end{align}
+is valid, meaning that if an integral curve of (1) passes through the point \,$(x_0,\,y_0)$, the integral curve is represented by the equation (4) as long as the curve is inside the region $R$.\\
+
+\item Additionally, it is possible to justificate that if\, $(x_0,\,y_0)$\, is an interior point of a region $R$ where $X(x)$ and $Y(y)$ are real, continuous and $\neq 0$, then one and only one integral curve of (1) passes through this point, the curve is \PMlinkname{regular}{RegularCurve}, and both $x$ and $y$ are monotonic on it.\, N.B., the Lipschitz condition for the right hand side of (1) is not necessary for the justification.
+
+\item When the point\, $(x_0,\,y_0)$\, changes in the region $R$, (4) gives a family of integral curves which cover the region once.\, The equations of these curves may be unified to the form 
+\begin{align}
+\int\frac{dy}{Y(y)} \;=\; \int\frac{dx}{X(x)},
+\end{align}
+which thus \PMlinkescapetext{represents} the general solution of the differential equation (1) in $R$.\, Hence one can speak of the {\em separation of variables},
+\begin{align}
+\frac{dy}{Y(y)} \;=\; \frac{dx}{X(x)},
+\end{align}
+and integration of both sides.
+
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{3L}{\sc E. Lindel\"of:} {\em Differentiali- ja integralilasku III 1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

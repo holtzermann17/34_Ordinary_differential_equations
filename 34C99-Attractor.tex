@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Attractor}
+\pmcreated{2013-03-22 15:17:34}
+\pmmodified{2013-03-22 15:17:34}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{attractor}
+\pmrecord{4}{37089}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C99}
+\pmdefines{attracting set}
+\pmdefines{repelling set}
+\pmdefines{repellor}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let
+$$\dot{x}=f(x)$$
+be a system of autonomous ordinary differential equation in $\mathbb{R}^n$ defined by a vector field $f\colon \mathbb{R}^n\to \mathbb{R}^n$.
+A set $A$ is said to be an \emph{attracting set}\cite{GH,P} if
+\begin{enumerate}
+\item $A$ is closed and invariant,
+\item there exists an open neighborhood $U$ of $A$ such that all solution 
+with initial solution in $U$ will eventually enter $A$ ($x(t)\to A$) as $t\to \infty$. 
+\end{enumerate}
+Additionally, if $A$ contains a dense orbit then $A$ is said to be an \emph{attractor}\cite{GH,P}.\\
+Conversely, a set $R$ is said to be a \emph{repelling set}\cite{GH} if $R$ satisfy the condition 1. and  2. where $t\to \infty$ is replaced by $t\to -\infty$.  Similarly, if $R$ contains a dense orbit then $R$ is said to be a \emph{repellor}\cite{GH}.
+
+\begin{thebibliography}{1}
+\bibitem[GH]{GH}
+{\scshape Guckenheimer, John \& Holmes, Philip},
+\emph{Nonlinear Oscillations, Dynamical Systems, 
+and Bifurcations of Vector Fields}, 
+Springer, New York, 1983.
+\bibitem[P]{P}
+{\scshape Perko, Lawrence},
+\emph{Differential Equations and Dynamical Systems}, 
+Springer, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

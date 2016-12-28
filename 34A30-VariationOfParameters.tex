@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VariationOfParameters}
+\pmcreated{2013-03-22 12:39:16}
+\pmmodified{2013-03-22 12:39:16}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{variation of parameters}
+\pmrecord{8}{32921}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+\pmclassification{msc}{34A05}
+\pmsynonym{variation of constants}{VariationOfParameters}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The method of \emph{variation of parameters} is a way of finding a particular
+solution to a nonhomogeneous linear differential equation.
+
+Suppose that we have an $n$th order linear differential operator
+\begin{equation*}
+ L[y] := y^{(n)} + p_1(t) y^{(n-1)} + \cdots + p_n(t) y ,
+\end{equation*}
+and a corresponding nonhomogeneous differential equation
+\begin{equation}
+ \label{nonhom-diffeq}
+ L[y] = g(t).
+\end{equation}
+Suppose that we know a fundamental set of solutions
+$y_1,y_2,\ldots,y_n$ of the corresponding homogeneous differential equation
+$L[y_c]=0$. The general solution of the homogeneous equation is
+\begin{equation*}
+ y_c(t) = c_1 y_1(t) + c_2 y_2(t) + \cdots + c_n y_n(t),
+\end{equation*}
+where $c_1,c_2,\ldots,c_n$ are constants.
+The general solution to the nonhomogeneous equation $L[y]=g(t)$ is then
+\begin{equation*}
+ y(t) = y_c(t) + Y(t),
+\end{equation*}
+where $Y(t)$ is a particular solution which satisfies $L[Y]=g(t)$, and the
+constants $c_1,c_2,\ldots,c_n$ are chosen to satisfy the appropriate
+boundary conditions or initial conditions.
+
+The key step in using variation of parameters is to suppose that the
+particular solution is given by
+\begin{equation}
+ \label{part-sol-form}
+ Y(t) = u_1(t) y_1(t) + u_2(t) y_2(t) + \cdots + u_n(t) y_n(t),
+\end{equation}
+where $u_1(t),u_2(t),\ldots,u_n(t)$ are as yet to be determined functions
+(hence the name \emph{variation of parameters}). To find
+these $n$ functions we need a set of $n$ independent equations.
+One obvious condition is that the proposed ansatz satisfies Eq.
+\eqref{nonhom-diffeq}. Many possible additional conditions are possible,
+we choose the ones that make further calculations easier. Consider the
+following set of $n-1$ conditions
+\begin{eqnarray*}
+ y_1 u_1' + y_2 u_2' + \cdots + y_n u_n' &=& 0 \\
+ y_1' u_1' + y_2' u_2' + \cdots + y_n' u_n' &=& 0 \\
+  &\vdots \\
+ y_1^{(n-2)} u_1' + y_2^{(n-2)} u_2' + \cdots + y_n^{(n-2)} u_n' &=& 0.
+\end{eqnarray*}
+Now, substituting Eq.~\eqref{part-sol-form} into $L[Y]=g(t)$ and using the
+above conditions, we can get another equation
+\begin{equation*}
+ y_1^{(n-1)} u_1' + y_2^{(n-1)} u_2' + \cdots + y_n^{(n-1)} u_n' = g .
+\end{equation*}
+
+So we have a system of $n$ equations for $u_1',u_2',\ldots,u_n'$ which
+we can solve using Cramer's rule:
+\begin{equation*}
+ u_m'(t) = \frac{g(t) W_m(t)}{W(t)}, \quad m=1,2,\ldots,n .
+\end{equation*}
+Such a solution always exists since the Wronskian $W=W(y_1,y_2,\ldots,y_n)$
+of the system is nowhere zero, because the $y_1,y_2,\ldots,y_n$ form a
+fundamental set of solutions. Lastly the term $W_m$ is the Wronskian
+determinant with the $m$th column replaced by the column
+$(0,0,\ldots,0,1)$.
+
+Finally the particular solution can be written explicitly as
+\begin{equation*}
+ Y(t) = \sum_{m=1}^n y_m(t) \int \frac{g(t) W_m(t)}{W(t)} dt .
+\end{equation*}
+
+\begin{thebibliography}{1}
+
+\bibitem{Boyce}
+ W.~E.~Boyce and R.~C.~DiPrima.
+ \textit{Elementary Differential Equations and Boundary Value Problems}
+ John Wiley \& Sons, 6th edition, 1997.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

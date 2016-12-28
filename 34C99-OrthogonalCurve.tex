@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalCurve}
+\pmcreated{2013-03-22 14:50:10}
+\pmmodified{2013-03-22 14:50:10}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{orthogonal curve}
+\pmrecord{17}{36504}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C99}
+\pmclassification{msc}{34C05}
+\pmsynonym{orthogonal trajectory}{OrthogonalCurve}
+%\pmkeywords{family of curves}
+\pmrelated{ConditionOfOrthogonality}
+\pmrelated{HarmonicConjugateFunction}
+\pmrelated{ConvexAngle}
+\pmrelated{Isocline}
+\pmrelated{TiltCurve}
+\pmrelated{HyperbolasOrthogonalToEllipses}
+\pmrelated{IsogonalTrajectory}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{pst-plot}
+\begin{document}
+If a family of plane curves (with one free parameter) satisfies the differential equation
+$$F(x,\,y,\,y') \;=\; 0,$$
+where \,$y' = \frac{dy}{dx}$, then the family of curves \PMlinkname{intersecting orthogonally}{ConvexAngle} all the first curves satisfies the differential equation
+$$F\left(x,\,y,\,-\frac{1}{y'}\right) \;=\; 0.$$
+Anyone of the latter curves is an \emph{orthogonal curve} of the former ones.
+
+\textbf{Example.} \,Let's consider the family of rectangular hyperbolas
+$$x^2-y^2 \;=\; c$$
+with the parameter $c$ taking any real value. \,Derivating with respect to $x$ gives the differential equation of this family,
+$$x-yy' \;=\; 0,$$
+and by replacing here $y'$ with $-\frac{1}{y'}$ we obtain the differential equation
+$$x+\frac{y}{y'} \;=\; 0$$
+of the orthogonal curves. \,Integrating its form
+$$\frac{dy}{y} \;=\; -\frac{dx}{x}$$
+gives the solution
+$$xy \;=\; C,$$
+which \PMlinkescapetext{represents} another family of rectangular hyperbolas.
+
+ In the picture below (by drini), there are four hyperbolas of the first family (blue) given by the values \,$c = -1,\,-2,\,-4,\,-8$\, and four hyperbolas of the orthogonal family (red) given by the values \,$C = 1,\,2,\,4,\,8$.
+
+\begin{center}
+\begin{pspicture*}(-5.4,-5.4)(5.2,5.4)
+\psaxes[labels=none,ticks=none](0,0)(-5,-5)(5,5)
+\psgrid[subgriddiv=1,griddots=10,gridlabels=7pt](-5,-5)(5,5)
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 1 add sqrt}
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 2 add sqrt}
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 4 add sqrt}
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 8 add sqrt}
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 1 add sqrt -1 mul}
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 2 add sqrt -1 mul}
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 4 add sqrt -1 mul}
+\psplot[linecolor=blue,linewidth=1pt]{-5}{5}{x x mul 8 add sqrt -1 mul}
+\psplot[linecolor=red,linewidth=1pt]{-5}{-0.1}{2 x div }
+\psplot[linecolor=red,linewidth=1pt]{0.1}{5}{2 x div }
+\psplot[linecolor=red,linewidth=1pt]{-5}{-0.1}{1 x div }
+\psplot[linecolor=red,linewidth=1pt]{0.1}{5}{1 x div }
+\psplot[linecolor=red,linewidth=1pt]{-5}{-0.1}{8 x div }
+\psplot[linecolor=red,linewidth=1pt]{0.1}{5}{8 x div }
+\psplot[linecolor=red,linewidth=1pt]{-5}{-0.1}{4 x div }
+\psplot[linecolor=red,linewidth=1pt]{0.1}{5}{4 x div }
+\end{pspicture*}
+\end{center}
+%%%%%
+%%%%%
+\end{document}

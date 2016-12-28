@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ChebyshevEquation}
+\pmcreated{2013-03-22 13:10:17}
+\pmmodified{2013-03-22 13:10:17}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{Chebyshev equation}
+\pmrecord{6}{33616}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+\pmsynonym{Chebyshev differential equation}{ChebyshevEquation}
+\pmrelated{HermiteEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Chebyshev's equation is the second order linear differential equation
+$$(1-x^2)\frac{d^2y}{dx^2} - x\frac{dy}{dx} + p^2y = 0$$
+where $p$ is a real constant.
+
+There are two independent solutions which are given as series by:
+
+$$
+y_1(x) = 1 - \tfrac{p^2}{2!}x^2 + \tfrac{(p-2)p^2(p+2)}{4!}x^4
+      - \tfrac{(p-4)(p-2)p^2(p+2)(p+4)}{6!}x^6 + \dotsb
+$$
+and
+$$
+y_2(x) = x - \tfrac{(p-1)(p+1)}{3!}x^3 + \tfrac{(p-3)(p-1)(p+1)(p+3)}{5!}x^5 - \dotsb
+$$
+
+In each case, the coefficients are given by the recursion
+$$
+a_{n+2} = \frac{(n-p)(n+p)}{(n+1)(n+2)} a_n
+$$
+with $y_1$ arising from the choice $a_0 = 1$, $a_1 = 0$,
+and $y_2$ arising from the choice $a_0 = 0$, $a_1 = 1$.
+
+The series converge for $|x| < 1$; this is easy to see from the ratio test and the recursion formula above.
+
+When $p$ is a non-negative integer, one of these series will terminate,
+giving a polynomial solution.
+If $p \ge 0$ is even, then the series for $y_1$ terminates at $x^p$.
+If $p$ is odd, then the series for $y_2$ terminates at $x^p$.
+
+These polynomials are, up to multiplication by a constant, the Chebyshev polynomials.  These are the only polynomial solutions of the Chebyshev equation.
+
+(In fact, polynomial solutions are also obtained when $p$ is a negative integer,
+but these are not new solutions, since the Chebyshev equation is invariant under the substitution of $p$ by $-p$.)
+%%%%%
+%%%%%
+\end{document}

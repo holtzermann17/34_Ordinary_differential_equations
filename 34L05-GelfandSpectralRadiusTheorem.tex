@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GelfandSpectralRadiusTheorem}
+\pmcreated{2013-03-22 13:39:19}
+\pmmodified{2013-03-22 13:39:19}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{Gelfand spectral radius theorem}
+\pmrecord{9}{34309}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34L05}
+\pmsynonym{spectral radius formula}{GelfandSpectralRadiusTheorem}
+\pmrelated{SelfConsistentMatrixNorm}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\newcommand{\mv}[1]{\mathbf{#1}}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For every self-consistent matrix norm, $||\cdot||$, and every square matrix $\mv{A}$ we can write\\
+\begin{displaymath}
+\rho(\mv{A})=\lim_{n \to \infty} ||\mv{A}^n||^{\frac{1}{n}}.
+\end{displaymath}\\
+
+Note: $\rho(\mv{A})$ denotes the spectral radius of $\mv{A}$.
+
+This theorem also generalizes to infinite dimensions and plays an important role in the theory of operator algebras.  If $\mathcal{A}$ is a Banach algebra with norm $||\cdot||$ and $A \in \mathcal{A}$, then we have\\
+\begin{displaymath}
+\rho(\mv{A})=\lim_{n \to \infty} ||\mv{A}^n||^{\frac{1}{n}}.
+\end{displaymath}\\
+
+It is worth pointing out that the self-consistency condition which was imposed on the matrix norm is part of the definition of a Banach algebra.  A common case of the infinite-dimensional generalization  occurs when $\mathcal{A}$ is the algebra of bounded operators on a Hilbert space --- the operators may be regarded as an infinite-dimensional generalization of the square matrices.
+%%%%%
+%%%%%
+\end{document}

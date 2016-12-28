@@ -1,0 +1,165 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExpectedWaitingTimeFormulasInMaxima}
+\pmcreated{2014-03-07 15:11:54}
+\pmmodified{2014-03-07 15:11:54}
+\pmowner{robert_dodier}{1000903}
+\pmmodifier{robert_dodier}{1000903}
+\pmtitle{Expected waiting time formulas in Maxima}
+\pmrecord{1}{}
+\pmprivacy{1}
+\pmauthor{robert_dodier}{1000903}
+\pmtype{Application}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let's express some well-known formulas for service waiting time,
+for which telephone calls are a commonly-used example.
+Discussion here is based on a web page [1] which states the formulas.
+I'll just copy the formulas verbatim and show how Maxima can carry out
+some interesting operations with them.
+
+The erlang.mac script makes use of a couple of Maxima add-ons.
+It puts the functions it defines in a namespace "erlang"
+so I'll write "erlang$|$E_c" to refer to the function E_c in the namespace erlang.
+Also, the script assumes that quantities (e.g., time) come with units attached.
+
+As with other articles about worked examples,
+I'm including only the barest outline and omitting a lot of details.
+If you're interested, we can follow up in the comments.
+
+[1] http://www.mitan.co.uk/erlang/elgcmath.htm
+\begin{verbatim}
+fpprintprec : 4 $
+batch ("./erlang.mac");
+\end{verbatim}
+$$\mbox{{}./erlang.mac{}}$$
+\section{Numerical examples
+}
+Let's reproduce the examples from the web page.
+First let's compute E_c for a given lambda, T_s, and m.
+\begin{verbatim}
+erlang|E_c (0.2 ` call/s, 240 ` s/call, 55);
+\end{verbatim}
+$$.2387$$
+Let's evaluate T_w, the expected waiting time, for given parameters.
+\begin{verbatim}
+erlang|T_w (0.2 ` call/s, 240 ` s/call, 55);
+\end{verbatim}
+$$8.184\;{{\mathrm{s}}\over{\mathrm{call}}}$$
+Let's compute the probability that waiting time is less than or equal to 15 seconds.
+\begin{verbatim}
+erlang|W (0.2 ` call/s, 240 ` s/call, 55, 15 ` s/call);
+\end{verbatim}
+$$.8459$$
+\section{Symbolic operations
+}
+So far, so good; the numerical values agree with those stated on the web page.
+Let's look at some symbolic operations.
+If some parameters are unknown, the functions return expressions in the unknown parameters.
+Given fixed values for call intensity and number of agents,
+how does expected waiting time vary as a function of the average call duration?
+\begin{verbatim}
+foo : erlang|T_w (0.2 ` call/s, T_s ` s/call, 4);
+\end{verbatim}
+$${{1.6667 \times 10^{-5}\,{\it T\_s}^5}\over{\left(1-0.05\,
+ {\it T\_s}\right)\,\left(6.6667 \times 10^{-5}\,{\it T\_s}^4+\left(1
+ -0.05\,{\it T\_s}\right)\,\left(.001333\,{\it T\_s}^3+0.02\,
+ {\it T\_s}^2+0.2\,{\it T\_s}+1\right)\right)}}\;{{\mathrm{s}}\over{
+ \mathrm{call}}}$$
+Notice that T_w is undefined for (\# agents)/(call intensity) $>= 1$.
+As that ratio approaches 1 from below, the expected waiting time increases without bound.
+\begin{verbatim}
+plot2d (qty (foo), [T_s, 0, 4/0.2], [y, 0, 100]);
+\end{verbatim}
+\includegraphics{erlang1.wxm-0_1.png} 
+Likewise, the function P(waiting time <= t) is a function of t alone given other parameters.
+\begin{verbatim}
+erlang|W (0.2 ` call/s, 240 ` s/call, 55, t ` s/call);
+\end{verbatim}
+$$1-.2387\,e^ {- .02917\,t }$$
+Let's construct a function which takes just t as an argument. The other parameters are baked in.
+\begin{verbatim}
+W (t) := ''(erlang|W (0.2 ` call/s, 240 ` s/call, 55, t ` s/call));
+\end{verbatim}
+
+\begin{verbatim}
+W(t):=1-.2387*%e^-(.02917*t);
+\end{verbatim}
+
+Let's take a look at that function W.
+\begin{verbatim}
+plot2d (W, [t, 0, 50]);
+\end{verbatim}
+\includegraphics{erlang1.wxm-1.png} 
+Another way to approach this is to construct a lambda expression (anonymous function).
+\begin{verbatim}
+foo (a, b, c) := buildq ([a, b, c], lambda ([t], erlang|W (a, b, c, t ` s/call)));
+\end{verbatim}
+
+\begin{verbatim}
+foo(a,b,c):=buildq([a,b,c],
+    ?common\-lisp|?lambda([t],erlang|W(a,b,c,t ` s/call)));
+\end{verbatim}
+
+\begin{verbatim}
+bar : foo (0.2 ` call/s, 240 ` s/call, 55);
+\end{verbatim}
+$$\lambda\left(\left[ t \right]  , W\left(0.2\;{{\mathrm{call}}\over{
+ \mathrm{s}}} , 240\;{{\mathrm{s}}\over{\mathrm{call}}} , 55 , t\;{{
+ \mathrm{s}}\over{\mathrm{call}}}\right)\right)$$
+\begin{verbatim}
+bar (15);
+\end{verbatim}
+$$.8459$$
+Finally, let's construct a memoizing function (called an "array function" in Maxima).
+We can think of this as a family of functions of t which are indexed by the parameters.
+\begin{verbatim}
+baz [%lambda, T_s, m] (t) := erlang|W (%lambda ` call/s, T_s ` s/call, m, t ` s/call);
+\end{verbatim}
+
+\begin{verbatim}
+baz[%lambda,T_s,m](t):=erlang|W(%lambda ` call/s,T_s ` s/call,m,t ` s/call);
+\end{verbatim}
+
+\begin{verbatim}
+baz [0.2, 240, 55];
+\end{verbatim}
+$$\lambda\left(\left[ t \right]  , 1-.2387\,e^ {- .02917\,t }\right)$$
+\begin{verbatim}
+baz [0.2, 240, 55] (15);
+\end{verbatim}
+$$.8459$$
+That's it for now.
+\begin{verbatim}
+build_info();
+\end{verbatim}
+$${\it build\_info}\left(\mbox{{}5.32.1{}} , 
+ \mbox{{}2014-01-02 09:53:22{}} , \mbox{{}i686-pc-linux-gnu{}} , 
+ \mbox{{}CLISP{}} , 
+ \mbox{{}2.49 (2010-07-07) (built 3539704948) (memory 3597674023){}}
+ \right)$$
+
+\end{document}

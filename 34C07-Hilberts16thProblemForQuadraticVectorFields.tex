@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hilberts16thProblemForQuadraticVectorFields}
+\pmcreated{2013-03-22 14:03:35}
+\pmmodified{2013-03-22 14:03:35}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Hilbert's 16th problem for quadratic vector fields}
+\pmrecord{11}{35415}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Conjecture}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Find a maximum natural number $H(2)$ and relative position of limit cycles of a vector field
+\begin{eqnarray*}
+\dot{x} = p(x,y) &=&\sum_{i+j=0}^2 a_{ij}x^iy^j \\
+\dot{y} = q(x,y) &=& \sum_{i+j=0}^2 b_{ij}x^iy^j
+\end{eqnarray*}
+\cite{1}.\\
+As of now neither part of the problem \textit{(i.e. the bound and the positions of the limit cycles)} are solved.  Although R. Bam\`on in 1986 showed \cite{2} that a quadratic vector field has finite number of limit cycles.  In 1980 Shi Songling \cite{3} and also independently Chen Lan-Sun and Wang Ming-Shu \cite{4} showed an example of a quadratic vector field which has four limit cycles \textit{(i.e. $H(2)\geq 4$)}.\\
+
+\textbf{Example by Shi Songling:}\\
+The following system
+\begin{eqnarray*}
+\dot{x}=& \lambda x - y - 10x^2 + (5+\delta)xy + y^2 \\
+\dot{y}=& x + x^2 + (-25 + 8\epsilon - 9\delta)xy
+\end{eqnarray*}
+has four limit cycles when $0<-\lambda\ll -\epsilon\ll- \delta\ll 1$. \cite{4}\\
+
+\textbf{Example by Chen Lan-sun and Wang Ming-Shu:}\\
+The following system
+\begin{eqnarray*}
+\dot{x}=& -y -\delta_2x - 3x^2 + (1-\delta_1)xy + y^2\\
+\dot{y}=& x(1+\frac{2}{3}x - 3y)
+\end{eqnarray*}
+has four limit cycles when $0<\delta_2\ll\delta_1\ll 1$. \cite{4}
+
+\begin{thebibliography}{1}
+\bibitem[DRR]{1} Dumortier, F., Roussarie, R., Rousseau, C.: Hilbert's 16th Problem for Quadratic Vector Fields. Journal of Differential Equations 110, 86-133, 1994.
+\bibitem[BR]{2} R. Bam\`on: Quadratic vector fields in the plane have a finite number of limit cycles, Publ. I.H.E.S. 64 (1986), 111-142.
+\bibitem[SS]{3} Shi Songling, A concrete example of the existence of four limit cycles for plane quadratic systems, Scientia Sinica 23 (1980), 154-158.
+\bibitem[ZTWZ]{4} Zhang Zhi-fen, Ding Tong-ren, Huang Wen-zoa, Dong Zhen-xi.  Qualitative Theory of Differential Equations.  American Mathematical Society, Providence, 1992.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DiracDeltaFunction}
+\pmcreated{2013-03-22 12:11:45}
+\pmmodified{2013-03-22 12:11:45}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Dirac delta function}
+\pmrecord{16}{31491}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34L40}
+\pmsynonym{delta function}{DiracDeltaFunction}
+\pmrelated{DiracSequence}
+\pmrelated{DiracMeasure}
+\pmrelated{Distribution4}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%%\usepackage{xypic}
+\begin{document}
+The Dirac delta ``function'' $\delta(x)$, or \emph{distribution} is not a true function because it is not uniquely defined for all values of the argument $x$. Similar to the Kronecker delta symbol, the notation $\delta(x)$ stands for
+
+$$ \delta(x) = 0 \;\text{for}\; x \ne 0, \;\text{and}\; \int_{-\infty}^\infty \delta(x) dx = 1 $$
+
+For any continuous function $F$:
+
+$$ \int_{-\infty}^\infty \delta(x) F(x)dx = F(0) $$
+
+or in $n$ dimensions:
+
+$$\int_{\mathbb{R}^n} \delta(x - s)f(s) \, d^ns = f(x)$$
+
+$\delta(x)$ can also be defined as a normalized Gaussian function (normal distribution) in the limit of zero width.
+
+\textbf{Notes:}
+However, the limit of the normalized Gaussian function is still meaningless as a function, but some people still write such a limit as being equal to the Dirac distribution considered above in the first paragraph. \\
+An example of how the Dirac distribution arises in a physical, classical context is available 
+\PMlinkexternal{on line.}{http://www.rose-hulman.edu/~rickert/Classes/ma222/Wint0102/dirac.pdf}
+
+{\bf Remarks:}
+Distributions play important roles in Dirac's formulation of quantum mechanics.
+
+\begin{thebibliography}{9}
+\bibitem{rudin_fap}
+W. Rudin, {\em Functional Analysis},
+McGraw-Hill Book Company, 1973.
+\bibitem{hormander}
+L. H\"ormander, {\em The Analysis of Linear Partial Differential Operators I,
+(Distribution theory and Fourier Analysis)}, 2nd ed, Springer-Verlag, 1990.
+\bibitem{TDAB} 
+Originally from The Data Analysis Briefbook
+(\PMlinkexternal{http://rkb.home.cern.ch/rkb/titleA.html}{http://rkb.home.cern.ch/rkb/titleA.html})
+\end{thebibliography}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

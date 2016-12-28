@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OnInhomogeneousSecondorderLinearODEWithConstantCoefficients}
+\pmcreated{2014-03-05 16:25:57}
+\pmmodified{2014-03-05 16:25:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{on inhomogeneous second-order linear ODE with constant coefficients}
+\pmrecord{14}{88042}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmclassification{msc}{34A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let's consider solving the ordinary second-order linear 
+differential equation
+\begin{align}
+      \frac{d^2y}{dx^2}+a\frac{dy}{dx}+by \;=\; R(x)
+\end{align}
+which is 
+\PMlinkname{inhomogeneous}{HomogeneousLinearDifferentialEquation}, i.e.
+$R(x) \not\equiv 0$.
+
+For obtaining the general solution of (1) we have to add to the 
+general solution of the 
+\PMlinkname{corresponding homogeneous equation}{SecondOrderLinearODEWithConstantCoefficients}
+\begin{align}
+\frac{d^2y}{dx^2}+a\frac{dy}{dx}+by \;=\; 0
+\end{align}
+some 
+\PMlinkname{particular solution}{SolutionsOfOrdinaryDifferentialEquation} 
+of the inhomogeneous equation (1).\, A latter one can 
+always be gotten by means of the variation of parameters, but 
+in many cases there exist simpler ways to find a particular 
+solution of (1).\\
+
+\textbf{$1^\circ$}\!:\; $R(x)$ is a nonzero constant function 
+$x \mapsto c$.\, In this case, apparently\, $y = \frac{c}{b}$ is 
+a solution of (1), supposing that\, $b \neq 0$.\, If\, $b = 0$\, 
+but $a \neq 0$,\, a particular solution is $y = \frac{c}{a}x$.\, 
+If\, $a = b = 0$,\, a solution is gotten via two consecutive 
+integrations.\\
+
+\textbf{$2^\circ$}\!:\; $R(x)$ is a polynomial function of degree 
+$n \ge 1$.\, Now (1) has as solution a polynomial which can be 
+found by using indetermined coefficients.\, If\, $b \neq 0$,\, 
+the polynomial is of degree $n$ and is uniquely determined.\, 
+If\, $b = 0$\, and\, $a \neq 0$,\, the degree of the polynomial 
+is $n\!+\!1$ and its constant term is arbitrary. If\, 
+$a = b = 0$\, the polynomial is of degree $n\!+\!2$ and is 
+gotten via two integrations.\\
+
+\textbf{$3^\circ$}\!:\; Let $R(x)$ in (1) be of the form 
+$\alpha\sin{nx}+\beta\cos{nx}$ with $\alpha$, $\beta$, $n$ 
+constants.\, We try to find a solution of the same form and put 
+into (1) the expression
+\begin{align}
+y \;:=\; A\sin{nx}+B\cos{nx}.
+\end{align}
+Then the left hand side of (1) attains the form
+$$[(b-n^2)A-anB]\sin{nx}+[anA+(b-n^2)B]\cos{nx}.$$
+This must equal $R(x)$, i.e. we have the conditions
+$$(b-n^2)A-anB \;=\; \alpha \quad \mbox{and} \quad anA+(b-n^2)B
+\;=\; \beta.$$
+These determine uniquely the values of $A$ and $B$ provided that
+the determinant
+$$
+\left|\begin{matrix}
+b\!-\!n^2 & -an\\
+an & b\!-\!n^2
+\end{matrix}\right|
+\;=\; a^2n^2\!+\!(b\!-\!n^2)^2
+$$
+does not vanish.\, Then we obtain the particular solution (3).\,   
+The determinant vanishes only if\, $a = 0$ and\, $b = n^2$, in 
+which case the differential equation (1) reads
+\begin{align}
+      \frac{d^2y}{dx^2}+n^2y \;=\; \alpha\sin{nx}+\beta\cos{nx}.
+\end{align}
+Unless we have\, $\alpha = \beta = 0$, the equation (4) has no 
+solution of the form (3), since
+\begin{align}
+\frac{d^2}{dx^2}(A\sin{nx}+B\cos{nx})+n^2(A\sin{nx}+B\cos{nx})
+\;=\; 0
+\end{align}
+identically.\, But we find easily a solution of (4) when we 
+differentiate the identity (5) with respect to $n$.\, Changing 
+the order of differentiations we get 
+$$\frac{d^2}{dx^2}(Ax\cos{nx}-Bx\sin{nx})
++n^2(Ax\cos{nx}-Bx\sin{nx}) \;=\; -2nA\sin{nx}-2nB\cos{nx}.$$
+The right hand side coincides with the right hand side of 
+(4) iff\; $-2nA = \alpha$\, and\, $-2nB = \beta$, and thus (4) 
+has the solution
+$$y \;:=\; 
+-\frac{\alpha}{2n}x\cos{nx}+\frac{\beta}{2n}x\sin{nx}.$$\\
+
+
+\textbf{$4^\circ$}\!:\;  Let $R(x)$ in (1) now be 
+$\alpha e^{kx}$ where $\alpha$ and $k$ are constants.\, Denote 
+the left hand side of (1) briefly
+$\frac{d^2y}{dx^2}+a\frac{dy}{dx}+by \;=:\; F(y)$.\, We seek 
+again a solution of the same form $Ae^{kx}$ as $R(x)$.
+
+First we have
+$$F(Ae^{kx}) \;=\; 
+A\underbrace{(k^2\!+\!ak\!+\!b)}_{f(k)}e^{kx} 
+\;=\; Af(k)e^{kx}.$$
+Thus $A$ can be determined from the condition\, $Af(k) = 
+\alpha$.\, If\, $f(k) \neq 0$,\, i.e. $k$ is not a root of the
+characteristic equation\, $f(r) = 0$\, corresponding the 
+homogeneous equation (2), then we obtain the 
+particular solution
+$$y \;:=\; \frac{\alpha}{f(k)}e^{kx} 
+     \;=\; \frac{\alpha}{k^2\!+\!ak\!+\!b}e^{kx}$$
+of the inhomogeneous equation (1).
+
+If\, $f(k) =0$, then $e^{kx}$ and $Ae^{kx}$ satisfy the 
+homogeneous equation\, $F(y) = 0$.\, Now we may start from the 
+identity
+$$F(Ae^{rx}) \;=\; Af(r)e^{rx}$$
+and differentiate it with respect to $r$.\, Changing again the 
+order of differentiations we can write first
+\begin{align}
+F(Axe^{rx}) \;=\; Ae^{rx}[f'(r)\!+\!xf(r)],
+\end{align}
+and differentiating anew,
+\begin{align}
+F(Ax^2e^{rx}) \;=\; Ae^{rx}[f''(r)\!+\!2xf'(r)\!+\!x^2f(r)].
+\end{align}
+If $k$ is a simple root of the equation\, $f(r) = 0$,\, i.e. 
+if\, $f(k) = 0$\, but\, $f'(k) \neq 0$,\, then\, $r := k$\, 
+makes the right hand side of (6) to $Af'(k)e^{kx}$, which 
+equals to\, $R(x) = \alpha e^{kx}$\, by choosing\, 
+$A := \frac{\alpha}{f'(k)}$.\, Then we have found the 
+particular solution
+$$y \;:=\; \frac{\alpha}{f'(k)}xe^{kx} 
+     \;=\; \frac{\alpha}{2k\!+\!a}xe^{kx}.$$
+We have still to handle the case when $k$ is the double root of 
+the equation\, $f(k) = 0$\, and thus\, $f'(k) = 0$.\, Putting\,  
+$r := k$\, into (7), the right hand side reduces to\, 
+$Af''(k)e^{kx} = 2Ae^{kx}$; this equals to\,$R(x) = \alpha e^{kx}$\, 
+when choosing $A := \frac{\alpha}{2}$.\, So we have the 
+particular solution
+$$y \;:=\; \frac{\alpha}{2}x^2e^{kx}$$
+of the given inhomogeneous equation.\\
+
+
+\textbf{$5^\circ$}\!:\; Suppose that in (1) the right hand side 
+$R(x)$ is a sum of several functions,
+\begin{align}
+\frac{d^2y}{dx^2}+a\frac{dy}{dx}+by \;=\; 
+R_1(x)+R_2(x)+\ldots+R_n(x),
+\end{align}
+and one can find a particular solution $y_i(x)$ for each of 
+the equations
+$$\frac{d^2y}{dx^2}+a\frac{dy}{dx}+by \;=\; R_i(x).$$
+Then evidently the sum $y_1(x)+y_2(x)+\ldots+y_n(x)$ is a 
+particular solution of the equation (8).\\
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III.1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}\\
+
+
+\end{document}

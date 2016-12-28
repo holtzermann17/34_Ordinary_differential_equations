@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetryOfAnOrdinaryDifferentialEquation}
+\pmcreated{2013-03-22 13:42:24}
+\pmmodified{2013-03-22 13:42:24}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{symmetry of an ordinary differential equation}
+\pmrecord{10}{34384}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmsynonym{symmetry of an differential equation}{SymmetryOfAnOrdinaryDifferentialEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $ f:\mathbb{R}^n \to \mathbb{R}^n$ be a smooth function and let
+$$\dot{x} = f(x)$$
+be a system of ordinary differential equations, in addition let $\gamma$ be an invertible matrix.  Then $\gamma$ is a \emph{\PMlinkescapetext{symmetry}\ of the ordinary differential equation} if
+$$f(\gamma x) = \gamma f(x).$$\\
+\textbf{Example:}
+\begin{itemize}
+\item Natural symmetry of the Lorenz equation is a \PMlinkescapetext{simple} example of a symmetry of a differential equation.
+\end{itemize}
+\begin{thebibliography}{1}
+\bibitem[GSS]{1} Golubitsky, Martin. Stewart, Ian. Schaeffer, G. David: Singularities and Groups in Bifurcation Theory \textit{(Volume II)}. Springer-Verlag, New York, 1988.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

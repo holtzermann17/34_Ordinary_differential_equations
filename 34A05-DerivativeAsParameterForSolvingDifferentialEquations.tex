@@ -1,0 +1,122 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DerivativeAsParameterForSolvingDifferentialEquations}
+\pmcreated{2013-03-22 18:28:39}
+\pmmodified{2013-03-22 18:28:39}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{derivative as parameter for solving differential equations}
+\pmrecord{10}{41150}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A05}
+%\pmkeywords{ordinary differential equation}
+\pmrelated{InverseFunctionTheorem}
+\pmrelated{ImplicitFunctionTheorem}
+\pmrelated{DAlembertsEquation}
+\pmrelated{ClairautsEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{independent}
+
+The solution of some differential equations of the forms \,$x = f(\frac{dy}{dx})$\, and\, $y = f(\frac{dy}{dx})$\, may be  expressed in a parametric form by taking for the parameter the derivative
+\begin{align}
+p \;:=\; \frac{dy}{dx}.
+\end{align}
+
+\textbf{I.}\; Consider first the equation
+\begin{align}
+x = f(\frac{dy}{dx}),
+\end{align}
+for which we suppose that\, $p \mapsto f(p)$\, and its derivative\, $p \mapsto f'(p)$\, are continuous and\, 
+$f'(p) \neq 0$\, on an interval \,$[p_1,\,p_2]$.\, It follows that on the interval, the function \,$p \mapsto f(p)$\, changes monotonically from\, $f(p_1) := x_1$\, to\, $f(p_2) := x_2$, whence conversely the equation
+\begin{align}
+x = f(p)
+\end{align}
+defines from\, $[p_1,\,p_2]$\, onto\, $[x_1,\,x_2]$\, a bijection
+\begin{align}
+p = g(x)
+\end{align}
+which is continuously differentiable.\, Thus on the interval\, $[x_1,\,x_2]$,\, the differential equation (2) can be replaced by the equation
+\begin{align}
+\frac{dy}{dx} = g(x),
+\end{align}
+and therefore, the solution of (2) is
+\begin{align}
+y = \int g(x)\,dx+C.
+\end{align}
+If we cannot express $g(x)$ in a \PMlinkescapetext{closed form}, we take $p$ as an independent variable through the substitution (3), which maps \,$[x_1,\,x_2]$\, bijectively onto\, $[p_1,\,p_2]$.\, Then (6) becomes a function of $p$, and by the chain rule,
+$$\frac{dy}{dp} = g(f(p))f'(p) = pf'(p).$$
+Accordingly, the solution of the given differential equation may be presented on\, $[p_1,\,p_2]$\, as
+
+\begin{align}
+\begin{cases}
+\displaystyle x = f(p),\\
+\displaystyle y = \int\!p\,f'(p)\,dp+C.
+\end{cases}
+\end{align}
+
+
+\textbf{II.}\; With corresponding considerations, one can write the solution of the differential equation
+\begin{align}
+y = f(\frac{dy}{dx}) \;:=\; f(p),
+\end{align}
+where $p$ changes on some interval\, $[p_1,\,p_2]$\, where $f(p)$ and $f'(p)$ are continuous and\, 
+$p\cdot f'(p) \neq 0$,\, in the parametric presentation
+\begin{align}
+\begin{cases}
+\displaystyle x = \int\!\frac{f'(p)}{p}\,dp+C,\\
+\displaystyle y = f(p).
+\end{cases}
+\end{align}
+
+
+\textbf{III.}\; The procedures of \textbf{I} and \textbf{II} may be generalised for the differential equations of 
+\PMlinkescapetext{types} \,$x = f(y,\,p)$\, and\, $y = f(x,\,p)$;\, let's consider the former one.
+
+In
+\begin{align}
+x \;=\; f(y,\,p)
+\end{align}
+we regard $y$ as the independent variable and differentiate with respect to it:
+$$\frac{dx}{dy} \;=\; \frac{1}{p} \;=\; f'_y(y,\,p)\!+\!f'_p(y,\,p)\frac{dp}{dy}.$$
+Supposing that the partial derivative \,$f'_p(y,\,p)$ does not vanish identically, we get
+\begin{align}
+ \frac{dp}{dy} \;=\; \frac{\frac{1}{p}-f'_y(y,\,p)}{f'_p(y,\,p)} \;:=\; g(y,\,p).
+\end{align}
+If\, $p = p(y,\,C)$\, is the general solution of (11), we obtain the general solution of (10):
+\begin{align}
+x \;=\; f(y,\,p(y,C))
+\end{align}
+
+
+%%%%%
+%%%%%
+\end{document}

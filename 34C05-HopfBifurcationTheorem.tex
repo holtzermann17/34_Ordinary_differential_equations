@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HopfBifurcationTheorem}
+\pmcreated{2013-03-22 13:18:45}
+\pmmodified{2013-03-22 13:18:45}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Hopf bifurcation theorem}
+\pmrecord{8}{33819}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C05}
+\pmsynonym{Poincar\'e-Andronov-Hopf}{HopfBifurcationTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{planar}
+
+Consider a planar system of ordinary differential equations, written in such a form as to make explicit the dependence on a parameter $\mu$:
+\begin{eqnarray*}
+x'&=&f_1(x,y,\mu) \\
+y'&=&f_2(x,y,\mu)
+\end{eqnarray*}
+Assume that this system has the origin as an equilibrium for all $\mu$. Suppose that the linearization $Df$ at zero has the two purely imaginary eigenvalues $\lambda_1(\mu)$ and $\lambda_2(\mu)$ when $\mu=\mu_c$. If the real part of the eigenvalues verify
+\[
+\frac{d}{d\mu}\left(\Re\left(\lambda_{1,2}(\mu)\right)\right)_{|\mu=\mu_c}>0
+\]
+and the origin is asymptotically stable at $\mu=\mu_c$, then
+\begin[roman]{enumerate}
+\item $\mu_c$ is a bifurcation point;
+\item for some $\mu_1\in\bar{\mathbb{R}}$ such that $\mu_1<\mu<\mu_c$, the origin is a stable focus;
+\item for some $\mu_2\in\bar{\mathbb{R}}$ such that $\mu_c<\mu<\mu_2$, the origin is unstable, surrounded by a stable limit cycle whose size increases with $\mu$.
+
+This is a simplified version of the theorem, corresponding to a supercritical Hopf bifurcation.
+\end{enumerate}
+
+Sometimes the Hopf theorem is called \emph{Poincar\'e-Andronov-Hopf theorem} since it was independently discovered by Andronov in 1929 and Hopf in 1943 and Poincar\'e had discussion of such result in 1892.\cite{HK}
+\begin{thebibliography}{20}
+\bibitem[HK]{HK} Hale, Jack H. \& Ko\,cak, H\"useyin: Dynamics and Bifurcations.  Springer-Verlag, New York, 1991.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

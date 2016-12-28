@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Nullcline}
+\pmcreated{2013-03-22 14:27:14}
+\pmmodified{2013-03-22 14:27:14}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{nullcline}
+\pmrecord{5}{35972}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+Let
+\begin{eqnarray*}
+\dot{x}_1 &=& f_1(x_1,\ldots,x_n)\\
+& \vdots & \\
+\dot{x}_n &=& f_n(x_1,\ldots,x_n)
+\end{eqnarray*}
+be a system of first order ordinary differential equation.  The $x_j$ \emph{nullcline} is the set of points which satisfy $f_j(x_1,\ldots,x_n)=0$.  Note that at an intersection point of all the nullclines implies that 
+\begin{eqnarray*}
+0 &=& f_1(x_1,\ldots,x_n)\\
+& \vdots & \\
+0 &=& f_n(x_1,\ldots,x_n).
+\end{eqnarray*}
+Hence the intersection point of all the nullclines is an equilibrium point of the system.
+\\\\
+\textbf{example:}
+\begin{itemize}
+\item see some qualitative analysis of FitzHugh-Nagumo equation using nullclines
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

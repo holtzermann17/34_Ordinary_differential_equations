@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClairautsEquation}
+\pmcreated{2015-02-04 11:20:02}
+\pmmodified{2015-02-04 11:20:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Clairaut's equation}
+\pmrecord{21}{37024}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C05}
+\pmsynonym{Clairaut differential equation}{ClairautsEquation}
+\pmrelated{DAlembertsEquation}
+\pmrelated{FamousCurvesInThePlane}
+\pmrelated{IndexOfDifferentialEquations}
+\pmrelated{PerimeterOfAstroid}
+\pmrelated{SingularSolution}
+\pmrelated{DerivativeAsParameterForSolvingDifferentialEquations}
+\pmdefines{astroid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The ordinary differential equation
+\begin{align}
+y \;=\; x\frac{dy}{dx}+\psi\left(\frac{dy}{dx}\right),
+\end{align}
+where $\psi$ is a given differentiable real function, is called {\em Clairaut's equation}.
+
+For solving the equation we use an auxiliary variable\, $p =: \frac{dy}{dx}$\, and write (1) as
+$$y \;=\; px+\psi(p).$$
+Differentiating this equation gives
+$$p  \;=\; x\frac{dp}{dx}+p+\psi'(p)\frac{dp}{dx},$$
+or
+$$[x+\psi'(p)]\frac{dp}{dx} \;=\; 0.$$
+The zero rule of product now yields the alternatives
+\begin{align}
+      \frac{dp}{dx} \;=\; 0
+\end{align}
+and
+\begin{align}
+        x+\psi'(p) \;=\; 0.
+\end{align}
+Integrating (2) we get\, $p = C$ (\PMlinkescapetext{constant}), and substituting this in (1) gives the general solution
+\begin{align}
+      y \;=\; Cx+\psi(C)
+\end{align}
+which presents a family of straight lines.\\
+
+If (3) allows to solve $p$ in \PMlinkescapetext{terms} of $x$,\, $p = p(x)$,\, we can write (1) as
+\begin{align}
+      y \;=\; xp(x)+\psi(p(x)),
+\end{align}
+which is easy to see satisfying (1).\, The solution (5) may not be gotten from (4) using any value of $C$.\, It is a singular solution which may be obtained by eliminating the parameter $p$ from the equations
+   $$y \;=\; px+\psi(p), \qquad x+\psi'(p) \;=\; 0.$$
+Thus the singular solution presents the envelope of the family (4).\\
+
+\textbf{Example.}\, The Clairaut's equation
+  $$y \;=\; x\frac{dy}{dx}+\frac{a\frac{dy}{dx}}{\sqrt{1+(\frac{dy}{dx})^2}}$$
+has the general solution
+     $$y \;=\; Cx+\frac{Ca}{\sqrt{1\!+\!C^2}}$$
+and the singular solution
+$$\begin{cases}
+                x \;=\; -\frac{a}{(1\!+\!p^2)^{3/2}},\\
+                y \;=\; -\frac{ap^3}{(1+p^2)^{3/2}}\\
+\end{cases}$$
+in a parametric form.\, Eliminating the parametre $p$ yields the form
+   $$\sqrt[3]{x^2}+\sqrt[3]{y^2} \;=\; \sqrt[3]{a^2},$$
+which can be recognized to be the equation of an {\em astroid}.\, The envelope (see ``\PMlinkname{determining envelope}{DeterminingEnvelope}'') of the lines is only the left half of this curve ($x \leqq 0$).\, The usual parametric \PMlinkescapetext{presentation} of the astroid is\, $x = a\cos^3\varphi$,\, $y = a\sin^3\varphi$\, 
+($0 \leqq \varphi < 2\pi$).
+
+\begin{center}
+\includegraphics{clairaut2}
+\end{center}
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja integraalarvutus k\~{o}rgematele tehnilistele \~{o}ppeasutustele}.\, -- Kirjastus Valgus, Tallinn  (1966).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

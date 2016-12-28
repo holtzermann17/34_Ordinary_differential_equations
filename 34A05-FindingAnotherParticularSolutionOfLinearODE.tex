@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FindingAnotherParticularSolutionOfLinearODE}
+\pmcreated{2014-02-28 14:31:42}
+\pmmodified{2014-02-28 14:31:42}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{finding another particular solution of linear ODE}
+\pmrecord{10}{88035}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Algorithm}
+\pmclassification{msc}{34A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Consider the 
+\PMlinkname{homogeneous}{HomogeneousLinearDifferentialEquation} 
+second-order linear ordinary differential equation
+\begin{align}
+      y''\!+\!P(x)y'\!+\!Q(x)y \;=\; 0.
+\end{align}
+
+If one knows one 
+\PMlinkname{particular solution}{SolutionsOfOrdinaryDifferentialEquation}\, 
+$y = y_1(x) \not\equiv 0$\, of (1), it's possible to derive 
+from it via two quadratures another solution\, $y_2(x)$,\, 
+linearly independent on\, $y_1(x)$;\, thus one can write the 
+general solution
+     $$y \;=\; C_1y_1(x)\!+\!C_2y_2(x)$$
+of that homogeneous differential equation.\\
+
+We will now show the derivation procedure.
+
+We put
+\begin{align}
+     y \;=\; uv
+\end{align}
+which renders (1) to
+\begin{align}
+(v''+Pv'+Qv)u+(2v'+Pv)u'+u''v \;=\; 0.
+\end{align}
+Here one can choose\, $v := y_1(x)$, whence the first addend 
+vanishes, and (3) gets the form
+\begin{align}
+(2y_1'+Py_1)u'+y_1u'' \;=\;0.
+\end{align}
+This equation may be written as\, $\frac{u''}{u'} = 
+-2\frac{y_1'}{y_1}-P$, which is integrated to
+     $$\ln\left|\frac{du}{dx}\right| 
+     \;=\; \ln\frac{1}{y_1^2}-\int P\,dx+\mbox{constant},$$
+i.e.
+  $$\frac{du}{dx} \;=\; \frac{C}{y_1^2}e^{-\int P\,dx}.$$
+A new integration results from this the general solution of (4):
+   $$u \;=\; C\int\frac{e^{-\int P\,dx}}{y_1^2}\,dx+C'.$$
+Thus by (2), we have obtained the wanted other solution
+$$y_2(x) \;=\; y_1(x)\int\frac{e^{-\int P\,dx}}{y_1^2}\,dx$$
+which is clearly linearly independent on y_1(x).\\
+
+Consequently, we can express the general solution of the 
+differential equation (1) as
+  $$y \;=\; y_1(x)u 
+  \;=\; C_1y_1(x)+C_2y_1(x)\int\frac{e^{-\int P\,dx}}{y_1^2}\,dx,$$
+where $C_1$ and $C_2$ are arbitrary constants.\\
+
+\textbf{Remark.}\, The substitution 
+$$y \;:=\; e^{-\frac{1}{2}\int P(x)\,dx}u$$
+converts the equation (1) into the form
+$$\frac{d^2u}{dx^2}+(Q-\frac{P^2}{4}-\frac{P'}{2})u \;=\;0$$
+not containing the derivative $\frac{du}{dx}$.
+
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III.1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}
+
+
+
+\end{document}

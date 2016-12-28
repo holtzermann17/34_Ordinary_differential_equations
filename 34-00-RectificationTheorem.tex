@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RectificationTheorem}
+\pmcreated{2013-03-22 14:57:15}
+\pmmodified{2013-03-22 14:57:15}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{rectification theorem}
+\pmrecord{12}{36649}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmclassification{msc}{34A12}
+\pmrelated{ImplicitFunctionTheorem}
+\pmrelated{TangentMap}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+Let $U$ be an open subset of $\mathbb{R}^n$ and let $f\in C^1(U)$ be a continuous differentiable vector field
+$$f\colon U \to \mathbb{R}^n.$$
+If there exists $x_0\in U$ such that $f(x_0)\neq 0$ then there exists $U_0\subset U$ an open neighborhood of $x_0$ such that there exists a diffeomorphism of class $C^1$
+$$F\colon U_0 \to V$$
+where $V$ is an open subset of $\mathbb{R}^n$ such that 
+$$[DF(x)]f(x)=e_1$$
+for all $x\in U_0$ where $[DF(x)]$ is the Jacobian of the diffeomorphism $F$ evaluated at $x$ and $e_1=(1,0,\ldots,0)$ is the first vector of the canonical basis of $\mathbb{R}^n$.  More generally if the vector field $f$ is of class $C^r$ then so is the diffeomorphism $F$. \cite{AVI}
+
+\begin{thebibliography}{1}
+\bibitem[AVI]{AVI}  Arnold, V.I.: Ordinary Differential Equations \textit{(translated by R.A. Silverman)}.  The MIT Press, Cambridge, 1973.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

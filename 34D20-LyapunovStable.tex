@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LyapunovStable}
+\pmcreated{2013-03-22 13:06:29}
+\pmmodified{2013-03-22 13:06:29}
+\pmowner{armbrusterb}{897}
+\pmmodifier{armbrusterb}{897}
+\pmtitle{Lyapunov stable}
+\pmrecord{10}{33535}
+\pmprivacy{1}
+\pmauthor{armbrusterb}{897}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34D20}
+\pmsynonym{Lyapunov stability}{LyapunovStable}
+\pmsynonym{Liapunov stable}{LyapunovStable}
+\pmsynonym{Liapunov stability}{LyapunovStable}
+\pmrelated{AsymptoticallyStable}
+\pmrelated{AttractingFixedPoint}
+\pmrelated{StableFixedPoint}
+\pmrelated{NeutrallyStableFixedPoint}
+\pmrelated{UnstableFixedPoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A fixed point $x^*$ is {\em Lyapunov stable} if trajectories of nearby points $x$ remain close for future time. More formally the fixed point $x^*$ is Lyapunov stable, if for any $\epsilon>0$, there is a $\delta>0$ such that  for all $t\ge 0$ and for all $x \neq x^*$ it is verified
+\begin{align*} 
+d(x^*,x)<\delta \Rightarrow d(x^*,x(t))<\epsilon.
+\end{align*}
+In particular, $d(x^*,x(0))=0$.
+%%%%%
+%%%%%
+\end{document}

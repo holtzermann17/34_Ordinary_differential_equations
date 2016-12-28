@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SecondorderLinearODEWithConstantCoefficients}
+\pmcreated{2014-03-01 17:02:54}
+\pmmodified{2014-03-01 17:02:54}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{second-order linear ODE with constant coefficients}
+\pmrecord{8}{88038}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmclassification{msc}{34A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let's consider the ordinary second-order linear differential equation
+\begin{align}
+      \frac{d^2y}{dx^2}+a\frac{dy}{dx}+by \;=\; 0
+\end{align}
+which is 
+\PMlinkname{homogeneous}{HomogeneousLinearDifferentialEquation} 
+and the coefficients $a, b$ of which are constants.\, As 
+mentionned in the entry 
+``finding another particular solution of linear ODE'', a simple substitution 
+makes possible to eliminate from it the addend containing first 
+derivative of the unknown function.\, Therefore we 
+concentrate upon the case\, $a = 0$.\, We have two cases 
+depending on the sign of\, $b = \pm k^2$.\\
+
+\textbf{$1^\circ$}.\; $b > 0$.\;  We will solve the equation
+\begin{align}
+\frac{d^2y}{dx^2}+k^2y \;=\; 0.
+\end{align}
+Multiplicating both addends by the expression $2\frac{dy}{dx}$ it becomes
+$$2\frac{dy}{dx}\frac{d^2y}{dx^2}+2k^2y\frac{dy}{dx} \;=\; 0,$$
+where the left hand side is the derivative of 
+$\left(\frac{dy}{dx}\right)^2+k^2y^2$.\, The latter one thus has a constant value 
+which must be nonnegative; denote it by $k^2C^2$.\, We then have the equation
+\begin{align}
+\left(\frac{dy}{dx}\right)^2 \;=\; k^2(C^2-y^2).
+\end{align}
+After taking the square root and separating the variables it reads
+$$\frac{dy}{\pm\sqrt{C^2\!-y^2}} \;=\; k\,dx.$$
+Integrating (see the table of integrals) this yields
+$$\arcsin\frac{y}{C} \;=\; k(x\!-\!x_0)$$
+where $x_0$ is another constant.\, Consequently, the general 
+solution of the differential equation (2) may be written
+\begin{align}
+y \,\;=\; C\,\sin k(x\!-\!x_0)
+\end{align}
+in which $C$ and $x_0$ are arbitrary real constants. 
+
+If one denotes\, $C\cos kx_0 = C_1$\, and $-C\sin kx_0 = C_2$,
+then (4) reads
+\begin{align}
+y \,\;=\; C_1\sin kx+C_2\cos kx.
+\end{align}
+Here, $C_1$ and $C_2$ are arbitrary constants.\, Because both 
+$\sin kx$ and $\cos kx$  satisfy the given equation (2) and are 
+linearly independent, its general solution can be written as (5).\\
+
+\textbf{$2^\circ$}.\; $b < 0$.\;  An analogical treatment of 
+the equation
+\begin{align}
+      \frac{d^2y}{dx^2}-k^2y \;=\; 0.
+\end{align}
+yields for it the general solution
+\begin{align}
+y \,\;=\; C_1e^{kx}+C_2e^{-kx}
+\end{align}
+(note that one can eliminate the square root from the equation
+$y\pm\sqrt{y^2+C} = C'e^{kx}$ and its ``inverted equation'' 
+$y\mp\sqrt{y^2+C} = -\frac{C}{C'}e^{-kx}$).\, The linear independence 
+of the obvious solutions $e^{\pm kx}$ implies also the linear 
+independence of $\cosh kx$ and $\sinh kx$ and thus allows us to
+give the general solution also in the alternative form
+\begin{align}
+y \,\;=\; C_1\sinh kx+C_2\cosh kx.
+\end{align}\\
+
+\textbf{Remark.}\, The standard method for solving a 
+\PMlinkname{homogeneous}{HomogeneousLinearDifferentialEquation}
+ordinary second-order linear differential equation (1) with 
+constant coefficients is to use in it the 
+substitution
+\begin{align}
+y \;=\; e^{rx}
+\end{align}
+where $r$ is a constant; see the entry ``second order linear 
+differential equation with constant coefficients''.\, This method 
+is possible to use also for such equations of higher order.\\
+
+
+
+\begin{thebibliography}{8}
+\bibitem{lindelof}{\sc Ernst Lindel\"of}: {\em Differentiali- ja integralilasku
+ja sen sovellutukset III.1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}\\
+
+
+
+\end{document}

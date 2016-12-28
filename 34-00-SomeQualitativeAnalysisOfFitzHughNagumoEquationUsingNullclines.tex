@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SomeQualitativeAnalysisOfFitzHughNagumoEquationUsingNullclines}
+\pmcreated{2013-03-22 14:32:06}
+\pmmodified{2013-03-22 14:32:06}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{some qualitative analysis of FitzHugh-Nagumo equation using nullclines}
+\pmrecord{4}{36079}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{formula}
+\PMlinkescapeword{formulas}
+\PMlinkescapeword{represent}
+\PMlinkescapeword{fix}
+\PMlinkescapeword{graph}
+
+The FitzHugh-Nagumo model which we will use for the analysis is:
+\begin{eqnarray*}
+\dot{u} &=& \frac{(v+u-u^3/3)}{\epsilon}\\
+\dot{v} &=& \epsilon(u+\beta-\gamma v)
+\end{eqnarray*}
+The following formulas
+\begin{eqnarray*}
+v &=& \frac{1}{3}u^3 - u\\
+v &=& \frac{1}{\gamma}u + \frac{\beta}{\gamma}
+\end{eqnarray*}
+are the $u$ and $v$ nullcline respectively.\textit{(See graph of the nullcline below.)}
+\begin{center}
+\includegraphics[scale=0.5]{FHN_nullcline1.eps}\\
+\small Graph of the nullcline with parameter \textit{($\epsilon=0.2,\beta=0.7,\gamma=0.5$)}
+\end{center} 
+The nullclines $v=\frac{1}{3}u^3 - u$ and $v=\frac{1}{\gamma}u + \frac{\beta}{\gamma}$
+ represent the set of points when the change with repect to time of $u$ and $v$ is null.  Hence the solution will cross the `cubic' nullcline \textit{(i.e. $u$ nullcline)} when travelling vertically while the solution will cross the `line' nullcline \textit{(i.e. $v$ nullcline)} when travelling horizontally.  Suppose that we fix the parameters of the FitzHugh-Nagumo model to $\epsilon=0.2,\beta=0.7,\gamma=0.5$, then suppose that you let a solution start at $x_0 = (1,-0.5)$.  Then we notice that $\frac{du}{dt}>0$ and that $\frac{dv}{dt}>0$, so the solution will travel upwards and to the right.  It will only cross the `cubic' nullcline vertically.  Therefore once the solution will be close to the nullcline it will travel vertically and cross the nullcline.  Once the solution has crossed the nullcline it will move upwards and to the left since $\frac{du}{dt}<0$ and that $\frac{dv}{dt}>0$. It will then cross the `line' nullcline horizontally and the solution will move downwards and will remain moving towards the left since $\frac{du}{dt}<0$ and $\frac{dv}{dt}<0$, until the solution reaches the `cubic' nullcline which it will cross vertically.  Once the solution has crossed the last nullcline it will continue to move downwards but will now progressively start moving to the right since $\frac{du}{dt}>0$ and $\frac{dv}{dt}<0$.  This is all that can be said about this specific case using the analysis of the nullcline.  Below is an example of the solution.  As we can see it intially behaves like the above description. 
+\begin{center}
+\includegraphics[scale=0.5]{FHN_nullcline2.eps}\\
+\small Graph of the nullcline with parameter \textit{($\epsilon=0.2,\beta=0.7,\gamma=0.5$)} and solution starting at $x_0=(1,-0.5)$.
+\end{center}
+%%%%%
+%%%%%
+\end{document}

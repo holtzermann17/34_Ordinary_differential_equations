@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BernoulliEquation}
+\pmcreated{2013-03-22 15:15:03}
+\pmmodified{2013-03-22 15:15:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Bernoulli equation}
+\pmrecord{11}{37032}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C05}
+\pmsynonym{Bernoulli differential equation}{BernoulliEquation}
+\pmrelated{RiccatiEquation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The {\em Bernoulli equation} has the form
+\begin{align}
+\frac{dy}{dx}+f(x)y \;=\; g(x)y^k
+\end{align}
+where $f$ and $g$ are continuous real functions and $k$ is a \PMlinkescapetext{constant} ($\neq 0$, \,$\neq 1$).\, Such a \PMlinkname{nonlinear equation}{DifferentialEquation} is got e.g. in examining the motion of a \PMlinkescapetext{body when the resistance of medium depends on the velocity $v$ as
+$$F \;=\; \lambda_1v\!+\!\lambda_2v^k.$$
+The real function $y$ can be solved from (1) explicitly.\, To do this, divide first both sides} by $y^k$.\, It yields
+\begin{align}
+y^{-k}\frac{dy}{dx}+f(x)y^{-k+1} \;=\; g(x).
+\end{align}
+The substitution
+\begin{align}
+z \;:=\; y^{-k+1}
+\end{align}
+transforms (2) into 
+$$\frac{dz}{dx}+(-k\!+\!1)f(x)z \;=\; (-k\!+\!1)g(x)$$
+which is a linear differential equation of first order.\, When one has obtained its general solution and made in this the substitution (3), then one has solved the Bernoulli equation (1).
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja integraalarvutus k\~{o}rgematele tehnilistele \~{o}ppeasutustele}. \,-- Kirjastus Valgus, Tallinn  (1966).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GradientSystem}
+\pmcreated{2013-03-22 15:14:25}
+\pmmodified{2013-03-22 15:14:25}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{gradient system}
+\pmrecord{7}{37014}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A34}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{properties}
+
+A \emph{gradient system} in $\mathbb{R}^n$ is an autonomous ordinary differential equation
+\begin{equation}
+\dot{x}=-\operatorname{grad}V(x)\label{eq}
+\end{equation}
+defined by the gradient of $V$ where $V:\mathbb{R}^n\to \mathbb{R}$ and $V\in C^\infty$.  The following results can be deduced from the definition of a gradient system.\\
+\textbf{Properties:}
+\begin{itemize}
+\item The eigenvalues of the linearization of (\ref{eq}) evaluated at equilibrium point are real.
+\item If $x_0$ is an isolated minimum of $V$ then $x_0$ is an asymptotically stable solution of (\ref{eq})
+\item If $x(t)$ is a solution of (\ref{eq}) that is not an equilibrium point then $V(x(t))$ is a strictly decreasing function and is perpendicular to the level curves of $V$.
+\item There does not exists periodic solutions of (\ref{eq}).
+\end{itemize}
+
+\begin{thebibliography}{1}
+\bibitem[HSD]{HSD} Hirsch, W. Morris, Smale, Stephen, Devaney, L. Robert: Differential Equations, Dynamical Systems \& An Introduction to Chaos. Elsevier Academic Press, New York, 2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

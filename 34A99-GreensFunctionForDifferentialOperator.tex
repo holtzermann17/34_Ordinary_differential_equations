@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GreensFunctionForDifferentialOperator}
+\pmcreated{2013-03-22 14:43:39}
+\pmmodified{2013-03-22 14:43:39}
+\pmowner{mathforever}{4370}
+\pmmodifier{mathforever}{4370}
+\pmtitle{Green's function for differential operator}
+\pmrecord{7}{36356}
+\pmprivacy{1}
+\pmauthor{mathforever}{4370}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A99}
+\pmclassification{msc}{34A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts,euscript}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Assume we are given $g\in\mathcal{C}^0([0,T])$ and we want to find $f\in\mathcal{C}^1([0,T])$ such that
+\begin{equation}\label{DiffEq}
+    \left\{
+    \begin{array}{rcl}
+        f'(t) & = & g(t) \\
+        f(0)  & = & 0
+    \end{array}
+    \right.
+\end{equation}
+Expression (\ref{DiffEq}) is an example of initial value problem for an ordinary differential equation. Let us
+show, that (\ref{DiffEq}) can be put into the framework of the definition for Green's function.
+\begin{enumerate}
+\item $\Omega_x=\Omega_y=[0,T]$.
+
+\item $\EuScript{F}(\Omega_x)=\{ f\in\mathcal{C}^1([0,T])\,|\,f(0)=0 \}$\\
+      $\EuScript{G}(\Omega_y)=\mathcal{C}^0([0,T])$.
+
+\item $Af=f'$
+
+\end{enumerate}
+Thus (\ref{DiffEq}) can be written as an operator equation
+\begin{equation}\label{OpEq}
+    Af=g.
+\end{equation}
+To find the Green's function for (\ref{OpEq}) we proceed as follows:
+$$
+    f(t)=\delta_t(A^{-1}g)=\int\limits_0^t g(t')\,dt'=\int\limits_0^T G(t,t')g(t')\,dt',
+$$
+where $G(t,t')$ has the following form:
+\begin{equation}\label{GrFn}
+    G(t,t')=\left\{
+                \begin{array}{rl}
+                    1, & 0\leq t \leq t'\\
+                    0, & t'<   t \leq T
+                \end{array}
+            \right.
+\end{equation}
+Thus, function (\ref{GrFn}) is the Green's function for the operator equation (\ref{OpEq}) and
+then for the problem (\ref{DiffEq}). 
+
+Its graph is presented in Figure~\ref{GrFnPic}.
+
+\begin{figure}[h]
+\begin{center}
+    \includegraphics[scale=.5]{GrFn.eps}
+\end{center}
+\caption{The Green's function for the problem (\ref{DiffEq}).}
+\label{GrFnPic}
+\end{figure}
+%%%%%
+%%%%%
+\end{document}

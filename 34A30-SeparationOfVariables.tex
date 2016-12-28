@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SeparationOfVariables}
+\pmcreated{2013-03-22 12:29:24}
+\pmmodified{2013-03-22 12:29:24}
+\pmowner{slider142}{78}
+\pmmodifier{slider142}{78}
+\pmtitle{separation of variables}
+\pmrecord{9}{32712}
+\pmprivacy{1}
+\pmauthor{slider142}{78}
+\pmtype{Algorithm}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+\pmclassification{msc}{34A09}
+\pmclassification{msc}{34A05}
+\pmrelated{LinearDifferentialEquationOfFirstOrder}
+\pmrelated{InverseLaplaceTransformOfDerivatives}
+\pmrelated{SingularSolution}
+\pmrelated{ODETypesReductibleToTheVariablesSeparableCase}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Separation of variables is a valuable tool for solving differential equations of the form
+$$\frac{dy}{dx}=f(x)g(y)$$
+The above equation can be rearranged algebraically through Leibniz notation, treating dy and dx as differentials, to separate the variables and be conveniently integrable on both sides.
+$$\frac{dy}{g(y)}=f(x)dx$$
+Instead of using differentials, we can also make use of the change of variables theorem for integration and the fact that if two integrable functions are equivalent, then their primitives differ by a constant $C$. Here, we write $y = y(x)$ and $\frac{dy}{dx} = y'(x)$ for clarity. The above equation then becomes:
+$$\frac{y'(x)}{g(y(x))} = f(x)$$
+Integrating both sides over $x$ gives us the desired result:
+$$\int \frac{y'(x)}{g(y(x))} dx = \int f(x) dx + C$$
+By the change of variables theorem of integration, the left hand side is equivalent to an integral in the variable $y$:
+$$\int \frac{dy}{g(y)} = \int f(x) dx + C$$
+It follows then that
+$$\int\frac{dy}{g(y)} = F(x) + C$$
+where $F(x)$ is an antiderivative of $f$ and $C$ is the constant difference between the two primitives. This gives a general form of the solution. An explicit form may be derived by an initial value.
+
+\textbf{Example:} 
+A population that is initially at $200$ organisms increases at a rate of $15\%$ each year. We then have a differential equation
+$$\frac{dP}{dt} = P + 0.15P = 1.15P$$
+The solution of this equation is relatively straightforward, we simply separate the variables algebraically and integrate.
+$$\int \frac{dP}{P} = \int 1.15\;dt$$
+This is just $\ln P = 1.15t + C$ or
+$$P=Ce^{1.15t}$$
+When we substitute $P(0)=200$, we see that $C=200$. This is where we get the general relation of exponential growth
+$$P(t) = P_0e^{kt}$$
+
+%%%%%
+%%%%%
+\end{document}

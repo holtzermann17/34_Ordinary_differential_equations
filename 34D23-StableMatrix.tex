@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StableMatrix}
+\pmcreated{2013-03-22 15:27:40}
+\pmmodified{2013-03-22 15:27:40}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{stable matrix}
+\pmrecord{8}{37312}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34D23}
+\pmclassification{msc}{15A57}
+\pmdefines{positive stable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A square matrix is said to be a \emph{stable matrix} if every eigenvalue
+of has negative real part. The matrix is called \emph{positive
+stable} if every eigenvalue has positive real part.
+
+{\it Motivation:} In the following system of linear differential
+equations,
+\[
+  \mathbf{x}'(t) = M \mathbf{x}(t)
+\]
+it is easy to see that the point $\mathbf{x}=\mathbf{0}$ is an
+equilibrium point. The trajectory $\mathbf{x}(t)$ will converge to
+$\mathbf{0}$ for every initial value $\mathbf{x}(0)$ if and only if
+the matrix $M$ is a stable matrix.
+%%%%%
+%%%%%
+\end{document}

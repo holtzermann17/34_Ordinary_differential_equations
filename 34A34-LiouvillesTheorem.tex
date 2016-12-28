@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LiouvillesTheorem}
+\pmcreated{2013-03-22 15:14:55}
+\pmmodified{2013-03-22 15:14:55}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Liouville's theorem}
+\pmrecord{20}{37027}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A34}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let
+\begin{equation}
+\dot{x}=f(x) \label{eq}
+\end{equation}
+be a autonomous ordinary differential equation in $\mathbb{R}^n$
+defined by a smooth vector field $f\colon \mathbb{R}^n\to \mathbb{R}^n$ 
+and the Jacobian of $f$ is denoted $\frac{\partial f}{\partial x}$. Also let $\Phi_t(x)$ be the \PMlinkname{flow}{Flow2} associated 
+with (\ref{eq}).  Let 
+$$V(t) = \int_{\Phi_t(D)} dx$$ 
+be the volume of the image of $D$ under this flow after a time $t$.
+\begin{thm}[Liouville's theorem]
+If $D\subseteq \mathbb{R}^n$ is a bounded measurable domain. Then
+$$\dot{V}(t)= \int_{\Phi_t(D)} \operatorname{div}\, f(x) dx$$
+\end{thm}
+\begin{proof}
+Let $V(t)$ be defined as above then
+\begin{eqnarray*}
+V(t_0+h) 
+& = & \int_{\Phi_{t_0+h}(D)}dy\\
+& = & \int_{\Phi_h(\Phi_{t_0}(D))}dy\\
+& = & \int_{\Phi_{t_0}(D)} \operatorname{det}\left(\frac{\partial\Phi_h}{\partial x}(x)\right) dx.
+\end{eqnarray*}
+
+We claim that, for $x\in \Phi_{t_0}(D)$,
+$$\frac{\partial\Phi_t}{\partial x}(x) = I + t\frac{\partial f}{\partial x}(x) + o(t)$$
+as $t\to 0$.
+
+In fact, 
+$$\Phi_t(x) = x + \int_{0}^t f(\Phi_s(x))ds,$$
+and by the Leibniz integral rule
+$$\frac{\partial \Phi_t}{\partial x}(x) = I + \int_{0}^t \frac{\partial}{\partial x}f(\Phi_s(x)) ds,$$
+so that 
+$$\frac{\partial}{\partial t} \frac{\partial \Phi_t}{\partial x}(x) = \frac{\partial}{\partial x}f(\Phi_t(x))$$
+and evaluating at $t=0$ we get
+$${\frac{\partial}{\partial t} \frac{\partial \Phi_t}{\partial x}(x)}\Big|_{t=0} = \frac{\partial}{\partial x}f(\Phi_0(x)) = \frac{\partial f}{\partial x} (x).$$
+Our claim follows from this and from the definition of derivative.
+
+Hence
+\begin{eqnarray*}
+\operatorname{det}\left(\frac{\partial\Phi_t}{\partial x}(x)\right) & = & \operatorname{det}\left(I + t\frac{\partial f}{\partial x}(x)\right) + o(t)\\
+& = & \prod_{i=1}^n(1 + \frac{\partial f_i}{\partial x_i}(x)) + o(t)\\
+& = & 1+t\sum_{i=1}^n\frac{\partial f_i}{\partial x_i}(x) +o(t)\\
+& = & 1 + t\operatorname{div}\, f(x) + o(t)
+\end{eqnarray*}
+as $t\to0$.
+It follows that 
+$$V(t_0+h) = \int_{\Phi_{t_0}(D)} 1 + h\operatorname{div}\, f(x) + o(h) dx$$
+and
+\begin{eqnarray*}
+\dot{V}(t_0) & = & \lim_{h\to 0}\frac{V(t_0+h)-V(t_0)}{h}\\
+& = & \frac{\int_{\Phi_{t_0}(D)} 1 + h\operatorname{div}\, f(x) + o(h) dx -V(t_0)}{h}\\
+& = & \frac{V(t_0) + h\int_{\Phi_{t_0}(D)}\operatorname{div}\, f(x)dx + o(h) -V(t_0)}{h}\\
+& = & \int_{\Phi_{t_0}(D)}\operatorname{div}\, f(x)dx + \lim_{h\to 0}\frac{o(h)}{h}\\
+& = & \int_{\Phi_{t_0}(D)}\operatorname{div}\, f(x)dx.
+\end{eqnarray*}
+\end{proof}
+
+\begin{cor}
+The flow of an \PMlinkname{Hamiltonian system}{HamiltonianEquations} preserves volume.
+\end{cor}
+\begin{proof}
+It follows directly since the vector field of an Hamiltonian system has divergence equal to zero.  Hence $\dot{V}=0$ implies that the volume is constant.
+\end{proof}
+
+\begin{thebibliography}{1}
+\bibitem[TG]{TG} Teschl, Gerald: Ordinary Differential Equations and Dynamical Systems. \PMlinkexternal{http://www.mat.univie.ac.at/~gerald/ftp/book-ode/index.html}{http://www.mat.univie.ac.at/~gerald/ftp/book-ode/index.html}, 2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

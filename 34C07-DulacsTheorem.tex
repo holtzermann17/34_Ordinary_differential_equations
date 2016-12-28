@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DulacsTheorem}
+\pmcreated{2013-03-22 14:25:21}
+\pmmodified{2013-03-22 14:25:21}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{Dulac's theorem}
+\pmrecord{6}{35930}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{planar}
+\PMlinkescapeword{limit}
+\PMlinkescapeword{cycles}
+
+
+Let $\dot{x}=f(x)$ be an analytic planar system, then in any bounded region of the plane there is at most a finite number of limit cycles.  Also any polynomial planar system has at most a finite number of limit cycles.\cite{PL}\\
+
+\textbf{\textit{note about the proof:}}
+The proof was given by Dulac in 1923, but an error was found in the proof.  In 1988 Jean Ecalle, Jacques Martinet, Robert Moussu, Jean Pierre Ramis and independently Yulij Ilyashenko corrected the error in the proof.\cite{PL} 
+
+\begin{thebibliography}{1}
+\bibitem[PL]{PL} Perko, Lawrence:  Differential Equations and Dynamical Systems. Springer-Verlag, New York, 1991.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

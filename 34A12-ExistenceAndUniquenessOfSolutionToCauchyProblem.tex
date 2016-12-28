@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceAndUniquenessOfSolutionToCauchyProblem}
+\pmcreated{2013-03-22 16:54:45}
+\pmmodified{2013-03-22 16:54:45}
+\pmowner{ehremo}{15714}
+\pmmodifier{ehremo}{15714}
+\pmtitle{existence and uniqueness of solution to Cauchy problem}
+\pmrecord{20}{39173}
+\pmprivacy{1}
+\pmauthor{ehremo}{15714}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+%\pmkeywords{cauchy initial value problem existence uniqueness solution}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\def\reals{\mathbb{R}}
+\def\v#1{\mathbf{#1}}
+\def\vdot#1{\mathbf{\dot{#1}}}
+\def\d{\mathrm{d}}
+\def\norm#1{\|#1\|}
+\def\eps{\epsilon}
+\begin{document}
+Let
+$$\begin{cases}\vdot x = F(\v x, t) \\ \v x(t_0) = \v x_0\end{cases}$$
+be a Cauchy problem, where $F : U \to \reals$ is
+\begin{itemize}
+\item a continuous function of $n+1$ variables defined in a neighborhood $U \subseteq \reals^{n+1}$ of $(\v x_0, t_0)$
+\item Lipschitz continuous with respect to the first $n$ variables (i.e. with respect to $\v x$).
+\end{itemize}
+
+Then there exists a unique solution $\v x : I \to \reals^n$ of the Cauchy problem, defined in a neighborhood $I \subseteq \reals$ of $t_0$.
+
+{\bf Proof}
+
+Solving the Cauchy problem is equivalent to solving the following integral equation
+$$x(t) = x(t_0) + \int_{t_0}^{t} F(\v x(\tau), \tau) \d\tau$$
+
+Let $X$ be the set of continuous functions $\v f : [t_0 - \delta, t_0 + \delta] \to B(\v x_0, \eps)$. We'll assume $\eps$ to be chosen such that the $B(\v x_0, \eps) \subseteq U$ \footnote{$B(\v x_0, \eps)$ denotes the closed ball $\{ \v x : \norm{\v x_0 - \v x} \leq \eps \}$}. In this ball, therefore, $F$ is Lipschitz continuous with respect to the first $n$ variable, in other words, there exists a real number $L$ such that
+$${F(\v x, t) - F(\v y, t)} \leq L\norm{\v x - \v y}$$
+for all points $\v x, \v y$ sufficiently near to $\v x_0$.
+
+Now let's define the mapping $T : X \to X$ as follows
+$$T\v x : t \mapsto \v x_0 + \int_{t_0}^t F(\v x(\tau), \tau) \d \tau$$
+We make the following observations about $T$.
+\begin{enumerate}
+\item Since $F$ is continuous, $\norm{F}$ attains a maximum value $M$ on the compact set $B(\v x_0, \eps) \times [t_0 \pm \delta]$. But by hypothesis, $\norm{\v x(t) - \v x_0} \leq \eps$, hence
+$$\norm{\v x(t) -  \v x_0} \leq \int_{t_0}^t \norm{F(\v x(\tau), \tau)} \d \tau \leq M(t - t_0) \leq M\delta$$
+for all $t \in [t_0 \pm \delta]$.
+\item The Lipschitz continuity of $F$ yields
+$$\norm{T\v x(t) - T\v y(t)} \leq \int_{t_0}^t \norm{F(\v x(\tau), \tau) - F(\v y(\tau), \tau)} \d \tau \leq \int_{t_0}^t L\norm{\v x(\tau) - \v y(\tau)} \d \tau \leq L \delta d_\infty(\v x, \v y)$$
+\end{enumerate}
+If we choose $\delta < \min\{1/L, \eps/M\}$ these conditions ensure that 
+\begin{itemize}
+\item $T(X) \subseteq X$, i.e. $T$ doesn't send us outside of $X$.
+\item $T$ is a contraction mapping with respect to the uniform convergence metric $d_\infty$ on $X$, i.e. there exists $\lambda \in \reals$ such that for all $\v x, \v y \in X$,
+$$d_\infty(T\v x, T\v y) \leq \lambda d_\infty(\v x, \v x)$$
+\end{itemize}
+In particular, the second point allows us to apply Banach's theorem and define
+$$\v x^\star = \lim_{k \to \infty} T^k\v x_0$$
+to find the unique fixed point of $T$ in $X$, i.e. the unique function which solves
+$$T\v x = \v x \text{ in other words } \v x(t) = \v x_0 + \int_{t_0}^t F(\v x(\tau), \tau) \d \tau$$
+and which therefore locally solves the Cauchy problem.
+%%%%%
+%%%%%
+\end{document}

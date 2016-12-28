@@ -1,0 +1,229 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HarmonicOscillator}
+\pmcreated{2013-03-22 17:22:46}
+\pmmodified{2013-03-22 17:22:46}
+\pmowner{perucho}{2192}
+\pmmodifier{perucho}{2192}
+\pmtitle{harmonic oscillator}
+\pmrecord{10}{39745}
+\pmprivacy{1}
+\pmauthor{perucho}{2192}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C05}
+\pmclassification{msc}{34A30}
+\pmclassification{msc}{34-01}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{theorem}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\begin{document}
+\section{Introduction}
+Harmonic oscillator is the simplest model but one of the most important vibrating system. It is often encountered in engineering systems and commonly produced by the unbalance in rotating machinery, isolation, earthquakes, bridges, building, control and atomatization devices, just for naming a few examples. Although pure harmonic oscillation is less likely to occur than general periodic oscillations by the action of arbitrary types of excitation, understanding the behavior of a system undergoing harmonic oscillation is essential in order to comprehend how the system will respond to more general types of excitation. Such  harmonic oscillations may be in the form of free vibrations or by the action of an exciter force applied at some point of the system, as we shall see later. Indeed, harmonic oscillator is a single degree of freedom system (it is like a vibration module) which is tipically constituted by an ideal spring in parallel with an ideal (but not conservative) viscous damper, both attached to a mass in one end and the other one grounded. \\
+In this entry  we will make an elementary but nonconventional discussion about the fundamental concepts involved in a single vibrating system. Unlike the conventional method, which is usually discussed in inherent Literature about this topic, where, by one side, the solution of the corresponding differential equation of motion is expressed in terms of circular trigonometric functions,  having to deal with complex arbitrary constants (obviously depending on the initial conditions) and, on the other hand, studying separately the three cases of damping. Alternatively we shall use  hyperbolic functions and their properties to obtain the solution of the mentioned differential equation. This way we gain a little in brevity and hilarity in the exposition, as we may study all the three cases of damping simultaneously,   avoiding at the same time calculating complex constants. \\
+Besides preliminars, we will separate the discussion in three paragraphs namely: free damped vibrations, forced damped vibrations and mechanical resonance.
+\section{Preliminars}
+The purpose of this section is concept definifitions.\\
+\textbf{Response:} $x=x(t)$, the general solution of the linear differential equation involved in the motion of harmonic oscillator. We will assume $x>0$ downward, like the sense of gravitatory field.\\
+\textbf{Ideal spring:} an unidimensional model, weightless, linear, elastic and that obeys the Hooke's law $F_s=kx$, where $k$ is an elastic constant so-called \emph{stiffness}, $F_s$ is the restitutive spring force and $x$ an arbitrary spring elongation. \\
+\textbf{Ideal damper:} an unidimensional model, weightless, where the damping force is proportional to the velocity of oscillator, i.e. $F_d=c\,\dot{x}$, being $c$ the \emph{damping constant}. \\
+\textbf{Natural angular frequency:} $\omega_n=\sqrt{k/m}$ (rad/sec), a specific property of the system; $m$ is the mass of oscillator. \\
+\textbf{Damping factor:} $\zeta=c/2\sqrt{km}\equiv c/2m\omega_n$ (physical dimensionless). \\ 
+\textbf{Critical damping:} $c_c=2\sqrt{km}\equiv 2m\omega_n$. Thus $\zeta=c/c_c$, and it is also called \emph{damping ratio}. \\
+\textbf{Static equilibrium configuration:} a static position at $t=0^-$, reached because the action of gravitatory field over the mass of oscillator, i.e. the weight $mg$ ($g$ is the gravity acceleration), thus deflecting the spring a quantity $\delta$, from its natural length, so-called \emph{spring static deflection}. As a result, from Newton's equation $\sum F_x=0$, the spring force $k\delta$ (damper does not work!) due to its static deflection is balanced, at every instant, by the weight of oscillator and therefore both forces do not appear in the dynamical equation. 
+\section{Free Damped Vibrations}
+With the help of an oscillator's free body diagram and by applying the Newton's second law $\sum F_x=m\ddot{x}$, we obtain the differential equation of motion
+\begin{equation}
+m\ddot{x}+c\dot{x}+kx=F(t),
+\end{equation}
+being $F(t)$ the so-called \emph{exciter force}. It is convenient to introduce $\omega_n$ and $\zeta$. So that (1) becomes
+\begin{equation}
+\ddot{x}+2\zeta\omega_n\dot{x}+\omega_n^2 x=f(t),
+\end{equation}
+where $f(t)=F(t)/m$. But in this section we are interested in free vibrations. So that we set $f(t)\equiv 0$ and thus we get the associate homogeneous differential equation
+\begin{equation}
+\ddot{x}+2\zeta\omega_n\dot{x}+\omega_n^2 x=0.
+\end{equation}
+In this case, about free oscillations, $x$ means an arbitrary displacement from the static equilibrium position. Let us suppose initial conditions $x(0)=x_0, \, \dot{x}(0)=\dot{x}_0$. These conditions may be interpreted as follows: from the static equilibrium position we give an initial displacement $x_0$ and an initial velocity $\dot{x}_0$ to the mass $m$ and then we let it free at instant $t=0$. Accordingly, the characteristic equation of (3) is
+\begin{equation}
+s^2+2\zeta\omega_n s+ \omega_n^2=0,
+\end{equation}
+whose roots are given by
+\begin{equation}
+s_1 = -\zeta\omega_n + \omega_n\sqrt{\zeta^2-1} \equiv -\zeta\omega_n+\omega_d, 
+\end{equation}
+\begin{equation}
+s_2 = -\zeta\omega_n - \omega_n\sqrt{\zeta^2-1} \equiv -\zeta\omega_n-\omega_d, 
+\end{equation}
+where we are defining $\omega_d := \omega_n\sqrt{\zeta^2-1}$ which is called \emph{frecuency of damped oscillation}. \\
+In the nullspace of the linear operator associate to (3), we find the general solution
+\begin{equation}
+x(t)=Ae^{s_1t}+Be^{s_2t}\implies\dot{x}(t)=As_1e^{s_1t}+Bs_2e^{s_2t}.
+\end{equation}
+By substituting the initial conditions in (7), we obtain the symmetric linear system of equations
+\begin{equation}
+x_0=A+B,\qquad \dot{x}_0=As_1+Bs_2.
+\end{equation}
+From (5), (6) and solving (8) for $A$ and $B$, leads to
+\begin{equation}
+A=\frac{\dot{x}_0+(\zeta\omega_n+\omega_d)x_0}{2\omega_d}\;,\qquad B=-\frac{\dot{x}_0+(\zeta\omega_n-\omega_d)x_0}{2\omega_d}\;,
+\end{equation} 
+which substituted into the solution (7) and after an elementary algebraic manipulation, leads to
+\begin{equation}
+x(t)=\frac{e^{-\zeta\omega_n t}}{\omega_d}\bigg\{(\dot{x}_0+\zeta\omega_n x_0)\frac{e^{\omega_d t}-e^{-\omega_d t}}{2}+
+\omega_d x_0\frac{e^{\omega_d t}+e^{-\omega_d t}}{2}\bigg\},
+\end{equation}
+that, in terms of hyperbolic functions, it is expressed as
+\begin{equation}
+x(t)=\frac{e^{-\zeta\omega_n t}}{\omega_d}\left\{(\dot{x}_0+\zeta\omega_n x_0)\sinh{\omega_d t}+
+\omega_d x_0\cosh{\omega_d t}\right\}.
+\end{equation}
+It is now easily seen that the general solution of the homogeneous equation (3) satifies $\lim_{t\to\infty}x(t)=0$, since we are dealing with a transitory solution which agree with the fact that an exciter force $f(t)$ is not present. \\
+Damping factor lets a classification about the kind of damping in concordance with the values that $\zeta$ may take. Thus,
+\begin{align*}
+\begin{cases}
+\; 1. \;\, \zeta>1   \implies & \textrm{overdamped case}, \\
+\; 2. \;\, \zeta=1   \implies & \textrm{critical damping case}, \\
+\; 3. \;\, 0<\zeta<1 \implies & \textrm{underdamped case}.
+\end{cases} 
+\end{align*} 
+Let us proceed to study all the three cases.
+\begin{enumerate}
+\item $\zeta>1$. \textbf{Overdamped case}. The response is \emph{nonperiodic} and is given directly by (11), i.e.
+\begin{equation}
+x(t)=\frac{e^{-\zeta\omega_n t}}{\omega_d}\left\{(\dot{x}_0+\zeta\omega_n x_0)\sinh{\omega_d t}+
+\omega_d x_0\cosh{\omega_d t}\right\}.
+\end{equation}
+Roots $s_1>s_2\in\mathbb{R}$. Hence $e^{s_1 t},e^{s_1 t}$ are linearly independent and form a basis in the above mentioned nullspace.
+\item $\zeta=1$. \textbf{Critical damping case}. The response is also \emph{nonperiodic}. In addition, $s_1=s_2<0$, so that $e^{s_1 t}, e^{s_2 t}$ are linearly dependent and therefore they do not form a complete basis in the space of solutions of the differential equation (3). Nevertheless, we may find out a second solution linearly independent because in this case $\omega_d\equiv 0$, and recalling (11) we note that (by applying $\textrm{L'Hospital}$),
+\begin{equation*}
+\lim_{\omega_d\to 0}\frac{\sinh{\omega_d t}}{\omega_d}=t. 
+\end{equation*}
+Thus, the general solution for critical damping may be expressed as
+\begin{equation}
+x(t)\equiv x_c(t)=e^{-\omega_n t}\left\{x_0+(\dot{x}_0+\omega_n x_0)t\right\}.
+\end{equation}
+\item $0<\zeta<1$. \textbf{Underdamped case}. Since in this case $\omega_d\in\mathbb{C}$, we redefine it as 
+$\omega_d=i\omega_n\sqrt{1-\zeta^2}:=i\omega'_d,\quad i=\sqrt{-1}$.
+Recalling the hyperbolic equations $\sinh\omega_d t=\sinh i\omega'_d t=i\sin\omega'_d t$, $\cosh\omega_d t=\cosh i\omega'_d t=\cos\omega'_d t$ which substituted into (11) gives the general solution on this case. That is,
+\begin{equation}
+x(t)=e^{-\zeta\omega_n t}\bigg\{\frac{\dot{x}_0+\zeta\omega_n x_0}{\omega'_d}\sin{\omega'_d t}+
+x_0\cos{\omega'_d t}\bigg\}.
+\end{equation}
+This solution is clearly harmonics. Alternatively, we may introduce definitions about the \emph{amplitude} $X$ of the response and the \emph{phase angle} $\phi$. They are,
+\begin{equation}
+X:=\sqrt{x_0^2+\bigg(\frac{\dot{x}_0+\zeta\omega_n x_0}{\omega'_d}\bigg)^2},\qquad
+\tan\phi:=\frac{\omega'_d x_0}{\dot{x}_0+\zeta\omega_n x_0}\cdot
+\end{equation}
+With these definitions placed into (14), it becomes
+\begin{equation}
+x(t)=Xe^{-\zeta\omega_n t}\sin{(\omega'_d t+\phi)}.
+\end{equation}
+\end{enumerate}
+\section{Forced Damped Vibrations}
+In this case an exciter force is present. Many useful and important applications, a few mentioned above in the Introduction, agree with an excellent degree of accuracy if we assume an \emph{intensive} periodic exciter force (exciter force by mass unit) on the form $f(t)=f_0\cos\omega t${\footnote{Naturally, an exciter force on the form $F(t)=F_0\sin\omega t$ is also valid, but the conclusions are the same.}}, being $f_0:=F_0/m$ the \emph{amplitude} of the intensive exciter force, and $\omega$ the \emph{frecuency of the exciter force}. In such case, the differential equation of motion (2) takes the form
+\begin{equation}
+\ddot{x}+2\zeta\omega_n\dot{x}+\omega_n^2 x=f_0\cos\omega t.
+\end{equation} 
+It is well-known, from the linear differential equations theory, that the general solution of (17) may be expressed as the \emph{superposition} of an homegeneous or transitory response and a particular or permanent response, i.e.
+\begin{equation}
+x(t)=x_h(t)+x_p(t).
+\end{equation}
+The general homogeneous solution $x_h$ already have been stablished, so that in this section we focus our attention in find out a particular solution $x_p$. We search that solution on the form
+\begin{equation}
+x_p(t)=C\cos\omega t+D\sin\omega t.
+\end{equation}
+Its first and second time derivatives are
+\begin{equation}
+\dot{x}_p(t)=-C\omega\sin\omega t+D\omega\cos\omega t\implies\ddot{x}_p(t)=-C\omega^2\cos\omega t-D\omega^2\sin\omega t.
+\end{equation}
+Next we substitute (19) and (20) into (17), setting $x(t)=x_p(t)$ and  by collecting terms in $\cos\omega t$ and 
+$\sin\omega t$, we have
+\begin{equation*}
+\{(\omega_n^2-\omega^2)C+(2\zeta\omega_n\omega)D\}\cos\omega t+
+\{(\omega_n^2-\omega^2)D-(2\zeta\omega_n\omega)C\}\sin\omega t=f_0\cos\omega t.
+\end {equation*}
+We are dealing with a subspace of dimension $2$, where the set of functions 
+$\{\cos\omega t, \sin\omega t\}\subset\mathcal{C}[0, \infty)$ 
+form an orthogonal basis in the spaces of solutions of (17). 
+In other words, $\cos\omega t$ and $\sin\omega t$ are there linearly independent. Therefore,
+\begin{equation*}
+(\omega_n^2-\omega^2)D-(2\zeta\omega_n\omega)C\equiv 0,\quad \textrm{and}\quad
+(\omega_n^2-\omega^2)C+(2\zeta\omega_n\omega)D\equiv f_0.
+\end{equation*}
+By solving for $C$ and $D$,
+\begin{equation*}
+C=\frac{(\omega_n^2-\omega^2)f_0}{(\omega_n^2-\omega^2)^2+ 4\zeta^2\omega_n^2\omega^2}\,,\qquad
+D=\frac{2\zeta\omega_n\omega f_0}{(\omega_n^2-\omega^2)^2+ 4\zeta^2\omega_n^2\omega^2}\cdot
+\end{equation*}
+These one are introduced into (19) and we obtain a particular solution of (17), i.e. the \emph{permanent response} of harmonic oscillator's forced vibrations. That is,
+\begin{equation}
+x_p(t)=\frac{(\omega_n^2-\omega^2)f_0}{(\omega_n^2-\omega^2)^2+ 4\zeta^2\omega_n^2\omega^2}\cos\omega t
++\frac{2\zeta\omega_n\omega f_0}{(\omega_n^2-\omega^2)^2+ 4\zeta^2\omega_n^2\omega^2}\sin\omega t.
+\end{equation}
+One also may define the \emph{frecuency ratio} $r=\omega/\omega_n$ and continue to discuss an important set of physical considerations, but that is not the sight of this entry{\footnote{Indeed the author mostly wanted to indicate the alternative elementary  method corresponding to free vibrations but, for completeness reasons, the latter two sections have been added.}}.
+\section{Mechanical Resonance}
+In absence of damping, i.e. $\zeta=0$, (21) reduces to
+\begin{equation}
+x_p(t)=\frac{f_0}{\omega_n^2-\omega^2}\cos\omega t.
+\end{equation}
+One realize (theoretically) that as the frequency of exciter force coincides with the natural frequency of the system, i.e. $\omega=\omega_n$ (or equivalently $r=1$), then $x_p=\infty$. This is what is defined as  \emph{mechanical resonance} phenomena. In the practice, however, low values of $\zeta$ ($\zeta\ll 1$) make feasible high values of the permanent response and thus, this fact, is also called \emph{resonance}. Such phenomena is undesirable in any system, unlike the magnetic resonance that provides beneficial applications in several fields of science. 
+\section{References}
+P. Fern\'andez, \emph{ Un m\'etodo elemental alternativo para el estudio de las vibraciones libres amortiguadas en un oscilador arm\'onico}, (ComunicaciÃ³n interna), Departamento de Mec\'anica, Facultad de Ingenier\'ia, Universidad Central de Venezuela (UCV), Caracas, 1997. 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+ 
+
+
+
+%%%%%
+%%%%%
+\end{document}

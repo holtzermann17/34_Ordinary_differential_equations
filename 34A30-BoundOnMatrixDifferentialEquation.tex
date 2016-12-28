@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BoundOnMatrixDifferentialEquation}
+\pmcreated{2013-03-22 18:59:00}
+\pmmodified{2013-03-22 18:59:00}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{bound on matrix differential equation}
+\pmrecord{4}{41848}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose that $A$ and $Z$ are two square matrices dependent
+on a parameter which satisfy the differential equation
+\[
+ Z'(t) = A(t) Z(t)
+\]
+withh initial condition $Z(0) = I$.
+Letting $\| \cdot \|$ denote the matrix operator norm, we
+will show that, if $\| A(t) \| \le C$ for some constant
+$C$ when $0 \le t \le R$, then
+\[
+ \| Z(t) - I \| \le C \left( e^{Ct} - 1 \right)
+\]
+when $0 \le t \le R$.
+
+We begin by applying the product inequality for the norm,
+then employing the triangle inequality (both in the sum and
+integral forms) after expressing
+$Z$ as the integral of its derivative:
+\begin{align*}
+ \| Z'(t) \| &\le \| A(t) \| \| Z(t) \| \\
+  & \le C \| Z(t) \| \\
+  & = C \left\| I + \int_0^t ds \, Z'(s) \right\| \\
+  &\le C \| I \| + C \int_0^t ds \, \| Z' (s) \| \\
+  &\le C + C \int_0^t ds \, \| Z' (s) \|
+\end{align*}
+
+For convenience, let us define $f(t) = \int_0^t ds \, \| Z' (s) \|$.
+Then we have $f'(t) \le C + C f(t)$ according to the 
+foregoing derivation.  By the product rule,
+\[
+ {d \over dt} \left( e^{-Ct} f(t) \right) =
+  e^{-Ct} (f'(t) - C f(t)) .
+\]
+Since $f'(t) - C f(t) \le C$, we have
+\[
+ {d \over dt} \left( e^{-Ct} f(t) \right) \le
+  C e^{-Ct} .
+\]
+Taking the integral from $0$ to $t$ of both sides and 
+noting that $f(0) = 0$, we have
+\[
+ e^{-Ct} f(t) \le C \left( 1 - e^{-Ct} \right) .
+\]
+Multiplying both sides by $e^{Ct}$ and recalling the
+definition of $f$, we conclude
+\[
+ \int_0^t ds \, \| Z'(s) \| 
+   \le C \left( e^{Ct} - 1 \right) .
+\]
+
+Finally, by the triangle inequality,
+\[
+ \| Z(t) - I \| 
+   = \left\| \int_0^t ds \, Z(s) \right\|
+   \le \int_0^t ds \, \| Z(s) \| .
+\]
+Combining this with the inequality derived in the
+last paragraph produces the answer:
+\[
+ \| Z(t) - I \| \le C \left( e^{Ct} - 1 \right) .
+\]
+%%%%%
+%%%%%
+\end{document}

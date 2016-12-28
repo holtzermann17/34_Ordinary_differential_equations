@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RayleighQuotient}
+\pmcreated{2013-03-22 13:39:17}
+\pmmodified{2013-03-22 13:39:17}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Rayleigh quotient}
+\pmrecord{9}{34308}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34L15}
+\pmdefines{variational method}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\newcommand{\mv}[1]{\mathbf{#1}}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{defn} The {\bf Rayleigh quotient}, $R_{\mv{A}}$, to the Hermitian matrix $\mv{A}$ is defined as \\
+\begin{displaymath}
+R_{\mv{A}}(\mv{x})=\frac{\mv{x}^H \mv{A} \mv{x}}{\mv{x}^H \mv{x}}, \quad \mv{x}\neq \mv{0},
+\end{displaymath}where $\mv{x}^H$ is the Hermitian conjugate of $\mv{x}$.
+\end{defn}
+
+The importance of this quantity (in fact, the reason Rayleigh first 
+introduced it) is that its critical values are the eigenvectors
+of $A$ and the values of the quotient at these special vectors are the
+corresponding eigenvalues.  This observation leads to the \emph{variational 
+method} for computing the spectrum of a positive matrix (either exactly or
+approximately).  Namely, one first minimizes the Rayleigh quotient over the
+whole vector space.  This gives the lowest eigenvalue and corresponding
+eigenvector.  Next, one restricts attention to the orthogonal complement
+of the eigenvector found in the first step and minimizes over this subspace.
+That produces the next lowest eigenvalue and corresponding eigenvector.  One
+can continue this process recursively.  At each step, one minimizes the 
+Rayleigh quotient over the subspace orthogonal to all the vectors found in 
+the preceding steps to find another eigenvalue and its corresponding 
+eigenvector.
+
+This concept of Rayleigh quotient also makes sense in the more general 
+setting when $A$ is a Hermitian operator on a Hilbert space.  Furthermore,
+it is possible to make use of the Rayleigh-Ritz method in cases where the
+operator has a discrete spectrum bounded from below, such as the Laplace
+operator on a compact domain.  This method is often employed in practise
+because, in physical applications, one is oftentimes interested in only the 
+lowest eigenvalue or perhaps the first few lowest eigenvalues and not so
+concerned with the rest of the spectrum.
+%%%%%
+%%%%%
+\end{document}

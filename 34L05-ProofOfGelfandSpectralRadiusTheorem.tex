@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGelfandSpectralRadiusTheorem}
+\pmcreated{2013-03-22 15:33:55}
+\pmmodified{2013-03-22 15:33:55}
+\pmowner{Andrea Ambrosio}{7332}
+\pmmodifier{Andrea Ambrosio}{7332}
+\pmtitle{proof of Gelfand spectral radius theorem}
+\pmrecord{7}{37469}
+\pmprivacy{1}
+\pmauthor{Andrea Ambrosio}{7332}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34L05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+For any $\epsilon>0$, consider the matrix 
+\[
+\tilde{A}=(\rho(A)+\epsilon)^{-1}A
+\]
+Then, obviously,
+\[
+\rho(\tilde{A}) = \frac{\rho(A)}{\rho(A)+\epsilon}<1
+\]
+and, by a well-known result on convergence of matrix powers,
+\[
+\lim_{k \to \infty}\tilde{A}^k=0.
+\]
+That means, by sequence limit definition, a natural number $N_1\in \mathbf{N}$ exists such that
+\[
+\forall k\geq N_1 \Rightarrow \|\tilde{A}^k\| < 1
+\]
+which in turn means:
+\[
+\forall k\geq N_1 \Rightarrow \|A^k\| < (\rho(A)+\epsilon)^k
+\]
+or 
+\[
+\forall k\geq N_1 \Rightarrow \|A^k\|^{1/k} < (\rho(A)+\epsilon).
+\]
+
+Let's now consider the matrix 
+\[
+\check{A}=(\rho(A)-\epsilon)^{-1}A
+\]
+Then, obviously,
+\[
+\rho(\check{A}) = \frac{\rho(A)}{\rho(A)-\epsilon}>1
+\]
+and so, by the same convergence theorem,$\|\check{A}^k\|$ is not bounded.
+This means a natural number $N_2\in \mathbf{N}$ exists such that
+\[
+\forall k\geq N_2 \Rightarrow \|\check{A}^k\|>1
+\]
+which in turn means:
+\[
+\forall k\geq N_2 \Rightarrow \|A^k\| > (\rho(A)-\epsilon)^k
+\]
+or 
+\[
+\forall k\geq N_2 \Rightarrow \|A^k\|^{1/k} > (\rho(A)-\epsilon).
+\]
+Taking $N:=max(N_1,N_2)$ and putting it all together, we obtain:
+\[
+\forall \epsilon>0, \exists N\in\mathbb{N}: \forall k\geq N \Rightarrow \rho(A)-\epsilon < \|A^k\|^{1/k} < \rho(A)+\epsilon
+\]
+which, by definition, is
+\[
+\lim_{k \to \infty}\|A^k\|^{1/k} = \rho(A).\,\,\square
+\]
+
+Actually, in case the norm is \PMlinkname{self-consistent}{SelfConsistentMatrixNorm}, the proof shows more than the thesis; in fact, using the fact that $|\lambda|\leq\rho(A)$, we can replace in the limit definition the left lower bound with the spectral radius itself and write more precisely:
+\[
+\forall \epsilon>0, \exists N\in\mathbb{N}: \forall k\geq N \Rightarrow \rho(A) \leq \|A^k\|^{1/k} < \rho(A)+\epsilon
+\]
+which, by definition, is
+\[\lim_{k \to \infty}\|A^k\|^{1/k} = \rho(A)^+.
+\]
+%%%%%
+%%%%%
+\end{document}

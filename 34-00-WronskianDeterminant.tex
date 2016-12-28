@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WronskianDeterminant}
+\pmcreated{2013-03-22 12:22:59}
+\pmmodified{2013-03-22 12:22:59}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Wronskian determinant}
+\pmrecord{13}{32164}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-00}
+\pmsynonym{Wronskian}{WronskianDeterminant}
+\pmrelated{GrammianDeterminant}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Given functions $f_1, f_2, \dotsc, f_n$, then the \emph{Wronskian determinant} (or simply the Wronskian) $W(f_1, f_2, f_3, \dotsc, f_n)$ is the determinant of the square matrix
+\[
+W(f_1, f_2, f_3, \dotsc, f_n) = \left\lvert\begin{array}{@{}ccccc@{}}
+f_1 & f_2 & f_3 & \cdots & f_n\\
+f_1' & f_2' & f_3' & \cdots & f_n'\\
+f_1'' & f_2'' & f_3'' & \cdots & f_n''\\
+\vdots & \vdots & \vdots & \ddots & \vdots\\
+f_1^{(n-1)} & f_2^{(n-1)} & f_3^{(n-1)} & \cdots & f_n^{(n-1)}\\
+\end{array}\right\rvert
+\]
+where $f^{(k)}$ indicates the $k$th derivative of $f$ (not exponentiation).
+
+The Wronskian of a set of functions $F$ is another function, which is zero over any interval where $F$ is linearly dependent. Just as a set of vectors is said to be linearly dependent when there exists a non-trivial linear relation between them, a set of functions $\{f_1, f_2, f_3, \dotsc, f_n\}$ is also said to be dependent over an interval $I$ when there exists a non-trivial linear relation between them, i.e.,
+\[
+a_1 f_1(t) + a_2 f_2(t) + \dotsb + a_n f_n(t) = 0
+\]
+for some $a_1, a_2, \dotsc, a_n$, not all zero, at any $t \in I$.
+
+Therefore the Wronskian can be used to determine if functions are independent. This is useful in many situations. For example, if we wish to determine if two solutions of a second-order differential equation are independent, we may use the Wronskian.
+
+\paragraph{Examples}
+
+Consider the functions $x^2$, $x$, and $1$. Take the Wronskian:
+\[
+W = \left\lvert\begin{array}{@{}ccc@{}}
+x^2 & x & 1\\
+2x & 1 & 0\\
+2 & 0 & 0\\
+\end{array}\right\rvert = -2
+\]
+Note that $W$ is always non-zero, so these functions are independent everywhere. Consider, however, $x^2$ and $x$:
+\[
+W = \left\lvert\begin{array}{@{}cc@{}}
+x^2 & x\\
+2x & 1\\
+\end{array}\right\rvert = x^2 - 2x^2 = -x^2
+\]
+Here $W = 0$ only when $x = 0$. Therefore $x^2$ and $x$ are independent except at $x = 0$.
+
+Consider $2x^2+3$, $x^2$, and $1$:
+\[
+W = \left\lvert\begin{array}{@{}ccc@{}}
+2x^2 + 3 & x^2 & 1\\
+4x & 2x & 0\\
+4 & 2 & 0\\
+\end{array}\right\rvert = 8x - 8x = 0
+\]
+Here $W$ is always zero, so these functions are always dependent. This is intuitively obvious, of course, since
+\[
+2x^2 + 3 = 2(x^2) + 3(1)
+\]
+
+Given $n$ linearly independant functions $f_1, f_2, \dotsc, f_n$, we can use 
+the Wronskian to construct a linear differential equation whose solution space
+is exactly the span of these functions.  Namely, if $g$ satisfies the equation
+\[
+W(f_1, f_2, f_3, \dotsc, f_n, g) = 0,
+\]
+then $g = a_1 f_1(t) + a_2 f_2(t) + \dotsb + a_n f_n(t)$ for some choice of
+$a_1, a_2, \dotsc, a_n$.
+
+As a simple illustration of this, let us consider polynomials of at most second order.  Such a polynomial is a linear combination of $1$, $x$, and $x^2$.  We
+have 
+\[ W (1, x, x^2, g(x)) = \left| \begin{matrix} 1 & x & x^2 & g(x) \\
+0 & 1 & 2x & g'(x) \\ 0 & 0 & 2 & g''(x) \\ 0 & 0 & 0 & g'''(x)
+\end{matrix} \right| = 2 g''' (x) .\]
+Hence, the equation is $g''' (x) = 0$ which indeed has exactly polynomials
+of degree at most two as solutions.
+%%%%%
+%%%%%
+\end{document}

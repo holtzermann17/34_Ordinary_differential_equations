@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EquilibriumPoint}
+\pmcreated{2013-03-22 13:18:34}
+\pmmodified{2013-03-22 13:18:34}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{equilibrium point}
+\pmrecord{10}{33815}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C99}
+\pmsynonym{steady state solution}{EquilibriumPoint}
+\pmsynonym{fixed point}{EquilibriumPoint}
+\pmsynonym{singular point}{EquilibriumPoint}
+\pmdefines{hyperbolic equilibrium}
+\pmdefines{nonhyperbolic equilibrium}
+\pmdefines{stable}
+\pmdefines{unstable}
+\pmdefines{asymptotically stable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{asymptotically stable}
+\PMlinkescapeword{regular}
+
+Consider an autonomous differential equation
+\begin{equation}
+\dot{x}=f(x).
+\label{eq}
+\end{equation}
+\\
+
+An \emph{equilibrium point} $x_0$ of (\ref{eq}) is such that $f(x_0)=0$.  Conversely a \emph{regular point} of (\ref{eq}) is such that $f(x_0)\neq 0$.
+
+If the linearization $Df(x_0)$ has no eigenvalue with zero real 
+part, $x_0$ is said to be a hyperbolic equilibrium, whereas if 
+there exists an eigenvalue with zero real part, the equilibrium 
+point is nonhyperbolic.\\
+
+An equilibrium point $x_0$ is said to be \emph{stable} if for 
+every neighborhood $x_0$,$U$ there exists a neighborhood 
+of $x_0$, $U'\subset U$ such that every solution of (\ref{eq}) 
+with initial condition in $U'$ \textit{(i.e. $x(0)\in U'$)}, 
+satisfies
+$$x(t)\in U$$
+for all $t\geq0$.\\
+
+Consequently an equilibrium point $x_0$ is said to be 
+\emph{unstable} if it is not stable.\\
+
+Moreover an equilibrium point $x_0$ is said to be 
+\emph{asymptotically stable} if it is stable and there exists 
+$U''$ such that every solution of (\ref{eq}) with initial 
+condition in $U''$ \textit{(i.e. $x(0)\in U''$)} satisfies
+$$\lim_{t\to\infty}x(t)=x_0.$$
+%%%%%
+%%%%%
+\end{document}

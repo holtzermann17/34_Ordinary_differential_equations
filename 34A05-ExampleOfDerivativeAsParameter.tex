@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfDerivativeAsParameter}
+\pmcreated{2013-03-22 18:29:03}
+\pmmodified{2013-03-22 18:29:03}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{example of derivative as parameter}
+\pmrecord{6}{41160}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A05}
+\pmsynonym{example of solving an ODE}{ExampleOfDerivativeAsParameter}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+For solving the (nonlinear) differential equation 
+\begin{align}
+x \;=\; \frac{y}{3p}-2py^2
+\end{align}
+with\, $p = \frac{dy}{dx}$,\, according to \textbf{III} in the \PMlinkname{parent entry}{DerivativeAsParameterForSolvingDifferentialEquations}, we differentiate both sides in regard to $y$, getting first
+$$\frac{1}{p} \;=\; \frac{1}{3p}-\left(\frac{y}{3p^2}+2y^2\right)\frac{dp}{dy}-4py.$$
+Removing the denominators, we obtain
+$$2p +(y+6p^2y^2)\frac{dp}{dy}+12p^3y = 0.$$
+The left hand side can be factored:
+\begin{align}
+(y\frac{dp}{dy}+2p)(1+6p^2y) = 0
+\end{align}
+Now we may use the zero rule of product; the first factor of the product in (2) yields\, $y\frac{dp}{dy} = -2p$, i.e.
+$$2\!\int\frac{dy}{y} = -\!\int\frac{dp}{p}+\ln{C},$$
+whence\, $y^2 = \frac{C}{p}$,\, i.e.\, $p = \frac{C}{y^2}$.\, Substituting this into the original equation (1) we get\, $\displaystyle x = \frac{y^3}{3C}-2C$.\, Hence the general solution of (1) may be written
+$$y^3 = 3Cx+6C^2.$$
+The second factor in (2) yields\, $6p^2y = -1$,\, which is substituted into (1) multiplied by $3p$:
+$$3px = y-(-y)$$
+Thus we see that\, $p = \frac{2y}{3x}$, which is again set into (1), giving
+$$x = \frac{y\cdot3x}{3\cdot2y}-\frac{4y^3}{3x}.$$
+Finally, we can write it
+$$3x^2 = -8y^3,$$
+which (a variant of the so-called semicubical parabola) is the singular solution of (1).
+
+
+%%%%%
+%%%%%
+\end{document}

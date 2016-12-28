@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LissajousCurves}
+\pmcreated{2013-03-22 19:13:33}
+\pmmodified{2013-03-22 19:13:33}
+\pmowner{rrogers}{21140}
+\pmmodifier{rrogers}{21140}
+\pmtitle{Lissajous curves}
+\pmrecord{13}{42147}
+\pmprivacy{1}
+\pmauthor{rrogers}{21140}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34C25}
+\pmclassification{msc}{34A05}
+\pmrelated{SawBladeFunction}
+\pmrelated{SequenceAccumulatingEverywhereIn11}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+We consider the \PMlinkescapetext{first order} ordinary differential equation
+\begin{align}
+\frac{dy}{dx} \;=\; \pm k\sqrt{\frac{b^2\!-\!y^2}{a^2\!-\!x^2}},
+\end{align}
+i.e.
+\begin{align}
+\left(\frac{dy}{dx}\right)^2 \;=\; k^2\!\cdot\!\frac{b^2\!-\!y^2}{a^2\!-\!x^2},
+\end{align}
+where $a$, $b$ and $k$ are positive \PMlinkescapetext{constants}.\, It's evident that the equations
+\begin{align}
+x \;=\; \pm a, \quad y \;=\; \pm b
+\end{align}
+give singular solutions of (1).\, The lines (3) divide the $xy$-plane into nine parts, each one of which contains a family of \PMlinkescapetext{normal} integral curves of (1). 
+
+Denote by $R$ the rectangle \,$|x| \leqq a,\; |y| \leqq b$.\, After separation of variables, we can write in $R$ the differential equation as
+$$\int\!\frac{dy}{\sqrt{b^2\!-\!y^2}} \;=\; k\!\int\!\frac{dx}{\sqrt{a^2\!-\!x^2}},$$
+which leads to the general integral
+\begin{align}
+\arcsin\frac{y}{b} \;=\; \pm k\arcsin\frac{x}{a}+C
+\end{align}
+and therefore
+\begin{align}
+y \;=\; \pm b\sin\left(k\arcsin\frac{x}{a}+C\right).
+\end{align}
+The equation (5) with the plus sign represents a family of smooth arcs \PMlinkescapetext{covering} once the rectangle $R$.\, Every single arc \PMlinkescapetext{joins} two opposite sides of $R$ which are tangent lines of the arc.\, The situation is analogical in the case of the minus sign.\, One arc of both kinds passes through every interior point of $R$.
+
+For better examining the curves (5) one may take 
+$$\arcsin\frac{x}{a} \;=:\; t$$
+for a parametre.\, Then,\, $x = a\sin{t}$,\, and (5) may be replaced by
+\begin{align}
+\begin{cases}
+x \;=\; a\sin{t},\\
+y \;=\; b\sin(kt\!+\!C).
+\end{cases}
+\end{align}
+
+Letting $t$ to change freely, for any given value of $C$ the equations (6) represent a continuous curve formed by an arc from the first family and another arc from the second family.\, All such curves (6) are integral curves of the equation (2) and are called \emph{Lissajous curves}.   \\
+
+It may be shown that for any rational value of $k$, (6) is a smooth closed curve, except when the curve comes to a vertex of the rectangle $R$.\, If the value of $k$ is irrational, then (6) is never a closed curve, and any such curve fills the whole rectangle in the sense that it comes arbitrarily \PMlinkescapetext{near} to every point of $R$.\, In the former case, all integral curves of (2) are \PMlinkname{algebraic}{AlgebraicFunction}. 
+
+Some figures in \PMlinkexternal{Wiki}{http://de.wikipedia.org/wiki/Lissajous-Figur}
+
+\begin{thebibliography}{9}
+\bibitem{3L}{\sc E. Lindel\"of:} {\em Differentiali- ja integralilasku III 1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

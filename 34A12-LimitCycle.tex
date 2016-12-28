@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LimitCycle}
+\pmcreated{2013-03-22 15:00:54}
+\pmmodified{2013-03-22 15:00:54}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{limit cycle}
+\pmrecord{9}{36722}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A12}
+\pmclassification{msc}{34C07}
+\pmsynonym{$\omega$-limit cycle}{LimitCycle}
+\pmsynonym{$\alpha$-limit cycle}{LimitCycle}
+\pmrelated{OmegaLimitSet}
+\pmdefines{stable limit cycle}
+\pmdefines{unstable limit cycle}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\PMlinkescapeword{terms}
+
+Let
+$$\dot{x}=f(x)$$
+be a planar autonomous ordinary differential equation and $\Gamma$ be a periodic solution of the system.  If the \PMlinkname{$\alpha$-limit set}{OmegaLimitSet} or the \PMlinkname{$\omega$-limit set}{OmegaLimitSet} of a solution with initial value not on $\Gamma$ and the respective limit set is $\Gamma$ then $\Gamma$ is a \emph{limit cycle}.    In simpler terms a limit cycle is an isolated periodic solution of the system.\\
+A limit cycle, $\Gamma$, is a \emph{stable limit cycle} \textit{(or \emph{$\omega$-limit cycle})} if $\Gamma$ is the $\omega$-limit set of all solutions in some neighborhood of $\Gamma$.\\
+A limit cycle, $\Gamma$, is a \emph{unstable limit cycle} \textit{(or \emph{$\alpha$-limit cycle})} if $\Gamma$ is the $\alpha$-limit set of all solutions in some neighborhood of $\Gamma$.\cite{PL}
+
+\begin{thebibliography}{2}
+\bibitem[PL]{PL} Perko, Lawrence: Differential Equations and Dynamical Systems \textit{(Third Edition)}. Springer, New York, 2001.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

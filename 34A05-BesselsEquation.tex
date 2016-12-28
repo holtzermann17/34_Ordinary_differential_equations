@@ -1,0 +1,186 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BesselsEquation}
+\pmcreated{2013-03-22 16:34:57}
+\pmmodified{2013-03-22 16:34:57}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{Bessel's equation}
+\pmrecord{26}{38774}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A05}
+\pmclassification{msc}{33C10}
+\pmsynonym{Bessel's differential equation}{BesselsEquation}
+\pmsynonym{Bessel equation}{BesselsEquation}
+\pmrelated{LaplaceEquationInCylindricalCoordinates}
+\pmrelated{CauchyResidueTheorem}
+\pmrelated{PropertiesOfEntireFunctions}
+\pmrelated{FrobeniusMethod}
+\pmrelated{TableOfLaplaceTransforms}
+\pmrelated{BesselFunctionsAndHelicalStructureDiffractionPatterns}
+\pmdefines{Bessel's function}
+\pmdefines{Bessel function}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+
+\begin{document}
+\PMlinkescapeword{constant} \PMlinkescapeword{order}
+The linear differential equation 
+\begin{align}
+  x^2\frac{d^2y}{dx^2}+x\frac{dy}{dx}+(x^2-p^2)y \;=\; 0,
+\end{align}
+in which $p$ is a constant (non-negative if it is real), is called the {\em Bessel's equation}.\, We derive its general solution by trying the series form
+\begin{align}
+               y \;=\; x^r\sum_{k=0}^\infty a_kx^k \;=\; \sum_{k=0}^\infty a_kx^{r+k},
+\end{align}
+due to Frobenius.\, Since the parameter $r$ is indefinite, we may regard $a_0$ as distinct from 0.
+
+We substitute (2) and the derivatives of the series in (1):
+$$
+x^2\sum_{k=0}^\infty(r+k)(r+k-1)a_kx^{r+k-2}+
+  x\sum_{k=0}^\infty(r+k)a_kx^{r+k-1}+
+(x^2-p^2)\sum_{k=0}^\infty a_kx^{r+k} \;=\; 0.
+$$
+Thus the coefficients of the powers $x^r$, $x^{r+1}$, $x^{r+2}$ and so on must vanish, and we get the system of equations
+\begin{align}
+\begin{cases}
+{[}r^2-p^2{]}a_0 \;=\; 0,\\
+{[}(r+1)^2-p^2{]}a_1 \;=\; 0,\\
+{[}(r+2)^2-p^2{]}a_2+a_0 \;=\; 0,\\
+\qquad \qquad \ldots\\
+{[}(r+k)^2-p^2{]}a_k+a_{k-2} \;=\; 0.
+\end{cases}
+\end{align}
+The last of those can be written
+$$(r+k-p)(r+k+p)a_k+a_{k-2} \;=\; 0.$$
+Because\, $a_0 \neq 0$,\, the first of those (the indicial equation) gives\, $r^2-p^2 = 0$,\, i.e. we have the roots
+$$r_1 \;=\; p, \quad r_2 \;=\; -p.$$
+Let's first look the the solution of (1) with\, $r = p$;\, then\, $k(2p+k)a_k+a_{k-2} = 0$,\, and thus\,
+$$a_k \;=\; -\frac{a_{k-2}}{k(2p+k).}$$
+From the system (3) we can solve one by one each of the coefficients $a_1$, $a_2$, $\ldots$\, and express them with $a_0$ which remains arbitrary.\, Setting for $k$ the integer values we get
+\begin{align}
+\begin{cases}
+a_1 \;=\; 0, \quad a_3 \;=\; 0,\;\ldots,\; a_{2m-1} \;=\; 0;\\
+a_2 \;=\; -\frac{a_0}{2(2p+2)}, \quad a_4 \;=\; \frac{a_0}{2\cdot4(2p+2)(2p+4)},\;\ldots,\;\,
+a_{2m} \;=\; \frac{(-1)^ma_0}{2\cdot4\cdot6\cdots(2m)(2p+2)(2p+4)\ldots(2p+2m)}
+\end{cases}
+\end{align}
+(where\, $m = 1,\,2,\,\ldots$).
+Putting the obtained coefficients to (2) we get the particular solution 
+\begin{align}
+ y_1 \;:=\; a_0x^p \left[\!\frac{x^2}{2(2p\!+\!2)}\!
++\!\frac{x^4}{2\!\cdot\!4(2p\!+\!2)(2p\!+\!4)}
+\!-\!\frac{x^6}{2\!\cdot\!4\!\cdot\!6(2p\!+\!2)(2p\!+\!4)(2p\!+\!6)}\!+-\ldots\right]
+\end{align}
+
+In order to get the coefficients $a_k$ for the second root\, $r_2 = -p$\, we have to look after that
+$$(r_2+k)^2-p^2 \;\neq\; 0,$$
+or\, $r_2+k \neq p = r_1$.\, Therefore
+$$r_1-r_2 \;=\; 2p \;\neq\; k$$
+where $k$ is a positive integer.\, Thus, when $p$ is not an integer and not an integer added by $\frac{1}{2}$, we get the second particular solution, gotten of (5) by replacing $p$ by $-p$:
+\begin{align}
+ y_2 \;:=\; a_0x^{-p}\!\left[1
+\!-\!\frac{x^2}{2(-2p\!+\!2)}\!+\!\frac{x^4}{2\!\cdot\!4(-2p\!+\!2)(-2p\!+\!4)}
+\!-\!\frac{x^6}{2\!\cdot\!4\!\cdot\!6(-2p\!+\!2)(-2p\!+\!4)(-2p\!+\!6)}\!+-\ldots\right]
+\end{align}
+
+The power series of (5) and (6) converge for all values of $x$ and are linearly independent (the ratio $y_1/y_2$ tends to 0 as\, $x\to\infty$).\, With the appointed value
+$$a_0 \;=\; \frac{1}{2^p\,\Gamma(p+1)},$$
+the solution $y_1$ is called the {\em Bessel function of the first kind and of order $p$} and denoted by $J_p$.\, The similar definition is set for the first kind Bessel function of an arbitrary order\, $p\in \mathbb{R}$ (and $\mathbb{C}$).
+ For\, $p\notin \mathbb{Z}$\, the general solution of the Bessel's differential equation is thus
+$$y \;:=\; C_1J_p(x)+C_2J_{-p}(x),$$
+where\, $J_{-p}(x) = y_2$\, with\, $a_0 = \frac{1}{2^{-p}\Gamma(-p+1)}$.
+
+The explicit expressions for $J_{\pm p}$ are
+\begin{align}
+J_{\pm p}(x) \;=\; 
+ \sum_{m=0}^\infty 
+  \frac{(-1)^m}{m!\,\Gamma(m\pm p+1)}\left(\frac{x}{2}\right)^{2m\pm p},
+\end{align}
+which are obtained from (5) and (6) by using the last \PMlinkescapetext{formula} for gamma function.
+
+E.g. when\, $p = \frac{1}{2}$\, the series in (5) gets the form
+$$y_1 \;=\; \frac{x^{\frac{1}{2}}}{\sqrt{2}\,\Gamma(\frac{3}{2})}\left[1\!-\!\frac{x^2}{2\!\cdot\!3}\!+\!\frac{x^4}{2\!\cdot\!4\!\cdot\!3\!\cdot\!5}\!-\!\frac{x^6}{2\!\cdot\!4\cdot\!6\!\cdot\!3\!\cdot\!5\!\cdot\!7}\!+-\ldots\right] \;=\;
+\sqrt{\frac{2}{\pi x}}\left(x\!-\!\frac{x^3}{3!}\!+\!\frac{x^5}{5!}\!-+\ldots\right).$$
+Thus we get
+$$J_{\frac{1}{2}}(x) \;=\; \sqrt{\frac{2}{\pi x}}\sin{x};$$
+analogically (6) yields
+$$J_{-\frac{1}{2}}(x) \;=\; \sqrt{\frac{2}{\pi x}}\cos{x},$$
+and the general solution of the equation (1) for\, $p = \frac{1}{2}$\, is
+$$y \;:=\; C_1J_{\frac{1}{2}}(x)+C_2J_{-\frac{1}{2}}(x).$$
+
+
+In the case that $p$ is a non-negative integer $n$, the ``+'' case of (7) gives the solution
+$$J_{n}(x) \;=\; 
+ \sum_{m=0}^\infty 
+  \frac{(-1)^m}{m!\,(m+n)!}\left(\frac{x}{2}\right)^{2m+n},
+$$
+but for\, $p = -n$\, the expression of $J_{-n}(x)$ is $(-1)^nJ_n(x)$, i.e. linearly dependent on $J_n(x)$.\, It can be shown that the other solution of (1) ought to be searched in the form\, 
+$y = K_n(x) = J_n(x)\ln{x}+x^{-n}\sum_{k=0}^\infty b_kx^k$.\, Then the general solution is\, $y := C_1J_n(x)+C_2K_n(x)$.\\
+
+\textbf{Other formulae}
+
+The first kind Bessel functions of integer order have the generating function $F$:
+\begin{align}
+F(z,\,t) \;=\; e^{\frac{z}{2}(t-\frac{1}{t})} \;=\; \sum_{n=-\infty}^\infty J_n(z)t^n
+\end{align}
+This function has an essential singularity at\, $t = 0$\, but is analytic elsewhere in $\mathbb{C}$; thus $F$ has the Laurent expansion in that point.\, Let us prove (8) by using the general expression
+$$c_n \;=\; \frac{1}{2\pi i}\oint_{\gamma} \frac{f(t)}{(t-a)^{n+1}}\,dt$$
+of the coefficients of Laurent series.\, Setting to this\, $a := 0$,\, 
+$f(t) := e^{\frac{z}{2}(t-\frac{1}{t})}$,\, $\zeta := \frac{zt}{2}$\, gives
+$$c_n \;=\; \frac{1}{2\pi i}
+\oint_\gamma\frac{e^{\frac{zt}{2}}e^{-\frac{z}{2t}}}{t^{n+1}}\,dt \;=\; 
+\frac{1}{2\pi i}\left(\frac{z}{2}\right)^n\!
+\oint_\delta\frac{e^\zeta e^{-\frac{z^2}{4\zeta}}}{\zeta^{n+1}}\,d\zeta \;=\; 
+\sum_{m=0}^\infty\frac{(-1)^m}{m!}\left(\frac{z}{2}\right)^{2m+n}\!
+\frac{1}{2\pi i}\oint_\delta \zeta^{-m-n-1}e^\zeta\,d\zeta.$$
+The paths $\gamma$ and $\delta$ go once round the origin anticlockwise in the $t$-plane and $\zeta$-plane, respectively.\, Since the residue of $\zeta^{-m-n-1}e^\zeta$ in the origin is\, $\frac{1}{(m+n)!} = \frac{1}{\Gamma(m+n+1)}$,\, the \PMlinkname{residue theorem}{CauchyResidueTheorem} gives
+$$c_n \;=\; \sum_{m=0}^\infty
+\frac{(-1)^m}{m!\Gamma(m+n+1)}\left(\frac{z}{2}\right)^{2m+n} \;=\; J_n(z).$$
+This \PMlinkescapetext{means} that $F$ has the Laurent expansion (8).
+
+By using the generating function, one can easily derive other formulae, e.g.
+the \PMlinkescapetext{integral representation} of the Bessel functions of integer order:
+$$J_n(z) \;=\; \frac{1}{\pi}\int_0^\pi\cos(n\varphi-z\sin{\varphi})\,d\varphi$$
+Also one can obtain the addition formula
+$$J_n(x\!+\!y) \;=\; \sum_{\nu=-\infty}^{\infty}J_\nu(x)J_{n-\nu}(y)$$
+and the series \PMlinkescapetext{representations} of cosine and sine:
+$$\cos{z} \;=\; J_0(z)-2J_2(z)+2J_4(z)-+\ldots$$
+$$\sin{z} \;=\; 2J_1(z)-2J_3(z)+2J_5(z)-+\ldots$$
+
+
+
+\begin{thebibliography}{9}
+\bibitem{NP}{\sc N. Piskunov:} {\em Diferentsiaal- ja integraalarvutus k\~{o}rgematele tehnilistele \~{o}ppeasutustele}.\, Kirjastus Valgus, Tallinn  (1966).
+\bibitem{KK}{\sc K. Kurki-Suonio:} {\em Matemaattiset apuneuvot}.\, Limes r.y., Helsinki (1966).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Eigenfunction}
+\pmcreated{2013-03-22 12:48:00}
+\pmmodified{2013-03-22 12:48:00}
+\pmowner{tensorking}{373}
+\pmmodifier{tensorking}{373}
+\pmtitle{eigenfunction}
+\pmrecord{8}{33117}
+\pmprivacy{1}
+\pmauthor{tensorking}{373}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34B24}
+\pmsynonym{characteristics function}{Eigenfunction}
+%\pmkeywords{Sturm-Liouville}
+\pmdefines{solution of system}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the Sturm-Liouville system given by
+
+\begin{equation}
+\frac{d}{dx}\left[p(x)\frac{dy}{dx}\right]+q(x)y+\lambda
+r(x)y=0\;\;\;\;\;\;a\leq x\leq b \label{stuff}
+\end{equation}
+
+\begin{equation}
+a_{1}y(a)+a_{2}y^{\prime}(a)=0,\;\;\;
+\;\;\;b_{1}y(b)+b_{2}y^{\prime}(b)=0, \label{stuff1}
+\end{equation}
+
+where $a_{i},b_{i}\in \mathbb{R}$ with $i\in \{1,2\}$ and
+$p(x),q(x),r(x)$ are differentiable functions and
+$\lambda\in\mathbb{R}$. A non zero solution of the system defined
+by \eqref{stuff} and \eqref{stuff1} exists in general for a
+specified $\lambda$.  The functions corresponding to that
+specified $\lambda$ are called eigenfunctions.
+
+
+
+More generally, if $D$ is some linear differential operator, and
+$\lambda\in \mathbb{R}$ and $f$ is a function such that
+$Df=\lambda f$ then we say $f$ is an eigenfunction of $D$ with
+eigenvalue $\lambda$.
+%%%%%
+%%%%%
+\end{document}

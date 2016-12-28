@@ -1,0 +1,221 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IndefiniteAndDefiniteSums}
+\pmcreated{2013-03-22 19:22:22}
+\pmmodified{2013-03-22 19:22:22}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{indefinite and definite sums}
+\pmrecord{80}{42327}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A36}
+\pmclassification{msc}{39B72}
+\pmclassification{msc}{33E30}
+\pmclassification{msc}{39A99}
+%\pmkeywords{indefinite sum}
+%\pmkeywords{definite sum}
+%\pmkeywords{indefinite integral}
+%\pmkeywords{Caves summation formula}
+\pmrelated{IndefiniteSum}
+\pmdefines{non-analytical function}
+\pmdefines{definite sum}
+\pmdefines{Caves summation formula}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+
+\begin{document}
+An {\em indefinite sum}, like an indefinite integral, is an operator which acts on a function. In other words, it transforms a given function to another {\em via} a certain law. This article presents the so called {\em Caves summation formula}. The advantages of the formula in comparison with other summation methods are that it gives the indefinite sum for any analytical function, and that it also completely reduces summation to integration.  One can do with the Caves summation formula everything that one can do with an integral. For example, one can take a sum along a path either in the complex plane or along a contour with a singular point inside the contour, and so on.
+
+\begin{multline*}
+\sum_{k}^{x-1}\varphi(k+z)=\int\limits_0^x\sum_{\nu=0}^{\infty}\frac{B_{\nu}-A_{\nu}}{\nu!}\varphi^{(\nu)}(\xi+z)d\xi-\int\limits_0^{x}\frac{A_N'(z-\xi)}{N!}\varphi^{(N-1)}(z+\xi)d\xi-\\
+-\int\limits_0^{x}\sum_{m=0}^{\infty}\varphi^{(N+m)}(z+\xi)A_{N+m}(x-\xi)\hspace{-5.4em}\rule[-10pt]{0pt}{2.3em}_{k_{N+m}+1}^{k_{N+1+m}}\hspace{2.5em}d\xi+H(x,z)=F(x,z,N)-f(x,z,N)-f\varepsilon(x,z,N)+H(x,z,N)
+\end{multline*}
+\begin{multline*}
+F(x,z,N)=F_N(x,z,N)+F_{N\varepsilon}(x,z,N). \text{\ I choose that\ } |B_{\nu}-A_{\nu}|\leq (r(\nu))^{\nu},\\
+\text{where\ }B_{\nu}\text{\ are Bernoulli numbers,}\\
+|F_{N\varepsilon}(x,z,N)|=\left|\int\limits_0^x\sum_{\nu=N}^{\infty}\frac{B_{\nu}-A_{\nu}}{\nu!}\varphi^{(\nu)}(z+z_1)\right|\leqslant\frac{|x|\left(r(N)\right)^N}{N!}\sup_{z+z_1\in G}\left|\varphi^{(n)}(z+z_1)\right|\\
+|f\varepsilon(x,z,N)|=\left|\int\limits_0^x\sum_{m=0}^{\infty}\varphi^{(N+m)}(z+\xi)A_{N+m}(x+\alpha-\xi)\hspace{-7.5em}\rule[-10pt]{0pt}{2.3em}_{k_{N+m}+1}^{k_{N+1+m}}\quad\qquad\quad\ \,\right|\leqslant\frac{|x|\left(r(N)\right)^N}{N!}\sup_{\zeta\in G}\left|\varphi^{(N)}(\zeta)\right|
+\end{multline*}
+
+where $G$ is the region of summation. In case of summation in complex plain $r(\nu)$ \emph{must} be a positive constant, $r(\nu)=r_z=\max\left(r,e^{\ln r+\frac{1}{er}}\right)$ where $r$ is a positive value less or equal to the minimal radius of convergence of Tailor series of the function $\varphi(z)$ on the intersection of the area of summation $G$ with the $x$-axis. In case of summation exclusively on a segment of the $x$-axis it is more convenient to choose $r(\nu)=\frac{1}{\ln\nu}$ or $ r(\nu)=\frac{1}{\ln(\ln\nu)}$, especially in a case when there is a singular point on the path of summation.The same for a path parallel to the $x$-axis when $\varphi(z)$ is regarded as a function of real valued argument. The more close $r_z$ is to zero the more close the possible area of summation is to the hole area where $\varphi(z)$ is analytical.
+
+$A_{\nu}=0,\ \nu=0,1,2,\dots,N-1,(N\geqslant2),\ A_{2\nu}=0,\nu=0,1,2,\dots$\\%[1em]
+
+Periodical function with the period $1$\\
+\begin{multline*}
+H(\alpha,z)=\\
+=\hspace{-0.2em}\int\limits^{x=0}\hspace{-0.1em}\int\limits_0^{\alpha}\hspace{-0.2em}\left(\hspace{-0.2em}\frac{A''_N(\xi+x)}{N!}\varphi^{(N-1)}(z-x)\hspace{-0.2em}+\hspace{-0.2em}\sum_{m=0}^{\infty}\varphi^{(N+m)}(z-x)A_{N+m}'(\xi+x)\hspace{-5.5em}\rule[-10pt]{0pt}{2.3em}_{k_{N+m}+1}^{k_{N+1+m}}\hspace{2.3em}\right)d\xi dx=\\
+=h_N(\alpha,z)+h\varepsilon_N(\alpha,z),\\
+\lim_{N\to\infty}\left|h\varepsilon_N(\alpha,z)\right|=\lim_{N\to\infty}\left|\int\limits^{x=0}\int\limits_0^{\alpha}\left(\sum_{m=0}^{\infty}\varphi^{(N+m)}(z-x)A_{N+m}'(\xi+x)\hspace{-5.5em}\rule[-10pt]{0pt}{2.3em}_{k_{N+m}+1}^{k_{N+1+m}}\hspace{2.3em}\right) d\xi dx\right|\leqslant\\
+\leqslant\lim_{N\to\infty}\frac{|D\alpha|r^{N+1}}{(N+1)!}\sup_{\zeta\in G}\left|\varphi^{(N+1)}(\zeta)\right|=0,
+\end{multline*}\\
+where $D$ is the diameter of the area of summation and $z$ is a parameter.
+
+\begin{equation*}
+A_N(\alpha)=\begin{cases}
+\displaystyle{2(-1)^{\lfloor\frac{N}{2}\rfloor+1}N!\sum_{k=1}^{k_{N}}\frac{\cos 2\pi k\alpha}{(2\pi k)^{N-1}}},&\text{when $N$ even}\\
+\rule{0pt}{1em}\\
+\displaystyle{2(-1)^{\lfloor\frac{N}{2}\rfloor+1}N!\sum_{k=1}^{k_{N}}\frac{\sin 2\pi k\alpha}{(2\pi k)^{N-1}}},&\text{when $N$ odd}
+\end{cases},
+\end{equation*}
+
+$A_N(0)=A_N$, and\\
+\begin{equation*}
+A_{N+m}(x)\hspace{-3.8em}\rule[-10pt]{0pt}{2.3em}_{k_{N+m}+1}^{k_{N+1+m}}\hspace{0.7em}=\begin{cases}
+\displaystyle{2(-1)^{\lfloor\frac{N+m}{2}\rfloor+1}}\sum_{k=k_{N+m}+1}^{k_{N+1+m}}\frac{\cos 2\pi kx}{(2\pi k)^{N+m}},&\text{when $N+m$ even}\\
+\rule{0pt}{1em}\\
+\displaystyle{2(-1)^{\lfloor\frac{N+m}{2}\rfloor+1}}\sum_{k=k_{N+m}+1}^{k_{N+1+m}}\frac{\sin 2\pi kx}{(2\pi k)^{N+m}},&\text{when $N+m$ odd}
+\end{cases}
+\end{equation*}\\
+
+The \emph{floor} of $x$ ($x$ is real) $\lfloor x\rfloor$ is the largest integer less then $x$.
+
+From the condition $|B_{\nu}(x)-A_{\nu}(x)|\leqslant (r(\nu))^{\nu}=r^{\nu},(0\leqslant x\leqslant 1\ )(B_{\nu}(x)$ are Bernoulli polynomials) I find out that 
+
+\begin{multline*}
+k_{\nu}=\lfloor\frac{\nu}{2\pi re}\rfloor(1-\delta_{\nu,1}), \nu=1,2,\dots\\
+ \text{where}\ \delta_{\nu,1}\ \text{is the Kronecker delta,}\ \delta_{\nu,1}=1\ \text{when}\ \nu=1 \text{and}\ 0\ \text{otherwise.}
+\end{multline*}
+
+The {\em definite sum} is defined as:
+
+\begin{equation*}
+\sum\limits_{k=a}^{x-1}\varphi(k+z)=\sum\limits_{k}^{x-1}\varphi(k+z)-\sum\limits_{k}^{a-1}\varphi(k+z)
+\end{equation*}
+
+In the case of integer summation boundaries the summation formula can be simplified. 
+
+\begin{multline*}
+\sum_{k=n_1}^{n_2-1}=\int\limits_{n_1}^{n_2}\left(\sum_{\nu=0}^{\infty}\frac{B_{\nu}-A_{\nu}}{\nu!}\varphi^{(\nu-1)}(\xi+z)-\frac{A_N'(z-\xi)}{N!}\varphi^{(N-1)}(\xi+z)\right)d\xi+\varepsilon_N,
+\end{multline*}\\
+where\\
+\begin{multline*}
+|\varepsilon_N|\leqslant\left|\int\limits_{n_1}^{n_2}\left(\sum_{m=0}^{\infty}\varphi^{(N+m)}(z+\xi)A_{N+m}(-\xi)\hspace{-5.4em}\rule[-10pt]{0pt}{2.3em}_{k_{N+m}+1}^{k_{N+1+m}}\hspace{2.5em}d\right)\xi\right|\leqslant\frac{|n_2-n_1|\left(r(N)\right)^N}{N!}\sup_{n_1\leqslant\zeta\leqslant n_2}\left|\varphi^{(N)}(\zeta)\right|.\\
+r(\nu)=r,\ r(\nu)=\frac{1}{ln\nu\ }\text{\ or\ }r(\nu)=\frac{1}{ln(ln\nu)}.
+\end{multline*} 
+
+{\bf Notes:}
+
+1. Complete details are provided through the link to the following \PMlinkexternal{web site: http://www.oddmaths.info/indefinitesum}{http://www.oddmaths.info/indefinitesum}.
+
+2. The complete pdf of the entire article can be downloaded here from the \PMlinkexternal{\bf complete article on ``Summation" uploaded to the Papers section}{http://planetmath.org/files/papers/554/Summation.pdf}.
+
+%%%%%
+%%%%%
+\end{document}

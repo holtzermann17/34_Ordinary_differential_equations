@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfDulacsCriteria}
+\pmcreated{2013-03-11 19:17:10}
+\pmmodified{2013-03-11 19:17:10}
+\pmowner{Filipe}{28191}
+\pmmodifier{}{0}
+\pmtitle{Proof of Dulac's Criteria}
+\pmrecord{9}{42625}
+\pmprivacy{1}
+\pmauthor{Filipe}{0}
+\pmtype{Proof}
+\pmclassification{msc}{34C25}
+\pmsynonym{}{ProofOfDulacsCriteria}
+%\pmkeywords{}
+\pmrelated{}
+\pmdefines{}
+
+
+\begin{document}
+Consider the the planar system $\dot{x}=f(x)$, where $f=(X,Y)^t$ and $x=(x,y)^t$. Consider the vector field $(-\rho Y, \rho X)$. Suppose that there is a periodic orbit contained in $E$ associated to the planar system. Let $\gamma$ be that periodic orbit. We have:
+
+$\displaystyle \int_{\gamma} (-\rho Y, \rho X) ds = \int_0^{\tau} (-\rho Y(x,y),\rho X(x,y)) \cdot (\dot{x},\dot{y}) dt= \int_0^{\tau} -\rho Y(x,y)X(x,y)+\rho X(x,y)Y(x,y) = 0$
+
+On the other hand, the region within $E$ that is limited by $\gamma$ is simply connected because $E$ is simply connected. Let $\tilde{E}$ be the region limited by $\gamma$. Then, by Green's theorem, we have:
+
+$$\int_{\gamma^+} (-\rho Y, \rho X) ds = \int \int_{\tilde{E}} \frac{\partial}{\partial x} (\rho X) - \frac{\partial}{\partial y} (-\rho Y) dxdy= \int \int_{\tilde{E}} \frac{\partial}{\partial x} (\rho X)+\frac{\partial}{\partial y} (\rho Y) dxdy$$
+
+Because $\tilde{E}$ has positive area and the integrand function has constant signal, then this integral is different from zero. This is a contradiction. So there are no periodic orbits. \qed
+
+%%%%%
+\end{document}

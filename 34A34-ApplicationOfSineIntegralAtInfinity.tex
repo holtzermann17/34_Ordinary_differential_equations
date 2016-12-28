@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ApplicationOfSineIntegralAtInfinity}
+\pmcreated{2013-03-22 18:45:58}
+\pmmodified{2013-03-22 18:45:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{application of sine integral at infinity}
+\pmrecord{6}{41547}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A34}
+\pmclassification{msc}{34A12}
+\pmclassification{msc}{26A36}
+\pmclassification{msc}{26A24}
+\pmsynonym{generalisation of sine integral at infinity}{ApplicationOfSineIntegralAtInfinity}
+%\pmkeywords{sine integral}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\sijoitus}[2]%
+{\operatornamewithlimits{\Big/}_{\!\!\!#1}^{\,#2}}
+\begin{document}
+For finding the value of the improper integral
+\begin{align}
+\int_0^\infty\!\frac{\sin{ax}}{x(1\!+\!x^2)}\,dx \;:=\; f(a) \qquad (a > 0) 
+\end{align}
+we first use the \PMlinkname{partial fraction representation}{PartialFractionsOfExpressions} 
+$$\frac{1}{x(1\!+\!x^2)} = \frac{1}{x}-\frac{x}{1\!+\!x^2}.$$
+Thus we may write
+$$f(a) = \int_0^\infty\frac{\sin{ax}}{x}\,dx-\int_0^\infty\frac{x\sin{ax}}{1+x^2}\,dx.$$
+But by the entry sine integral at infinity, the first integral equals $\displaystyle\frac{\pi}{2}$.\, When we check
+$$f'(a) \;=\; \int_0^\infty\frac{\cos{ax}}{1\!+\!x^2}\,dx, \quad 
+f''(a) \;=\; -\!\int_0^\infty\frac{x\sin{ax}}{1\!+\!x^2}\,dx,$$
+we see that there is the linear differential equation
+\begin{align}
+f(a) = \frac{\pi}{2}+f''(a)
+\end{align}
+i.e.
+$$f''-f \;=\; -\frac{\pi}{2},$$
+satisfied by the sought function $a \mapsto f(a)$.\, We have the initial conditions
+$$f(0) \;=\; \int_0^\infty{0}\,dx \;=\; 0, \quad f'(0) \;=\; \int_0^\infty\frac{dx}{1\!+\!x^2} 
+\;=\; \sijoitus{0}{\quad \infty}\!\arctan{x} \;=\; \frac{\pi}{2}.$$
+Therefore the general solution 
+$$f(a) \;=\; C_1e^a+C_2e^{-a}+\frac{\pi}{2}$$
+of (2) requires that\, $C_1 = 0$,\; $C_2 = \frac{\pi}{2}$,\, and consequently the sought integral $f(a)$ has the value
+\begin{align}
+\int_0^\infty\!\frac{\sin{ax}}{x(1\!+\!x^2)}\,dx \;=\; \frac{\pi}{2}(1-e^{-a})
+\end{align}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderNConstantCoefficientDifferentialEquationsAndMatrixExponential}
+\pmcreated{2013-03-22 19:01:00}
+\pmmodified{2013-03-22 19:01:00}
+\pmowner{gaillard}{1824}
+\pmmodifier{gaillard}{1824}
+\pmtitle{order n constant coefficient differential equations and matrix exponential}
+\pmrecord{7}{41887}
+\pmprivacy{1}
+\pmauthor{gaillard}{1824}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34-01}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $P$ be a degree $n>0$ monic complex polynomial in one indeterminate, let $f$ be a continuous function on the real line, let $k$ be an integer varying from 0 to $n-1$, and let $y_k$ be a complex number. The solution to the ODE
+%
+\begin{equation}\label{se}P(d/d t)\ y=f(t),\quad
+y^{(k)}(0)=y_k
+\end{equation}
+%
+is
+%
+\begin{equation}\label{sse}
+y(t)=\sum\ y_k\ g_k(t)+\int_0^t g_{n-1}(t-x)\ f(x)\ d x,
+\end{equation}
+%
+where $g_k(t)$ is the coefficient of $z^k$ in the product of $P(z)$ by the singular part of
+%
+$$\frac{e^{t z}}{P(z)}\quad.$$
+%
+Moreover, if $A$ is a complex square matrix annihilated by $P$, then 
+%
+\begin{equation}\label{e}e^{t A}=\sum\ g_k(t)\ A^k.
+\end{equation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\PMlinkescapetext{Transform} (\ref{se}) into
+%
+\begin{equation}\label{ve}
+Y'-B\,Y=f(t)\ v,\quad Y(0)=Y_0
+\end{equation}
+%
+by putting $Y_k:=y^{(k)}$, $Y_{0k}:=y_k$, and by letting $B$ be the transpose companion matrix of $P$, and $v$ the last vector of the canonical basis of $\mathbb{C}^n$. The solution to (\ref{ve}) is
+%
+$$Y(t)=e^{t B}\ Y_0+\int_0^t\ f(x)\ e^{(t-x)B}\ v\ d x.$$
+%
+There is a unique $n$-tuple of functions $h_k$ such that
+$e^{t A}$ is the sum of the $h_k(t)\,A^k$ whenever $A$ is a complex square matrix annihilated by $P$. The first line of $B^k$ being the $(k+1)$-th vector of the canonical basis of $\mathbb{C}^n$ (for $0\le k<n$), we obtain
+%
+$$y(t)=\sum\ y_k\ h_k(t)
++\int_0^t h_{n-1}(t-x)\ f(x)\ d x,$$
+%
+so that the proof of (\ref{sse}) and (\ref{e}) boils down to verifying
+%
+$$h_k(t)=g_k(t).$$
+%
+\PMlinkescapetext{Fix} a real value of $t$, let $G\in\mathbb{C}[X]$ be the sum of the $g_k(t)\, X^k$, form the entire function 
+%
+$$\varphi(z)=\frac{e^{t z}-G(z)}{P(z)}\quad,$$
+%
+multiply the above equality by $P(z)$, and replace $z$ by $A$. 
+%%%%%
+%%%%%
+\end{document}

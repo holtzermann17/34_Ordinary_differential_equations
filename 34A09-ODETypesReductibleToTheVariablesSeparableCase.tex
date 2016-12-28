@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ODETypesReductibleToTheVariablesSeparableCase}
+\pmcreated{2013-03-22 18:06:36}
+\pmmodified{2013-03-22 18:06:36}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ODE types reductible to the variables separable case}
+\pmrecord{13}{40655}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{34A09}
+\pmclassification{msc}{34A05}
+\pmrelated{SeparationOfVariables}
+\pmrelated{ODETypesSolvableByTwoQuadratures}
+\pmrelated{TheoryForSeparationOfVariables}
+\pmdefines{homogeneous differential equation}
+\pmdefines{similarity equation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+There are certain \PMlinkescapetext{types} of non-linear ordinary differential equations of \PMlinkname{first order}{ODE} which may by a suitable substitution be \PMlinkescapetext{reduced} to a form where one can \PMlinkname{separate}{SeparationOfVariables} the variables.\\
+
+\textbf{I.\; So-called homogeneous differential equation}
+
+This means the equation of the form
+$$X(x,\,y)dx+Y(x,\,y)dy = 0,$$
+where $X$ and $Y$ are two homogeneous functions of the same \PMlinkname{degree}{HomogeneousFunction}.\, Therefore, if the equation is written as
+$$\frac{dy}{dx} = -\frac{X(x,\,y)}{Y(x,\,y)},$$
+its right hand side is a homogeneous function of degree 0, i.e. it depends only on the ratio $y\!:\!x$, and has thus the form
+\begin{align}
+\frac{dy}{dx} = f\left(\frac{y}{x}\right).
+\end{align}
+
+Accordingly, if this ratio is constant, then also $\frac{dy}{dx}$ is constant; thus all lines \, $\frac{y}{x} =$ constant\, are isoclines of the family of the integral curves which intersect any such line isogonally.
+
+We can infer as well, that if one integral curve is represented by\, $x = x(t)$,\; $y = y(t)$,\, then also\, $x = Cx(t)$,\; $y = Cy(t)$\, \PMlinkescapetext{represents} an integral curve for any constant $C$.\, Hence the integral curves are homothetic with respect to the origin; therefore some people call the equation (1) a {\em similarity equation}.
+
+For generally solving the equation (1), make the substitution
+$$\frac{y}{x} := t; \quad y = tx; \quad \frac{dy}{dx} = t+x\frac{dt}{dx}.$$
+The equation takes the form
+\begin{align}
+t+x\frac{dt}{dx} = f(t)
+\end{align}
+which shows that any \PMlinkname{root}{Equation} $t_\nu$ of the equality \,$f(t) = t$\, gives a singular solution \, $y = t_\nu x$.
+The variables in (2) may be \PMlinkescapetext{separated}:
+$$\frac{dx}{x} = \frac{dt}{f(t)\!-\!t}$$
+Thus one obtains\, $\ln{|x|} = \int\!\frac{dt}{f(t)\!-\!t}+ \ln{C}$, whence the general solution of the homogeneous differential equation (1) is in a parametric form
+$$x = Ce^{\int\!\frac{dt}{f(t)\!-\!t}}, \quad y = Cte^{\int\!\frac{dt}{f(t)\!-\!t}}.$$
+
+
+
+\textbf{II.\; Equation of the form\, {\em y}$\,'${\em = f(ax+by+c)}}
+
+It's a question of the equation
+\begin{align}
+\frac{dy}{dx} = f(ax+by+c),
+\end{align}
+where $a$, $b$ and $c$ are given constants.\, If\, $ax+by$ is constant, then $\frac{dy}{dx}$ is constant, and we see that the lines\, $ax+by =$ constant\, are isoclines of the intgral curves of (3).
+
+Let
+\begin{align}
+ax+by+c := u
+\end{align}
+be a new variable.\, It changes the equation (3) to
+\begin{align}
+\frac{du}{dx} = a+bf(u).
+\end{align}
+Here, one can see that the real zeros $u$ of the right hand side yield lines (4) which are integral curves of (3), and thus we have singular solutions.\, Moreover, one can separate the variables in (5) and integrate, obtaining $x$ as a function of $u$.\, Using still (4) gives also $y$.\, The general solution is
+$$x = \int\frac{du}{a+bf(u)}+C, \quad y = \frac{1}{b}\left(u-c-a\int\frac{du}{a+bf(u)}-aC\right).\\$$
+
+
+\textbf{Example.}\, In the nonlinear equation
+$$\frac{dy}{dx} = (x-y)^2,$$
+which is of the type II, one cannot separate the variables $x$ and $y$.\, The substitution\, $x-y := u$\, converts it to
+$$\frac{du}{dx} = 1-u^2,$$
+where one can separate the variables.\, Since the right hand side has the zeros\, $u = \pm1$,\, the given equation has the singular solutions $y$ given by\, $x-y = \pm1$.\, Separating the variables $x$ and $u$, one obtains
+$$dx = \frac{du}{1-u^2},$$
+whence
+$$x = \int\frac{du}{(1+u)(1-u)} = \frac{1}{2}\int\left(\frac{1}{1+u}+\frac{1}{1-u}\right)du 
+= \frac{1}{2}\ln\left|\frac{1+u}{1-u}\right|+C.$$
+Accordingly, the given differential equation has the parametric solution
+$$x = \ln\sqrt{\left|\frac{1\!+\!u}{1\!-\!u}\right|}+C, \quad y = \ln\sqrt{\left|\frac{1\!+\!u}{1\!-\!u}\right|}-u\!+\!C.$$
+
+\begin{thebibliography}{9}
+\bibitem{3L}{\sc E. Lindel\"of:} {\em Differentiali- ja integralilasku III 1}.\, Mercatorin Kirjapaino Osakeyhti\"o, Helsinki (1935).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}
