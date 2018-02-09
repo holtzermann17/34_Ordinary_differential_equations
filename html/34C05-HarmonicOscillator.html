@@ -1,0 +1,457 @@
+<!DOCTYPE html><html>
+<head>
+<title>harmonic oscillator</title>
+<!--Generated on Fri Feb  9 20:41:44 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">harmonic oscillator</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Harmonic oscillator is the simplest model but one of the most important vibrating system. It is often encountered in engineering systems and commonly produced by the unbalance in rotating machinery, isolation, earthquakes, bridges, building, control and atomatization devices, just for naming a few examples. Although pure harmonic oscillation is less likely to occur than general periodic oscillations by the action of arbitrary types of excitation, understanding the behavior of a system undergoing harmonic oscillation is essential in order to comprehend how the system will respond to more general types of excitation. Such harmonic oscillations may be in the form of free vibrations or by the action of an exciter force applied at some point of the system, as we shall see later. Indeed, harmonic oscillator is a single degree of freedom system (it is like a vibration module) which is tipically constituted by an ideal spring in parallel with an ideal (but not conservative) viscous damper, both attached to a mass in one end and the other one grounded. 
+<br class="ltx_break">In this entry we will make an elementary but nonconventional discussion about the fundamental concepts involved in a single vibrating system. Unlike the conventional method, which is usually discussed in inherent Literature about this topic, where, by one side, the solution of the corresponding differential equation of motion is expressed in terms of circular trigonometric functions, having to deal with complex arbitrary constants (obviously depending on the initial conditions) and, on the other hand, studying separately the three cases of damping. Alternatively we shall use hyperbolic functions and their properties to obtain the solution of the mentioned differential equation. This way we gain a little in brevity and hilarity in the exposition, as we may study all the three cases of damping simultaneously, avoiding at the same time calculating complex constants. 
+<br class="ltx_break">Besides preliminars, we will separate the discussion in three paragraphs namely: free damped vibrations, forced damped vibrations and mechanical resonance.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Preliminars</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">The purpose of this section is concept definifitions.
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Response:</span> <math id="S2.p1.m1" class="ltx_Math" alttext="x=x(t)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, the general solution of the linear differential equation involved in the motion of harmonic oscillator. We will assume <math id="S2.p1.m2" class="ltx_Math" alttext="x&gt;0" display="inline"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></math> downward, like the sense of gravitatory field.
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Ideal spring:</span> an unidimensional model, weightless, linear, elastic and that obeys the Hooke’s law <math id="S2.p1.m3" class="ltx_Math" alttext="F_{s}=kx" display="inline"><mrow><msub><mi>F</mi><mi>s</mi></msub><mo>=</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>, where <math id="S2.p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math> is an elastic constant so-called <em class="ltx_emph ltx_font_italic">stiffness</em>, <math id="S2.p1.m5" class="ltx_Math" alttext="F_{s}" display="inline"><msub><mi>F</mi><mi>s</mi></msub></math> is the restitutive spring force and <math id="S2.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> an arbitrary spring elongation. 
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Ideal damper:</span> an unidimensional model, weightless, where the damping force is proportional to the velocity of oscillator, i.e. <math id="S2.p1.m7" class="ltx_Math" alttext="F_{d}=c\,\dot{x}" display="inline"><mrow><msub><mi>F</mi><mi>d</mi></msub><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>c</mi></mpadded><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>˙</mo></mover></mrow></mrow></math>, being <math id="S2.p1.m8" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> the <em class="ltx_emph ltx_font_italic">damping constant</em>. 
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Natural angular frequency:</span> <math id="S2.p1.m9" class="ltx_Math" alttext="\omega_{n}=\sqrt{k/m}" display="inline"><mrow><msub><mi>ω</mi><mi>n</mi></msub><mo>=</mo><msqrt><mrow><mi>k</mi><mo>/</mo><mi>m</mi></mrow></msqrt></mrow></math> (rad/sec), a specific property of the system; <math id="S2.p1.m10" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is the mass of oscillator. 
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Damping factor:</span> <math id="S2.p1.m11" class="ltx_Math" alttext="\zeta=c/2\sqrt{km}\equiv c/2m\omega_{n}" display="inline"><mrow><mi>ζ</mi><mo>=</mo><mrow><mrow><mi>c</mi><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><msqrt><mrow><mi>k</mi><mo>⁢</mo><mi>m</mi></mrow></msqrt></mrow><mo>≡</mo><mrow><mrow><mi>c</mi><mo>/</mo><mn>2</mn></mrow><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow></math> (physical dimensionless). 
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Critical damping:</span> <math id="S2.p1.m12" class="ltx_Math" alttext="c_{c}=2\sqrt{km}\equiv 2m\omega_{n}" display="inline"><mrow><msub><mi>c</mi><mi>c</mi></msub><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msqrt><mrow><mi>k</mi><mo>⁢</mo><mi>m</mi></mrow></msqrt></mrow><mo>≡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow></math>. Thus <math id="S2.p1.m13" class="ltx_Math" alttext="\zeta=c/c_{c}" display="inline"><mrow><mi>ζ</mi><mo>=</mo><mrow><mi>c</mi><mo>/</mo><msub><mi>c</mi><mi>c</mi></msub></mrow></mrow></math>, and it is also called <em class="ltx_emph ltx_font_italic">damping ratio</em>. 
+<br class="ltx_break"><span class="ltx_text ltx_font_bold">Static equilibrium configuration:</span> a static position at <math id="S2.p1.m14" class="ltx_Math" alttext="t=0^{-}" display="inline"><mrow><mi>t</mi><mo>=</mo><msup><mn>0</mn><mo>-</mo></msup></mrow></math>, reached because the action of gravitatory field over the mass of oscillator, i.e. the weight <math id="S2.p1.m15" class="ltx_Math" alttext="mg" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mi>g</mi></mrow></math> (<math id="S2.p1.m16" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is the gravity acceleration), thus deflecting the spring a quantity <math id="S2.p1.m17" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math>, from its natural length, so-called <em class="ltx_emph ltx_font_italic">spring static deflection</em>. As a result, from Newton’s equation <math id="S2.p1.m18" class="ltx_Math" alttext="\sum F_{x}=0" display="inline"><mrow><mrow><mo largeop="true" symmetric="true">∑</mo><msub><mi>F</mi><mi>x</mi></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>, the spring force <math id="S2.p1.m19" class="ltx_Math" alttext="k\delta" display="inline"><mrow><mi>k</mi><mo>⁢</mo><mi>δ</mi></mrow></math> (damper does not work!) due to its static deflection is balanced, at every instant, by the weight of oscillator and therefore both forces do not appear in the dynamical equation.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Free Damped Vibrations</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">With the help of an oscillator’s free body diagram and by applying the Newton’s second law <math id="S3.p1.m1" class="ltx_Math" alttext="\sum F_{x}=m\ddot{x}" display="inline"><mrow><mrow><mo largeop="true" symmetric="true">∑</mo><msub><mi>F</mi><mi>x</mi></msub></mrow><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>¨</mo></mover></mrow></mrow></math>, we obtain the differential equation of motion</p>
+<table id="S3.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E1.m1" class="ltx_Math" alttext="m\ddot{x}+c\dot{x}+kx=F(t)," display="block"><mrow><mrow><mrow><mrow><mi>m</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>¨</mo></mover></mrow><mo>+</mo><mrow><mi>c</mi><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>˙</mo></mover></mrow><mo>+</mo><mrow><mi>k</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">being <math id="S3.p1.m2" class="ltx_Math" alttext="F(t)" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> the so-called <em class="ltx_emph ltx_font_italic">exciter force</em>. It is convenient to introduce <math id="S3.p1.m3" class="ltx_Math" alttext="\omega_{n}" display="inline"><msub><mi>ω</mi><mi>n</mi></msub></math> and <math id="S3.p1.m4" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math>. So that (1) becomes</p>
+<table id="S3.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E2.m1" class="ltx_Math" alttext="\ddot{x}+2\zeta\omega_{n}\dot{x}+\omega_{n}^{2}x=f(t)," display="block"><mrow><mrow><mrow><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>˙</mo></mover></mrow><mo>+</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S3.p1.m5" class="ltx_Math" alttext="f(t)=F(t)/m" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><mi>m</mi></mrow></mrow></math>. But in this section we are interested in free vibrations. So that we set <math id="S3.p1.m6" class="ltx_Math" alttext="f(t)\equiv 0" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mn>0</mn></mrow></math> and thus we get the associate homogeneous differential equation</p>
+<table id="S3.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E3.m1" class="ltx_Math" alttext="\ddot{x}+2\zeta\omega_{n}\dot{x}+\omega_{n}^{2}x=0." display="block"><mrow><mrow><mrow><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>˙</mo></mover></mrow><mo>+</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">In this case, about free oscillations, <math id="S3.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> means an arbitrary displacement from the static equilibrium position. Let us suppose initial conditions <math id="S3.p1.m8" class="ltx_Math" alttext="x(0)=x_{0},\,\dot{x}(0)=\dot{x}_{0}" display="inline"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo rspace="4.2pt">,</mo><mrow><mrow><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub></mrow></mrow></math>. These conditions may be interpreted as follows: from the static equilibrium position we give an initial displacement <math id="S3.p1.m9" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> and an initial velocity <math id="S3.p1.m10" class="ltx_Math" alttext="\dot{x}_{0}" display="inline"><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub></math> to the mass <math id="S3.p1.m11" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> and then we let it free at instant <math id="S3.p1.m12" class="ltx_Math" alttext="t=0" display="inline"><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow></math>. Accordingly, the characteristic equation of (3) is
+</p>
+<table id="S3.E4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E4.m1" class="ltx_Math" alttext="s^{2}+2\zeta\omega_{n}s+\omega_{n}^{2}=0," display="block"><mrow><mrow><mrow><msup><mi>s</mi><mn>2</mn></msup><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>s</mi></mrow><mo>+</mo><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr>
+</table>
+<p class="ltx_p">whose roots are given by</p>
+<table id="S3.E5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E5.m1" class="ltx_Math" alttext="s_{1}=-\zeta\omega_{n}+\omega_{n}\sqrt{\zeta^{2}-1}\equiv-\zeta\omega_{n}+%
+\omega_{d}," display="block"><mrow><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow><mo>+</mo><mrow><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msqrt><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></mrow><mo>≡</mo><mrow><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow><mo>+</mo><msub><mi>ω</mi><mi>d</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr>
+</table>
+<table id="S3.E6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E6.m1" class="ltx_Math" alttext="s_{2}=-\zeta\omega_{n}-\omega_{n}\sqrt{\zeta^{2}-1}\equiv-\zeta\omega_{n}-%
+\omega_{d}," display="block"><mrow><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow><mo>-</mo><mrow><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msqrt><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></mrow><mo>≡</mo><mrow><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow><mo>-</mo><msub><mi>ω</mi><mi>d</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(6)</span></td>
+</tr>
+</table>
+<p class="ltx_p">where we are defining <math id="S3.p1.m13" class="ltx_Math" alttext="\omega_{d}:=\omega_{n}\sqrt{\zeta^{2}-1}" display="inline"><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>:=</mo><mrow><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msqrt><mrow><msup><mi>ζ</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></mrow></math> which is called <em class="ltx_emph ltx_font_italic">frecuency of damped oscillation</em>. 
+<br class="ltx_break">In the nullspace of the linear operator associate to (3), we find the general solution</p>
+<table id="S3.E7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E7.m1" class="ltx_Math" alttext="x(t)=Ae^{s_{1}t}+Be^{s_{2}t}\implies\dot{x}(t)=As_{1}e^{s_{1}t}+Bs_{2}e^{s_{2}%
+t}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow><mo>⟹</mo><mrow><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(7)</span></td>
+</tr>
+</table>
+<p class="ltx_p">By substituting the initial conditions in (7), we obtain the symmetric linear system of equations</p>
+<table id="S3.E8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E8.m1" class="ltx_Math" alttext="x_{0}=A+B,\qquad\dot{x}_{0}=As_{1}+Bs_{2}." display="block"><mrow><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mrow><mi>A</mi><mo>+</mo><mi>B</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>=</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(8)</span></td>
+</tr>
+</table>
+<p class="ltx_p">From (5), (6) and solving (8) for <math id="S3.p1.m14" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S3.p1.m15" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, leads to</p>
+<table id="S3.E9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E9.m1" class="ltx_Math" alttext="A=\frac{\dot{x}_{0}+(\zeta\omega_{n}+\omega_{d})x_{0}}{2\omega_{d}}\;,\qquad B%
+=-\frac{\dot{x}_{0}+(\zeta\omega_{n}-\omega_{d})x_{0}}{2\omega_{d}}\;," display="block"><mrow><mrow><mrow><mi>A</mi><mo>=</mo><mpadded width="+2.8pt"><mfrac><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow><mo>+</mo><msub><mi>ω</mi><mi>d</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>ω</mi><mi>d</mi></msub></mrow></mfrac></mpadded></mrow><mo rspace="22.5pt">,</mo><mrow><mi>B</mi><mo>=</mo><mrow><mo>-</mo><mpadded width="+2.8pt"><mfrac><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow><mo>-</mo><msub><mi>ω</mi><mi>d</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mi>ω</mi><mi>d</mi></msub></mrow></mfrac></mpadded></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(9)</span></td>
+</tr>
+</table>
+<p class="ltx_p">which substituted into the solution (7) and after an elementary algebraic manipulation, leads to</p>
+<table id="S3.E10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E10.m1" class="ltx_Math" alttext="x(t)=\frac{e^{-\zeta\omega_{n}t}}{\omega_{d}}\bigg{\{}(\dot{x}_{0}+\zeta\omega%
+_{n}x_{0})\frac{e^{\omega_{d}t}-e^{-\omega_{d}t}}{2}+\omega_{d}x_{0}\frac{e^{%
+\omega_{d}t}+e^{-\omega_{d}t}}{2}\bigg{\}}," display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><msub><mi>ω</mi><mi>d</mi></msub></mfrac><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">{</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><msup><mi>e</mi><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></msup><mo>-</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow><mn>2</mn></mfrac></mrow><mo>+</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mfrac><mrow><msup><mi>e</mi><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup></mrow><mn>2</mn></mfrac></mrow></mrow><mo maxsize="210%" minsize="210%">}</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(10)</span></td>
+</tr>
+</table>
+<p class="ltx_p">that, in terms of hyperbolic functions, it is expressed as</p>
+<table id="S3.E11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E11.m1" class="ltx_Math" alttext="x(t)=\frac{e^{-\zeta\omega_{n}t}}{\omega_{d}}\left\{(\dot{x}_{0}+\zeta\omega_{%
+n}x_{0})\sinh{\omega_{d}t}+\omega_{d}x_{0}\cosh{\omega_{d}t}\right\}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><msub><mi>ω</mi><mi>d</mi></msub></mfrac><mo>⁢</mo><mrow><mo>{</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>sinh</mi><mo>⁡</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(11)</span></td>
+</tr>
+</table>
+<p class="ltx_p">It is now easily seen that the general solution of the homogeneous equation (3) satifies <math id="S3.p1.m16" class="ltx_Math" alttext="\lim_{t\to\infty}x(t)=0" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></msub><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, since we are dealing with a transitory solution which agree with the fact that an exciter force <math id="S3.p1.m17" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is not present. 
+<br class="ltx_break">Damping factor lets a classification about the kind of damping in concordance with the values that <math id="S3.p1.m18" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math> may take. Thus,</p>
+<table id="S6.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S3.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex1.m1" class="ltx_Math" alttext="\displaystyle\begin{cases}\;1.\;\,\zeta&gt;1\implies&amp;\textrm{overdamped case},\\
+\;2.\;\,\zeta=1\implies&amp;\textrm{critical damping case},\\
+\;3.\;\,0&lt;\zeta&lt;1\implies&amp;\textrm{underdamped case}.\end{cases}" display="inline"><mrow><mo>{</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mn> 1</mn><mo rspace="6.9pt">.</mo><mrow><mi>ζ</mi><mo>&gt;</mo><mn>1</mn><mo>⟹</mo><mi></mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>overdamped case</mtext><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mn> 2</mn><mo rspace="6.9pt">.</mo><mrow><mi>ζ</mi><mo>=</mo><mn>1</mn><mo>⟹</mo><mi></mi></mrow></mrow></mtd><mtd columnalign="left"><mrow><mtext>critical damping case</mtext><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mrow><mn> 3.  0</mn><mo>&lt;</mo><mi>ζ</mi><mo>&lt;</mo><mn>1</mn><mo>⟹</mo><mi></mi></mrow></mtd><mtd columnalign="left"><mrow><mtext>underdamped case</mtext><mo>.</mo></mrow></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us proceed to study all the three cases.</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="\zeta&gt;1" display="inline"><mrow><mi>ζ</mi><mo>&gt;</mo><mn>1</mn></mrow></math>. <span class="ltx_text ltx_font_bold">Overdamped case</span>. The response is <em class="ltx_emph ltx_font_italic">nonperiodic</em> and is given directly by (11), i.e.</p>
+<table id="S3.E12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E12.m1" class="ltx_Math" alttext="x(t)=\frac{e^{-\zeta\omega_{n}t}}{\omega_{d}}\left\{(\dot{x}_{0}+\zeta\omega_{%
+n}x_{0})\sinh{\omega_{d}t}+\omega_{d}x_{0}\cosh{\omega_{d}t}\right\}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><msub><mi>ω</mi><mi>d</mi></msub></mfrac><mo>⁢</mo><mrow><mo>{</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>sinh</mi><mo>⁡</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(12)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Roots <math id="I1.i1.p1.m2" class="ltx_Math" alttext="s_{1}&gt;s_{2}\in\mathbb{R}" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>s</mi><mn>2</mn></msub><mo>∈</mo><mi>ℝ</mi></mrow></math>. Hence <math id="I1.i1.p1.m3" class="ltx_Math" alttext="e^{s_{1}t},e^{s_{1}t}" display="inline"><mrow><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup><mo>,</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></math> are linearly independent and form a basis in the above mentioned nullspace.
+</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\zeta=1" display="inline"><mrow><mi>ζ</mi><mo>=</mo><mn>1</mn></mrow></math>. <span class="ltx_text ltx_font_bold">Critical damping case</span>. The response is also <em class="ltx_emph ltx_font_italic">nonperiodic</em>. In addition, <math id="I1.i2.p1.m2" class="ltx_Math" alttext="s_{1}=s_{2}&lt;0" display="inline"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><msub><mi>s</mi><mn>2</mn></msub><mo>&lt;</mo><mn>0</mn></mrow></math>, so that <math id="I1.i2.p1.m3" class="ltx_Math" alttext="e^{s_{1}t},e^{s_{2}t}" display="inline"><mrow><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup><mo>,</mo><msup><mi>e</mi><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><mi>t</mi></mrow></msup></mrow></math> are linearly dependent and therefore they do not form a complete basis in the space of solutions of the differential equation (3). Nevertheless, we may find out a second solution linearly independent because in this case <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\omega_{d}\equiv 0" display="inline"><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>≡</mo><mn>0</mn></mrow></math>, and recalling (11) we note that (by applying <span class="ltx_text ltx_markedasmath">L’Hospital</span>),</p>
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex2.m1" class="ltx_Math" alttext="\lim_{\omega_{d}\to 0}\frac{\sinh{\omega_{d}t}}{\omega_{d}}=t." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mi>sinh</mi><mo>⁡</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><msub><mi>ω</mi><mi>d</mi></msub></mfrac></mrow><mo>=</mo><mi>t</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, the general solution for critical damping may be expressed as</p>
+<table id="S3.E13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E13.m1" class="ltx_Math" alttext="x(t)\equiv x_{c}(t)=e^{-\omega_{n}t}\left\{x_{0}+(\dot{x}_{0}+\omega_{n}x_{0})%
+t\right\}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≡</mo><mrow><msub><mi>x</mi><mi>c</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo>{</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(13)</span></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="0&lt;\zeta&lt;1" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>ζ</mi><mo>&lt;</mo><mn>1</mn></mrow></math>. <span class="ltx_text ltx_font_bold">Underdamped case</span>. Since in this case <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\omega_{d}\in\mathbb{C}" display="inline"><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>∈</mo><mi>ℂ</mi></mrow></math>, we redefine it as
+<math id="I1.i3.p1.m3" class="ltx_Math" alttext="\omega_{d}=i\omega_{n}\sqrt{1-\zeta^{2}}:=i\omega^{\prime}_{d},\quad i=\sqrt{-1}" display="inline"><mrow><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>-</mo><msup><mi>ζ</mi><mn>2</mn></msup></mrow></msqrt></mrow><mo>:=</mo><mrow><mi>i</mi><mo>⁢</mo><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>i</mi><mo>=</mo><msqrt><mrow><mo>-</mo><mn>1</mn></mrow></msqrt></mrow></mrow></math>.
+Recalling the hyperbolic equations <math id="I1.i3.p1.m4" class="ltx_Math" alttext="\sinh\omega_{d}t=\sinh i\omega^{\prime}_{d}t=i\sin\omega^{\prime}_{d}t" display="inline"><mrow><mrow><mi>sinh</mi><mo>⁡</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>=</mo><mrow><mi>sinh</mi><mo>⁡</mo><mrow><mi>i</mi><mo>⁢</mo><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow></math>, <math id="I1.i3.p1.m5" class="ltx_Math" alttext="\cosh\omega_{d}t=\cosh i\omega^{\prime}_{d}t=\cos\omega^{\prime}_{d}t" display="inline"><mrow><mrow><mi>cosh</mi><mo>⁡</mo><mrow><msub><mi>ω</mi><mi>d</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>=</mo><mrow><mi>cosh</mi><mo>⁡</mo><mrow><mi>i</mi><mo>⁢</mo><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>=</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math> which substituted into (11) gives the general solution on this case. That is,</p>
+<table id="S3.E14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E14.m1" class="ltx_Math" alttext="x(t)=e^{-\zeta\omega_{n}t}\bigg{\{}\frac{\dot{x}_{0}+\zeta\omega_{n}x_{0}}{%
+\omega^{\prime}_{d}}\sin{\omega^{\prime}_{d}t}+x_{0}\cos{\omega^{\prime}_{d}t}%
+\bigg{\}}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo maxsize="210%" minsize="210%">{</mo><mrow><mrow><mfrac><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup></mfrac><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>+</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo maxsize="210%" minsize="210%">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(14)</span></td>
+</tr>
+</table>
+<p class="ltx_p">This solution is clearly harmonics. Alternatively, we may introduce definitions about the <em class="ltx_emph ltx_font_italic">amplitude</em> <math id="I1.i3.p1.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> of the response and the <em class="ltx_emph ltx_font_italic">phase angle</em> <math id="I1.i3.p1.m7" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>. They are,</p>
+<table id="S3.E15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E15.m1" class="ltx_Math" alttext="X:=\sqrt{x_{0}^{2}+\bigg{(}\frac{\dot{x}_{0}+\zeta\omega_{n}x_{0}}{\omega^{%
+\prime}_{d}}\bigg{)}^{2}},\qquad\tan\phi:=\frac{\omega^{\prime}_{d}x_{0}}{\dot%
+{x}_{0}+\zeta\omega_{n}x_{0}}\cdot" display="block"><mrow><mi>X</mi><mo>:=</mo><msqrt><mrow><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mo>+</mo><msup><mrow><mo maxsize="210%" minsize="210%">(</mo><mfrac><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup></mfrac><mo maxsize="210%" minsize="210%">)</mo></mrow><mn>2</mn></msup></mrow></msqrt><mo rspace="22.5pt">,</mo><mi>tan</mi><mi>ϕ</mi><mo>:=</mo><mfrac><mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mn>0</mn></msub><mo>+</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></mfrac><mo>⋅</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(15)</span></td>
+</tr>
+</table>
+<p class="ltx_p">With these definitions placed into (14), it becomes</p>
+<table id="S3.E16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E16.m1" class="ltx_Math" alttext="x(t)=Xe^{-\zeta\omega_{n}t}\sin{(\omega^{\prime}_{d}t+\phi)}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>X</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>t</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msubsup><mi>ω</mi><mi>d</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(16)</span></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Forced Damped Vibrations</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">In this case an exciter force is present. Many useful and important applications, a few mentioned above in the Introduction, agree with an excellent degree of accuracy if we assume an <em class="ltx_emph ltx_font_italic">intensive</em> periodic exciter force (exciter force by mass unit) on the form <math id="S4.p1.m1" class="ltx_Math" alttext="f(t)=f_{0}\cos\omega t" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow></math><span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>Naturally, an exciter force on the form <math id="S4.p1.m2" class="ltx_Math" alttext="F(t)=F_{0}\sin\omega t" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow></math> is also valid, but the conclusions are the same.</span></span></span>, being <math id="S4.p1.m3" class="ltx_Math" alttext="f_{0}:=F_{0}/m" display="inline"><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>:=</mo><mrow><msub><mi>F</mi><mn>0</mn></msub><mo>/</mo><mi>m</mi></mrow></mrow></math> the <em class="ltx_emph ltx_font_italic">amplitude</em> of the intensive exciter force, and <math id="S4.p1.m4" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> the <em class="ltx_emph ltx_font_italic">frecuency of the exciter force</em>. In such case, the differential equation of motion (2) takes the form</p>
+<table id="S4.E17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E17.m1" class="ltx_Math" alttext="\ddot{x}+2\zeta\omega_{n}\dot{x}+\omega_{n}^{2}x=f_{0}\cos\omega t." display="block"><mrow><mrow><mrow><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mover accent="true"><mi>x</mi><mo>˙</mo></mover></mrow><mo>+</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(17)</span></td>
+</tr>
+</table>
+<p class="ltx_p">It is well-known, from the linear differential equations theory, that the general solution of (17) may be expressed as the <em class="ltx_emph ltx_font_italic">superposition</em> of an homegeneous or transitory response and a particular or permanent response, i.e.</p>
+<table id="S4.E18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E18.m1" class="ltx_Math" alttext="x(t)=x_{h}(t)+x_{p}(t)." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>x</mi><mi>h</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(18)</span></td>
+</tr>
+</table>
+<p class="ltx_p">The general homogeneous solution <math id="S4.p1.m5" class="ltx_Math" alttext="x_{h}" display="inline"><msub><mi>x</mi><mi>h</mi></msub></math> already have been stablished, so that in this section we focus our attention in find out a particular solution <math id="S4.p1.m6" class="ltx_Math" alttext="x_{p}" display="inline"><msub><mi>x</mi><mi>p</mi></msub></math>. We search that solution on the form</p>
+<table id="S4.E19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E19.m1" class="ltx_Math" alttext="x_{p}(t)=C\cos\omega t+D\sin\omega t." display="block"><mrow><mrow><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>+</mo><mrow><mi>D</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(19)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Its first and second time derivatives are</p>
+<table id="S4.E20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E20.m1" class="ltx_Math" alttext="\dot{x}_{p}(t)=-C\omega\sin\omega t+D\omega\cos\omega t\implies\ddot{x}_{p}(t)%
+=-C\omega^{2}\cos\omega t-D\omega^{2}\sin\omega t." display="block"><mrow><mrow><mrow><msub><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>C</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mi>D</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>⟹</mo><mrow><msub><mover accent="true"><mi>x</mi><mo>¨</mo></mover><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>-</mo><mrow><mi>D</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(20)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Next we substitute (19) and (20) into (17), setting <math id="S4.p1.m7" class="ltx_Math" alttext="x(t)=x_{p}(t)" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and by collecting terms in <math id="S4.p1.m8" class="ltx_Math" alttext="\cos\omega t" display="inline"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math> and
+<math id="S4.p1.m9" class="ltx_Math" alttext="\sin\omega t" display="inline"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math>, we have</p>
+<table id="S4.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex3.m1" class="ltx_Math" alttext="\{(\omega_{n}^{2}-\omega^{2})C+(2\zeta\omega_{n}\omega)D\}\cos\omega t+\{(%
+\omega_{n}^{2}-\omega^{2})D-(2\zeta\omega_{n}\omega)C\}\sin\omega t=f_{0}\cos%
+\omega t." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">{</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>D</mi></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">{</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>D</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We are dealing with a subspace of dimension <math id="S4.p1.m10" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, where the set of functions
+<math id="S4.p1.m11" class="ltx_Math" alttext="\{\cos\omega t,\sin\omega t\}\subset\mathcal{C}[0,\infty)" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>,</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⊂</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒞</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+form an orthogonal basis in the spaces of solutions of (17).
+In other words, <math id="S4.p1.m12" class="ltx_Math" alttext="\cos\omega t" display="inline"><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math> and <math id="S4.p1.m13" class="ltx_Math" alttext="\sin\omega t" display="inline"><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math> are there linearly independent. Therefore,</p>
+<table id="S4.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex4.m1" class="ltx_Math" alttext="(\omega_{n}^{2}-\omega^{2})D-(2\zeta\omega_{n}\omega)C\equiv 0,\quad\textrm{%
+and}\quad(\omega_{n}^{2}-\omega^{2})C+(2\zeta\omega_{n}\omega)D\equiv f_{0}." display="block"><mrow><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>D</mi></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi></mrow></mrow><mo>≡</mo><mrow><mn>0</mn><mo rspace="12.5pt">,</mo><mtext>and</mtext></mrow></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>C</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>ω</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>D</mi></mrow></mrow><mo>≡</mo><msub><mi>f</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By solving for <math id="S4.p1.m14" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> and <math id="S4.p1.m15" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>,</p>
+<table id="S4.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex5.m1" class="ltx_Math" alttext="C=\frac{(\omega_{n}^{2}-\omega^{2})f_{0}}{(\omega_{n}^{2}-\omega^{2})^{2}+4%
+\zeta^{2}\omega_{n}^{2}\omega^{2}}\,,\qquad D=\frac{2\zeta\omega_{n}\omega f_{%
+0}}{(\omega_{n}^{2}-\omega^{2})^{2}+4\zeta^{2}\omega_{n}^{2}\omega^{2}}\cdot" display="block"><mrow><mi>C</mi><mo>=</mo><mpadded width="+1.7pt"><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>f</mi><mn>0</mn></msub></mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow></mfrac></mpadded><mo rspace="22.5pt">,</mo><mi>D</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>f</mi><mn>0</mn></msub></mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow></mfrac><mo>⋅</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These one are introduced into (19) and we obtain a particular solution of (17), i.e. the <em class="ltx_emph ltx_font_italic">permanent response</em> of harmonic oscillator’s forced vibrations. That is,</p>
+<table id="S4.E21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E21.m1" class="ltx_Math" alttext="x_{p}(t)=\frac{(\omega_{n}^{2}-\omega^{2})f_{0}}{(\omega_{n}^{2}-\omega^{2})^{%
+2}+4\zeta^{2}\omega_{n}^{2}\omega^{2}}\cos\omega t+\frac{2\zeta\omega_{n}%
+\omega f_{0}}{(\omega_{n}^{2}-\omega^{2})^{2}+4\zeta^{2}\omega_{n}^{2}\omega^{%
+2}}\sin\omega t." display="block"><mrow><mrow><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>f</mi><mn>0</mn></msub></mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow></mfrac><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>ζ</mi><mo>⁢</mo><msub><mi>ω</mi><mi>n</mi></msub><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><msub><mi>f</mi><mn>0</mn></msub></mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>ζ</mi><mn>2</mn></msup><mo>⁢</mo><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mrow></mfrac><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(21)</span></td>
+</tr>
+</table>
+<p class="ltx_p">One also may define the <em class="ltx_emph ltx_font_italic">frecuency ratio</em> <math id="S4.p1.m16" class="ltx_Math" alttext="r=\omega/\omega_{n}" display="inline"><mrow><mi>r</mi><mo>=</mo><mrow><mi>ω</mi><mo>/</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></mrow></math> and continue to discuss an important set of physical considerations, but that is not the sight of this entry<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>Indeed the author mostly wanted to indicate the alternative elementary method corresponding to free vibrations but, for completeness reasons, the latter two sections have been added.</span></span></span>.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Mechanical Resonance</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">In absence of damping, i.e. <math id="S5.p1.m1" class="ltx_Math" alttext="\zeta=0" display="inline"><mrow><mi>ζ</mi><mo>=</mo><mn>0</mn></mrow></math>, (21) reduces to</p>
+<table id="S5.E22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.E22.m1" class="ltx_Math" alttext="x_{p}(t)=\frac{f_{0}}{\omega_{n}^{2}-\omega^{2}}\cos\omega t." display="block"><mrow><mrow><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msub><mi>f</mi><mn>0</mn></msub><mrow><msubsup><mi>ω</mi><mi>n</mi><mn>2</mn></msubsup><mo>-</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(22)</span></td>
+</tr>
+</table>
+<p class="ltx_p">One realize (theoretically) that as the frequency of exciter force coincides with the natural frequency of the system, i.e. <math id="S5.p1.m2" class="ltx_Math" alttext="\omega=\omega_{n}" display="inline"><mrow><mi>ω</mi><mo>=</mo><msub><mi>ω</mi><mi>n</mi></msub></mrow></math> (or equivalently <math id="S5.p1.m3" class="ltx_Math" alttext="r=1" display="inline"><mrow><mi>r</mi><mo>=</mo><mn>1</mn></mrow></math>), then <math id="S5.p1.m4" class="ltx_Math" alttext="x_{p}=\infty" display="inline"><mrow><msub><mi>x</mi><mi>p</mi></msub><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>. This is what is defined as <em class="ltx_emph ltx_font_italic">mechanical resonance</em> phenomena. In the practice, however, low values of <math id="S5.p1.m5" class="ltx_Math" alttext="\zeta" display="inline"><mi>ζ</mi></math> (<math id="S5.p1.m6" class="ltx_Math" alttext="\zeta\ll 1" display="inline"><mrow><mi>ζ</mi><mo>≪</mo><mn>1</mn></mrow></math>) make feasible high values of the permanent response and thus, this fact, is also called <em class="ltx_emph ltx_font_italic">resonance</em>. Such phenomena is undesirable in any system, unlike the magnetic resonance that provides beneficial applications in several fields of science.</p>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>References</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">P. Fernández, <em class="ltx_emph ltx_font_italic"> Un método elemental alternativo para el estudio de las vibraciones libres amortiguadas en un oscilador armónico</em>, (ComunicaciÃÂ³n interna), Departamento de Mecánica, Facultad de Ingeniería, Universidad Central de Venezuela (UCV), Caracas, 1997.
+</p>
+</div>
+<div id="S6.p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">harmonic oscillator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">HarmonicOscillator</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:22:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:22:46</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">perucho (2192)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Application</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34C05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34A30</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 34-01</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:41:44 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

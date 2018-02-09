@@ -1,0 +1,107 @@
+<!DOCTYPE html><html>
+<head>
+<title>Hopf bifurcation theorem</title>
+<!--Generated on Fri Feb  9 20:41:47 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Hopf bifurcation theorem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Consider a planar system of ordinary differential equations, written in such a form as to make explicit the dependence on a parameter <math id="p2.m1" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>:</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle x^{\prime}" display="inline"><msup><mi>x</mi><mo>′</mo></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle f_{1}(x,y,\mu)" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle y^{\prime}" display="inline"><msup><mi>y</mi><mo>′</mo></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle f_{2}(x,y,\mu)" display="inline"><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Assume that this system has the origin as an equilibrium for all <math id="p2.m2" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. Suppose that the linearization <math id="p2.m3" class="ltx_Math" alttext="Df" display="inline"><mrow><mi>D</mi><mo>⁢</mo><mi>f</mi></mrow></math> at zero has the two purely imaginary eigenvalues <math id="p2.m4" class="ltx_Math" alttext="\lambda_{1}(\mu)" display="inline"><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p2.m5" class="ltx_Math" alttext="\lambda_{2}(\mu)" display="inline"><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow></math> when <math id="p2.m6" class="ltx_Math" alttext="\mu=\mu_{c}" display="inline"><mrow><mi>μ</mi><mo>=</mo><msub><mi>μ</mi><mi>c</mi></msub></mrow></math>. If the real part of the eigenvalues verify</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\frac{d}{d\mu}\left(\Re\left(\lambda_{1,2}(\mu)\right)\right)_{|\mu=\mu_{c}}&gt;0" display="block"><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>μ</mi></mrow></mfrac><mo>⁢</mo><msub><mrow><mo>(</mo><mrow><mi mathvariant="normal">ℜ</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi>λ</mi><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>μ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>)</mo></mrow><mrow><mo stretchy="false">|</mo><mi>μ</mi><mo>=</mo><msub><mi>μ</mi><mi>c</mi></msub></mrow></msub></mrow><mo>&gt;</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the origin is asymptotically stable at <math id="p2.m7" class="ltx_Math" alttext="\mu=\mu_{c}" display="inline"><mrow><mi>μ</mi><mo>=</mo><msub><mi>μ</mi><mi>c</mi></msub></mrow></math>, then</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="roman]{enumerate}\item\mu_{c}isabifurcationpoint;\item forsome\mu_{1}\in\bar{%
+\mathbb{R}}suchthat\mu_{1}&lt;\mu&lt;\mu_{c},theoriginisastablefocus;\item forsome%
+\mu_{2}\in\bar{\mathbb{R}}suchthat\mu_{c}&lt;\mu&lt;\mu_{2},theoriginisunstable,%
+surroundedbyastablelimitcyclewhosesizeincreaseswith\mu.\par
+
+Thisisasimplifiedversionofthetheorem%
+,correspondingtoasupercriticalHopfbifurcation.\end{enumerate}\par
+
+SometimestheHopftheoremiscalled%
+\emph{Poincar\'{e}-Andronov-Hopf theorem}%
+sinceitwasindependentlydiscoveredbyAndronovin1929andHopfin1943andPoincar\'{e}%
+haddiscussionofsuchresultin1892.\@@cite[cite]{[\@@bibref{Refnum}{HK}{}{}]}%
+\thebibliography\bibitem[HK]{HK}Hale,JackH.\&amp;Ko\,cak,H\&quot;{u}seyin:%
+DynamicsandBifurcations.Springer-Verlag,NewYork,1991.\endthebibliography%
+\begin{flushright}\begin{tabular}[]{|ll|}\hline Title&amp;Hopf bifurcation theorem%
+\\
+Canonical name&amp;HopfBifurcationTheorem\\
+Date of creation&amp;2013-03-22 13:18:45\\
+Last modified on&amp;2013-03-22 13:18:45\\
+Owner&amp;Daume (40)\\
+Last modified by&amp;Daume (40)\\
+Numerical id&amp;8\\
+Author&amp;Daume (40)\\
+Entry type&amp;Theorem\\
+Classification&amp;msc 34C05\\
+Synonym&amp;Poincar\'{e}-Andronov-Hopf\\
+\hline\end{tabular}\end{flushright}\end{document}" display="block"><mrow><mi>r</mi><mi>o</mi><mi>m</mi><mi>a</mi><mi>n</mi><mo stretchy="false">]</mo><mi>e</mi><mi>n</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>a</mi><mi>t</mi><mi>e</mi><mtext></mtext><mi>μ</mi><msub><mi></mi><mi>c</mi></msub><mi>i</mi><mi>s</mi><mi>a</mi><mi>b</mi><mi>i</mi><mi>f</mi><mi>u</mi><mi>r</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>p</mi><mi>o</mi><mi>i</mi><mi>n</mi><mi>t</mi><mo>;</mo><mtext></mtext><mi>f</mi><mi>o</mi><mi>r</mi><mi>s</mi><mi>o</mi><mi>m</mi><mi>e</mi><mi>μ</mi><msub><mi></mi><mn>1</mn></msub><mo>∈</mo><mover accent="true"><mi>ℝ</mi><mo stretchy="false">¯</mo></mover><mi>s</mi><mi>u</mi><mi>c</mi><mi>h</mi><mi>t</mi><mi>h</mi><mi>a</mi><mi>t</mi><mi>μ</mi><msub><mi></mi><mn>1</mn></msub><mo>&lt;</mo><mi>μ</mi><mo>&lt;</mo><mi>μ</mi><msub><mi></mi><mi>c</mi></msub><mo>,</mo><mi>t</mi><mi>h</mi><mi>e</mi><mi>o</mi><mi>r</mi><mi>i</mi><mi>g</mi><mi>i</mi><mi>n</mi><mi>i</mi><mi>s</mi><mi>a</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>b</mi><mi>l</mi><mi>e</mi><mi>f</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>s</mi><mo>;</mo><mtext></mtext><mi>f</mi><mi>o</mi><mi>r</mi><mi>s</mi><mi>o</mi><mi>m</mi><mi>e</mi><mi>μ</mi><msub><mi></mi><mn>2</mn></msub><mo>∈</mo><mover accent="true"><mi>ℝ</mi><mo stretchy="false">¯</mo></mover><mi>s</mi><mi>u</mi><mi>c</mi><mi>h</mi><mi>t</mi><mi>h</mi><mi>a</mi><mi>t</mi><mi>μ</mi><msub><mi></mi><mi>c</mi></msub><mo>&lt;</mo><mi>μ</mi><mo>&lt;</mo><mi>μ</mi><msub><mi></mi><mn>2</mn></msub><mo>,</mo><mi>t</mi><mi>h</mi><mi>e</mi><mi>o</mi><mi>r</mi><mi>i</mi><mi>g</mi><mi>i</mi><mi>n</mi><mi>i</mi><mi>s</mi><mi>u</mi><mi>n</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>b</mi><mi>l</mi><mi>e</mi><mo>,</mo><mi>s</mi><mi>u</mi><mi>r</mi><mi>r</mi><mi>o</mi><mi>u</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>d</mi><mi>b</mi><mi>y</mi><mi>a</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>b</mi><mi>l</mi><mi>e</mi><mi>l</mi><mi>i</mi><mi>m</mi><mi>i</mi><mi>t</mi><mi>c</mi><mi>y</mi><mi>c</mi><mi>l</mi><mi>e</mi><mi>w</mi><mi>h</mi><mi>o</mi><mi>s</mi><mi>e</mi><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi><mi>i</mi><mi>n</mi><mi>c</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>s</mi><mi>e</mi><mi>s</mi><mi>w</mi><mi>i</mi><mi>t</mi><mi>h</mi><mi>μ</mi><mo>.</mo><mi>T</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>s</mi><mi>a</mi><mi>s</mi><mi>i</mi><mi>m</mi><mi>p</mi><mi>l</mi><mi>i</mi><mi>f</mi><mi>i</mi><mi>e</mi><mi>d</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>o</mi><mi>f</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>m</mi><mo>,</mo><mi>c</mi><mi>o</mi><mi>r</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>p</mi><mi>o</mi><mi>n</mi><mi>d</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>t</mi><mi>o</mi><mi>a</mi><mi>s</mi><mi>u</mi><mi>p</mi><mi>e</mi><mi>r</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>t</mi><mi>i</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>H</mi><mi>o</mi><mi>p</mi><mi>f</mi><mi>b</mi><mi>i</mi><mi>f</mi><mi>u</mi><mi>r</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>.</mo><mi>S</mi><mi>o</mi><mi>m</mi><mi>e</mi><mi>t</mi><mi>i</mi><mi>m</mi><mi>e</mi><mi>s</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>H</mi><mi>o</mi><mi>p</mi><mi>f</mi><mi>t</mi><mi>h</mi><mi>e</mi><mi>o</mi><mi>r</mi><mi>e</mi><mi>m</mi><mi>i</mi><mi>s</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>e</mi><mi>d</mi><mtext mathvariant="italic"><em class="ltx_emph ltx_font_italic">Poincaré-Andronov-Hopf theorem</em></mtext><mi>s</mi><mi>i</mi><mi>n</mi><mi>c</mi><mi>e</mi><mi>i</mi><mi>t</mi><mi>w</mi><mi>a</mi><mi>s</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>l</mi><mi>y</mi><mi>d</mi><mi>i</mi><mi>s</mi><mi>c</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>e</mi><mi>d</mi><mi>b</mi><mi>y</mi><mi>A</mi><mi>n</mi><mi>d</mi><mi>r</mi><mi>o</mi><mi>n</mi><mi>o</mi><mi>v</mi><mi>i</mi><mi>n</mi><mn>1929</mn><mi>a</mi><mi>n</mi><mi>d</mi><mi>H</mi><mi>o</mi><mi>p</mi><mi>f</mi><mi>i</mi><mi>n</mi><mn>1943</mn><mi>a</mi><mi>n</mi><mi>d</mi><mi>P</mi><mi>o</mi><mi>i</mi><mi>n</mi><mi>c</mi><mi>a</mi><mi>r</mi><mtext>é</mtext><mi>h</mi><mi>a</mi><mi>d</mi><mi>d</mi><mi>i</mi><mi>s</mi><mi>c</mi><mi>u</mi><mi>s</mi><mi>s</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>o</mi><mi>f</mi><mi>s</mi><mi>u</mi><mi>c</mi><mi>h</mi><mi>r</mi><mi>e</mi><mi>s</mi><mi>u</mi><mi>l</mi><mi>t</mi><mi>i</mi><mi>n</mi><mn>1892</mn><mo>.</mo><mrow><mtext class="ltx_citemacro_cite"><cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bibx1" title="" class="ltx_ref">HK</a>]</cite></mtext><mtext>
+<section id="bibnest" class="ltx_bibliography">
+<h2 class="ltx_title ltx_font_italic ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+                
+<li id="bib.bibx1nest" class="ltx_bibitem">
+                  <span class="ltx_bibtag ltx_role_refnum">HK</span>
+                  
+<span class="ltx_bibblock">
+</span>
+                </li>
+              
+</ul>
+</section></mtext></mrow><mi>H</mi><mi>a</mi><mi>l</mi><mi>e</mi><mo>,</mo><mi>J</mi><mi>a</mi><mi>c</mi><mi>k</mi><mi>H</mi><mo>.</mo><mo>&amp;</mo><mi>K</mi><mpadded width="+1.7pt"><mi>o</mi></mpadded><mi>c</mi><mi>a</mi><mi>k</mi><mo>,</mo><mi>H</mi><mtext>ü</mtext><mi>s</mi><mi>e</mi><mi>y</mi><mi>i</mi><mi>n</mi><mo>:</mo><mi>D</mi><mi>y</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>i</mi><mi>c</mi><mi>s</mi><mi>a</mi><mi>n</mi><mi>d</mi><mi>B</mi><mi>i</mi><mi>f</mi><mi>u</mi><mi>r</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>s</mi><mo>.</mo><mi>S</mi><mi>p</mi><mi>r</mi><mi>i</mi><mi>n</mi><mi>g</mi><mi>e</mi><mi>r</mi><mo>-</mo><mi>V</mi><mi>e</mi><mi>r</mi><mi>l</mi><mi>a</mi><mi>g</mi><mo>,</mo><mi>N</mi><mi>e</mi><mi>w</mi><mi>Y</mi><mi>o</mi><mi>r</mi><mi>k</mi><mo>,</mo><mn>1991</mn><mo>.</mo><mtable class="ltx_align_right ltx_guessed_headers" columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd class="ltx_border_l ltx_border_t ltx_th_row" columnalign="left"><mtext>Title</mtext></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="left"><mtext>Hopf bifurcation theorem</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Canonical name</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>HopfBifurcationTheorem</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Date of creation</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>2013-03-22 13:18:45</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Last modified on</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>2013-03-22 13:18:45</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Owner</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>Daume (40)</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Last modified by</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>Daume (40)</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Numerical id</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>8</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Author</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>Daume (40)</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Entry type</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>Theorem</mtext></mtd></mtr><mtr><mtd class="ltx_border_l ltx_th_row" columnalign="left"><mtext>Classification</mtext></mtd><mtd class="ltx_border_r" columnalign="left"><mtext>msc 34C05</mtext></mtd></mtr><mtr><mtd class="ltx_border_b ltx_border_l ltx_th_row" columnalign="left"><mtext>Synonym</mtext></mtd><mtd class="ltx_border_b ltx_border_r" columnalign="left"><mtext>Poincaré-Andronov-Hopf</mtext></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:41:47 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

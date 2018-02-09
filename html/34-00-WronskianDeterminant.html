@@ -1,0 +1,199 @@
+<!DOCTYPE html><html>
+<head>
+<title>Wronskian determinant</title>
+<!--Generated on Fri Feb  9 20:39:06 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Wronskian determinant</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Given functions <math id="p1.m1" class="ltx_Math" alttext="f_{1},f_{2},\ldots,f_{n}" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><msub><mi>f</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub></mrow></math>, then the <em class="ltx_emph ltx_font_italic">Wronskian determinant</em> (or simply the Wronskian) <math id="p1.m2" class="ltx_Math" alttext="W(f_{1},f_{2},f_{3},\ldots,f_{n})" display="inline"><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><msub><mi>f</mi><mn>2</mn></msub><mo>,</mo><msub><mi>f</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> is the determinant of the square matrix</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="W(f_{1},f_{2},f_{3},\ldots,f_{n})=\left\lvert\begin{array}[]{@{}ccccc@{}}f_{1}%
+&amp;f_{2}&amp;f_{3}&amp;\cdots&amp;f_{n}\\
+f_{1}^{\prime}&amp;f_{2}^{\prime}&amp;f_{3}^{\prime}&amp;\cdots&amp;f_{n}^{\prime}\\
+f_{1}^{\prime\prime}&amp;f_{2}^{\prime\prime}&amp;f_{3}^{\prime\prime}&amp;\cdots&amp;f_{n}^{%
+\prime\prime}\\
+\vdots&amp;\vdots&amp;\vdots&amp;\ddots&amp;\vdots\\
+f_{1}^{(n-1)}&amp;f_{2}^{(n-1)}&amp;f_{3}^{(n-1)}&amp;\cdots&amp;f_{n}^{(n-1)}\\
+\end{array}\right\rvert" display="block"><mrow><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><msub><mi>f</mi><mn>2</mn></msub><mo>,</mo><msub><mi>f</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo fence="true">|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msub><mi>f</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>f</mi><mn>2</mn></msub></mtd><mtd columnalign="center"><msub><mi>f</mi><mn>3</mn></msub></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msub><mi>f</mi><mi>n</mi></msub></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi>f</mi><mn>1</mn><mo>′</mo></msubsup></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mn>2</mn><mo>′</mo></msubsup></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mn>3</mn><mo>′</mo></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mi>n</mi><mo>′</mo></msubsup></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi>f</mi><mn>1</mn><mo>′′</mo></msubsup></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mn>2</mn><mo>′′</mo></msubsup></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mn>3</mn><mo>′′</mo></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mi>n</mi><mo>′′</mo></msubsup></mtd></mtr><mtr><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋱</mi></mtd><mtd columnalign="center"><mi mathvariant="normal">⋮</mi></mtd></mtr><mtr><mtd columnalign="center"><msubsup><mi>f</mi><mn>1</mn><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mn>2</mn><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mn>3</mn><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msubsup></mtd><mtd columnalign="center"><mi mathvariant="normal">⋯</mi></mtd><mtd columnalign="center"><msubsup><mi>f</mi><mi>n</mi><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></msubsup></mtd></mtr></mtable><mo fence="true">|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p1.m3" class="ltx_Math" alttext="f^{(k)}" display="inline"><msup><mi>f</mi><mrow><mo stretchy="false">(</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></msup></math> indicates the <math id="p1.m4" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>th derivative of <math id="p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> (not exponentiation).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The Wronskian of a set of functions <math id="p2.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is another function, which is zero over any interval where <math id="p2.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is linearly dependent. Just as a set of vectors is said to be linearly dependent when there exists a non-trivial linear relation between them, a set of functions <math id="p2.m3" class="ltx_Math" alttext="\{f_{1},f_{2},f_{3},\ldots,f_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><msub><mi>f</mi><mn>2</mn></msub><mo>,</mo><msub><mi>f</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is also said to be dependent over an interval <math id="p2.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> when there exists a non-trivial linear relation between them, i.e.,</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="a_{1}f_{1}(t)+a_{2}f_{2}(t)+\cdots+a_{n}f_{n}(t)=0" display="block"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>f</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for some <math id="p2.m5" class="ltx_Math" alttext="a_{1},a_{2},\ldots,a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>, not all zero, at any <math id="p2.m6" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Therefore the Wronskian can be used to determine if functions are independent. This is useful in many situations. For example, if we wish to determine if two solutions of a second-order differential equation are independent, we may use the Wronskian.</p>
+</div>
+<section id="S0.SS0.SSS0.Px1" class="ltx_paragraph">
+<h2 class="ltx_title ltx_title_paragraph">Examples</h2>
+
+<div id="S0.SS0.SSS0.Px1.p1" class="ltx_para">
+<p class="ltx_p">Consider the functions <math id="S0.SS0.SSS0.Px1.p1.m1" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math>, <math id="S0.SS0.SSS0.Px1.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and <math id="S0.SS0.SSS0.Px1.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. Take the Wronskian:</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="W=\left\lvert\begin{array}[]{@{}ccc@{}}x^{2}&amp;x&amp;1\\
+2x&amp;1&amp;0\\
+2&amp;0&amp;0\\
+\end{array}\right\rvert=-2" display="block"><mrow><mi>W</mi><mo>=</mo><mrow><mo fence="true">|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>x</mi><mn>2</mn></msup></mtd><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo fence="true">|</mo></mrow><mo>=</mo><mrow><mo>-</mo><mn>2</mn></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that <math id="S0.SS0.SSS0.Px1.p1.m4" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is always non-zero, so these functions are independent everywhere. Consider, however, <math id="S0.SS0.SSS0.Px1.p1.m5" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math> and <math id="S0.SS0.SSS0.Px1.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="W=\left\lvert\begin{array}[]{@{}cc@{}}x^{2}&amp;x\\
+2x&amp;1\\
+\end{array}\right\rvert=x^{2}-2x^{2}=-x^{2}" display="block"><mrow><mi>W</mi><mo>=</mo><mrow><mo fence="true">|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>x</mi><mn>2</mn></msup></mtd><mtd columnalign="center"><mi>x</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo fence="true">|</mo></mrow><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here <math id="S0.SS0.SSS0.Px1.p1.m7" class="ltx_Math" alttext="W=0" display="inline"><mrow><mi>W</mi><mo>=</mo><mn>0</mn></mrow></math> only when <math id="S0.SS0.SSS0.Px1.p1.m8" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>. Therefore <math id="S0.SS0.SSS0.Px1.p1.m9" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math> and <math id="S0.SS0.SSS0.Px1.p1.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> are independent except at <math id="S0.SS0.SSS0.Px1.p1.m11" class="ltx_Math" alttext="x=0" display="inline"><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p2" class="ltx_para">
+<p class="ltx_p">Consider <math id="S0.SS0.SSS0.Px1.p2.m1" class="ltx_Math" alttext="2x^{2}+3" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>3</mn></mrow></math>, <math id="S0.SS0.SSS0.Px1.p2.m2" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math>, and <math id="S0.SS0.SSS0.Px1.p2.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="W=\left\lvert\begin{array}[]{@{}ccc@{}}2x^{2}+3&amp;x^{2}&amp;1\\
+4x&amp;2x&amp;0\\
+4&amp;2&amp;0\\
+\end{array}\right\rvert=8x-8x=0" display="block"><mrow><mi>W</mi><mo>=</mo><mrow><mo fence="true">|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>3</mn></mrow></mtd><mtd columnalign="center"><msup><mi>x</mi><mn>2</mn></msup></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mn>4</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>4</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo fence="true">|</mo></mrow><mo>=</mo><mrow><mrow><mn>8</mn><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>8</mn><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Here <math id="S0.SS0.SSS0.Px1.p2.m4" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is always zero, so these functions are always dependent. This is intuitively obvious, of course, since</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="2x^{2}+3=2(x^{2})+3(1)" display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>+</mo><mn>3</mn></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mn>3</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S0.SS0.SSS0.Px1.p3" class="ltx_para">
+<p class="ltx_p">Given <math id="S0.SS0.SSS0.Px1.p3.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> linearly independant functions <math id="S0.SS0.SSS0.Px1.p3.m2" class="ltx_Math" alttext="f_{1},f_{2},\ldots,f_{n}" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><msub><mi>f</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub></mrow></math>, we can use
+the Wronskian to construct a linear differential equation whose solution space
+is exactly the span of these functions. Namely, if <math id="S0.SS0.SSS0.Px1.p3.m3" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> satisfies the equation</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="W(f_{1},f_{2},f_{3},\ldots,f_{n},g)=0," display="block"><mrow><mrow><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><msub><mi>f</mi><mn>2</mn></msub><mo>,</mo><msub><mi>f</mi><mn>3</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then <math id="S0.SS0.SSS0.Px1.p3.m4" class="ltx_Math" alttext="g=a_{1}f_{1}(t)+a_{2}f_{2}(t)+\cdots+a_{n}f_{n}(t)" display="inline"><mrow><mi>g</mi><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>f</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>f</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for some choice of
+<math id="S0.SS0.SSS0.Px1.p3.m5" class="ltx_Math" alttext="a_{1},a_{2},\ldots,a_{n}" display="inline"><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+<div id="S0.SS0.SSS0.Px1.p4" class="ltx_para">
+<p class="ltx_p">As a simple illustration of this, let us consider polynomials of at most second order. Such a polynomial is a linear combination of <math id="S0.SS0.SSS0.Px1.p4.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, <math id="S0.SS0.SSS0.Px1.p4.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and <math id="S0.SS0.SSS0.Px1.p4.m3" class="ltx_Math" alttext="x^{2}" display="inline"><msup><mi>x</mi><mn>2</mn></msup></math>. We
+have</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="W(1,x,x^{2},g(x))=\left|\begin{matrix}1&amp;x&amp;x^{2}&amp;g(x)\\
+0&amp;1&amp;2x&amp;g^{\prime}(x)\\
+0&amp;0&amp;2&amp;g^{\prime\prime}(x)\\
+0&amp;0&amp;0&amp;g^{\prime\prime\prime}(x)\end{matrix}\right|=2g^{\prime\prime\prime}(x)." display="block"><mrow><mrow><mrow><mi>W</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mi>x</mi><mo>,</mo><msup><mi>x</mi><mn>2</mn></msup><mo>,</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>|</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mi>x</mi></mtd><mtd columnalign="center"><msup><mi>x</mi><mn>2</mn></msup></mtd><mtd columnalign="center"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mrow><mn>2</mn><mo>⁢</mo><mi>x</mi></mrow></mtd><mtd columnalign="center"><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>2</mn></mtd><mtd columnalign="center"><mrow><msup><mi>g</mi><mo>′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><msup><mi>g</mi><mo>′′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable><mo>|</mo></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>g</mi><mo>′′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence, the equation is <math id="S0.SS0.SSS0.Px1.p4.m4" class="ltx_Math" alttext="g^{\prime\prime\prime}(x)=0" display="inline"><mrow><mrow><msup><mi>g</mi><mo>′′′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> which indeed has exactly polynomials
+of degree at most two as solutions.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Wronskian determinant</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">WronskianDeterminant</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:22:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:22:59</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34-00</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wronskian</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">GrammianDeterminant</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:39:06 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

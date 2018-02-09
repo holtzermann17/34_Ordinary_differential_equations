@@ -1,0 +1,118 @@
+<!DOCTYPE html><html>
+<head>
+<title>some qualitative analysis of FitzHugh-Nagumo equation using nullclines</title>
+<!--Generated on Fri Feb  9 20:38:58 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">some qualitative analysis of FitzHugh-Nagumo equation using nullclines</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The FitzHugh-Nagumo model which we will use for the analysis is:</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex1" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle\dot{u}" display="inline"><mover accent="true"><mi>u</mi><mo>˙</mo></mover></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m3" class="ltx_Math" alttext="\displaystyle\frac{(v+u-u^{3}/3)}{\epsilon}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>v</mi><mo>+</mo><mi>u</mi></mrow><mo>-</mo><mrow><msup><mi>u</mi><mn>3</mn></msup><mo>/</mo><mn>3</mn></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>ϵ</mi></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle\dot{v}" display="inline"><mover accent="true"><mi>v</mi><mo>˙</mo></mover></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle\epsilon(u+\beta-\gamma v)" display="inline"><mrow><mi>ϵ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>u</mi><mo>+</mo><mi>β</mi></mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The following formulas</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle v" display="inline"><mi>v</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{3}u^{3}-u" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mn>3</mn></mfrac></mstyle><mo>⁢</mo><msup><mi>u</mi><mn>3</mn></msup></mrow><mo>-</mo><mi>u</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle v" display="inline"><mi>v</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\gamma}u+\frac{\beta}{\gamma}" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>γ</mi></mfrac></mstyle><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mstyle displaystyle="true"><mfrac><mi>β</mi><mi>γ</mi></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are the <math id="p2.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p2.m2" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> nullcline respectively.<span class="ltx_text ltx_font_italic">(See graph of the nullcline below.)</span></p>
+<img src="FHN_nullcline1.eps" id="p2.g1" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:90%;">Graph of the nullcline with parameter <span class="ltx_text ltx_font_italic">(<math id="p2.m3" class="ltx_Math" alttext="\epsilon=0.2,\beta=0.7,\gamma=0.5" display="inline"><mrow><mrow><mi>ϵ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0.2</mn></mrow><mo mathvariant="normal">,</mo><mrow><mrow><mi>β</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0.7</mn></mrow><mo mathvariant="normal">,</mo><mrow><mi>γ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0.5</mn></mrow></mrow></mrow></math>)</span></span></p>
+<p class="ltx_p">The nullclines <math id="p2.m4" class="ltx_Math" alttext="v=\frac{1}{3}u^{3}-u" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>⁢</mo><msup><mi>u</mi><mn>3</mn></msup></mrow><mo>-</mo><mi>u</mi></mrow></mrow></math> and <math id="p2.m5" class="ltx_Math" alttext="v=\frac{1}{\gamma}u+\frac{\beta}{\gamma}" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mi>γ</mi></mfrac><mo>⁢</mo><mi>u</mi></mrow><mo>+</mo><mfrac><mi>β</mi><mi>γ</mi></mfrac></mrow></mrow></math>
+represent the set of points when the change with repect to time of <math id="p2.m6" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> and <math id="p2.m7" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> is null. Hence the solution will cross the ‘cubic’ nullcline <span class="ltx_text ltx_font_italic">(i.e. <math id="p2.m8" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> nullcline)</span> when travelling vertically while the solution will cross the ‘line’ nullcline <span class="ltx_text ltx_font_italic">(i.e. <math id="p2.m9" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> nullcline)</span> when travelling horizontally. Suppose that we fix the parameters of the FitzHugh-Nagumo model to <math id="p2.m10" class="ltx_Math" alttext="\epsilon=0.2,\beta=0.7,\gamma=0.5" display="inline"><mrow><mrow><mi>ϵ</mi><mo>=</mo><mn>0.2</mn></mrow><mo>,</mo><mrow><mrow><mi>β</mi><mo>=</mo><mn>0.7</mn></mrow><mo>,</mo><mrow><mi>γ</mi><mo>=</mo><mn>0.5</mn></mrow></mrow></mrow></math>, then suppose that you let a solution start at <math id="p2.m11" class="ltx_Math" alttext="x_{0}=(1,-0.5)" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>0.5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. Then we notice that <math id="p2.m12" class="ltx_Math" alttext="\frac{du}{dt}&gt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&gt;</mo><mn>0</mn></mrow></math> and that <math id="p2.m13" class="ltx_Math" alttext="\frac{dv}{dt}&gt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&gt;</mo><mn>0</mn></mrow></math>, so the solution will travel upwards and to the right. It will only cross the ‘cubic’ nullcline vertically. Therefore once the solution will be close to the nullcline it will travel vertically and cross the nullcline. Once the solution has crossed the nullcline it will move upwards and to the left since <math id="p2.m14" class="ltx_Math" alttext="\frac{du}{dt}&lt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&lt;</mo><mn>0</mn></mrow></math> and that <math id="p2.m15" class="ltx_Math" alttext="\frac{dv}{dt}&gt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&gt;</mo><mn>0</mn></mrow></math>. It will then cross the ‘line’ nullcline horizontally and the solution will move downwards and will remain moving towards the left since <math id="p2.m16" class="ltx_Math" alttext="\frac{du}{dt}&lt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&lt;</mo><mn>0</mn></mrow></math> and <math id="p2.m17" class="ltx_Math" alttext="\frac{dv}{dt}&lt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&lt;</mo><mn>0</mn></mrow></math>, until the solution reaches the ‘cubic’ nullcline which it will cross vertically. Once the solution has crossed the last nullcline it will continue to move downwards but will now progressively start moving to the right since <math id="p2.m18" class="ltx_Math" alttext="\frac{du}{dt}&gt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="p2.m19" class="ltx_Math" alttext="\frac{dv}{dt}&lt;0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>v</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>&lt;</mo><mn>0</mn></mrow></math>. This is all that can be said about this specific case using the analysis of the nullcline. Below is an example of the solution. As we can see it intially behaves like the above description.</p>
+<img src="FHN_nullcline2.eps" id="p2.g2" class="ltx_graphics ltx_centering" alt="">
+<p class="ltx_p ltx_align_center"><span class="ltx_text" style="font-size:90%;">Graph of the nullcline with parameter <span class="ltx_text ltx_font_italic">(<math id="p2.m20" class="ltx_Math" alttext="\epsilon=0.2,\beta=0.7,\gamma=0.5" display="inline"><mrow><mrow><mi>ϵ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0.2</mn></mrow><mo mathvariant="normal">,</mo><mrow><mrow><mi>β</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0.7</mn></mrow><mo mathvariant="normal">,</mo><mrow><mi>γ</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0.5</mn></mrow></mrow></mrow></math>)</span> and solution starting at <math id="p2.m21" class="ltx_Math" alttext="x_{0}=(1,-0.5)" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mrow><mo>-</mo><mn>0.5</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.</span></p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">some qualitative analysis of FitzHugh-Nagumo equation using nullclines</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SomeQualitativeAnalysisOfFitzHughNagumoEquationUsingNullclines</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:32:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:32:06</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Daume (40)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Daume (40)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">4</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Daume (40)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Result</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 34-00</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:38:58 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

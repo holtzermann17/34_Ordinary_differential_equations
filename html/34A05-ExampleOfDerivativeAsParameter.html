@@ -1,0 +1,165 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of derivative as parameter</title>
+<!--Generated on Fri Feb  9 20:39:29 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of derivative as parameter</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">For solving the (nonlinear) differential equation</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle x\;=\;\frac{y}{3p}-2py^{2}" display="inline"><mrow><mpadded width="+2.8pt"><mi>x</mi></mpadded><mo rspace="5.3pt">=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>y</mi><mrow><mn>3</mn><mo>⁢</mo><mi>p</mi></mrow></mfrac></mstyle><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">with  <math id="p1.m1" class="ltx_Math" alttext="p=\frac{dy}{dx}" display="inline"><mrow><mi>p</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow></math>,  according to <span class="ltx_text ltx_font_bold">III</span> in the parent entry (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DerivativeAsParameterForSolvingDifferentialEquations</span>), we differentiate both sides in regard to <math id="p1.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>, getting first
+</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\frac{1}{p}\;=\;\frac{1}{3p}-\left(\frac{y}{3p^{2}}+2y^{2}\right)\frac{dp}{dy}%
+-4py." display="block"><mrow><mrow><mpadded width="+2.8pt"><mfrac><mn>1</mn><mi>p</mi></mfrac></mpadded><mo rspace="5.3pt">=</mo><mrow><mfrac><mn>1</mn><mrow><mn>3</mn><mo>⁢</mo><mi>p</mi></mrow></mfrac><mo>-</mo><mrow><mrow><mo>(</mo><mrow><mfrac><mi>y</mi><mrow><mn>3</mn><mo>⁢</mo><msup><mi>p</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>p</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mfrac></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Removing the denominators, we obtain</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="2p+(y+6p^{2}y^{2})\frac{dp}{dy}+12p^{3}y=0." display="block"><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>p</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mn>12</mn><mo>⁢</mo><msup><mi>p</mi><mn>3</mn></msup><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The left hand side can be factored:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle(y\frac{dp}{dy}+2p)(1+6p^{2}y)=0" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>y</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>p</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mfrac></mstyle></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Now we may use the zero rule of product; the first factor of the product in (2) yields  <math id="p1.m3" class="ltx_Math" alttext="y\frac{dp}{dy}=-2p" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>p</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow></mrow></mrow></math>, i.e.</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="2\!\int\frac{dy}{y}=-\!\int\frac{dp}{p}+\ln{C}," display="block"><mrow><mrow><mrow><mpadded width="-1.7pt"><mn>2</mn></mpadded><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mi>y</mi></mfrac></mrow></mrow><mo>=</mo><mrow><mrow><mo rspace="0.8pt">-</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>p</mi></mrow><mi>p</mi></mfrac></mrow></mrow><mo>+</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>C</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence  <math id="p1.m4" class="ltx_Math" alttext="y^{2}=\frac{C}{p}" display="inline"><mrow><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mfrac><mi>C</mi><mi>p</mi></mfrac></mrow></math>,  i.e.  <math id="p1.m5" class="ltx_Math" alttext="p=\frac{C}{y^{2}}" display="inline"><mrow><mi>p</mi><mo>=</mo><mfrac><mi>C</mi><msup><mi>y</mi><mn>2</mn></msup></mfrac></mrow></math>.  Substituting this into the original equation (1) we get  <math id="p1.m6" class="ltx_Math" alttext="\displaystyle x=\frac{y^{3}}{3C}-2C" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi>y</mi><mn>3</mn></msup><mrow><mn>3</mn><mo>⁢</mo><mi>C</mi></mrow></mfrac></mstyle><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>C</mi></mrow></mrow></mrow></math>.  Hence the general solution of (1) may be written</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="y^{3}=3Cx+6C^{2}." display="block"><mrow><mrow><msup><mi>y</mi><mn>3</mn></msup><mo>=</mo><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>C</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>6</mn><mo>⁢</mo><msup><mi>C</mi><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The second factor in (2) yields  <math id="p1.m7" class="ltx_Math" alttext="6p^{2}y=-1" display="inline"><mrow><mrow><mn>6</mn><mo>⁢</mo><msup><mi>p</mi><mn>2</mn></msup><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>,  which is substituted into (1) multiplied by <math id="p1.m8" class="ltx_Math" alttext="3p" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mi>p</mi></mrow></math>:</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="3px=y-(-y)" display="block"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>y</mi><mo>-</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus we see that  <math id="p1.m9" class="ltx_Math" alttext="p=\frac{2y}{3x}" display="inline"><mrow><mi>p</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>y</mi></mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow></math>, which is again set into (1), giving</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="x=\frac{y\cdot 3x}{3\cdot 2y}-\frac{4y^{3}}{3x}." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mfrac><mrow><mrow><mi>y</mi><mo>⋅</mo><mn>3</mn></mrow><mo>⁢</mo><mi>x</mi></mrow><mrow><mrow><mn>3</mn><mo>⋅</mo><mn>2</mn></mrow><mo>⁢</mo><mi>y</mi></mrow></mfrac><mo>-</mo><mfrac><mrow><mn>4</mn><mo>⁢</mo><msup><mi>y</mi><mn>3</mn></msup></mrow><mrow><mn>3</mn><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, we can write it</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="3x^{2}=-8y^{3}," display="block"><mrow><mrow><mrow><mn>3</mn><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>8</mn><mo>⁢</mo><msup><mi>y</mi><mn>3</mn></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which (a variant of the so-called semicubical parabola) is the singular solution of (1).</p>
+</div>
+<div id="p2" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of derivative as parameter</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfDerivativeAsParameter</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:29:03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:29:03</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">example of solving an ODE</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:39:29 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

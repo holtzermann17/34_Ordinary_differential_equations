@@ -1,0 +1,294 @@
+<!DOCTYPE html><html>
+<head>
+<title>ODE types reductible to the variables separable case</title>
+<!--Generated on Fri Feb  9 20:40:14 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">ODE types reductible to the variables separable case</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">There are certain  of non-linear ordinary differential equations of first order (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/ODE</span>) which may by a suitable substitution be  to a form where one can separate (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/SeparationOfVariables</span>) the variables.
+<br class="ltx_break"></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">I.  So-called homogeneous differential equation</span></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">This means the equation of the form</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="X(x,\,y)dx+Y(x,\,y)dy=0," display="block"><mrow><mrow><mrow><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="p3.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> are two homogeneous functions of the same degree (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/HomogeneousFunction</span>).  Therefore, if the equation is written as</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\frac{dy}{dx}=-\frac{X(x,\,y)}{Y(x,\,y)}," display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mfrac><mrow><mi>X</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>Y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo rspace="4.2pt">,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">its right hand side is a homogeneous function of degree 0, i.e. it depends only on the ratio <math id="p3.m3" class="ltx_Math" alttext="y\!:\!x" display="inline"><mrow><mpadded width="-1.7pt"><mi>y</mi></mpadded><mo rspace="0.8pt">:</mo><mi>x</mi></mrow></math>, and has thus the form</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E1.m1" class="ltx_Math" alttext="\displaystyle\frac{dy}{dx}=f\left(\frac{y}{x}\right)." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mi>x</mi></mfrac></mstyle><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Accordingly, if this ratio is constant, then also <math id="p4.m1" class="ltx_Math" alttext="\frac{dy}{dx}" display="inline"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></math> is constant; thus all lines   <math id="p4.m2" class="ltx_Math" alttext="\frac{y}{x}=" display="inline"><mrow><mfrac><mi>y</mi><mi>x</mi></mfrac><mo>=</mo><mi></mi></mrow></math> constant  are isoclines of the family of the integral curves which intersect any such line isogonally.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We can infer as well, that if one integral curve is represented by  <math id="p5.m1" class="ltx_Math" alttext="x=x(t)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,  <math id="p5.m2" class="ltx_Math" alttext="y=y(t)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,  then also  <math id="p5.m3" class="ltx_Math" alttext="x=Cx(t)" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,  <math id="p5.m4" class="ltx_Math" alttext="y=Cy(t)" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>   an integral curve for any constant <math id="p5.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.  Hence the integral curves are homothetic with respect to the origin; therefore some people call the equation (1) a <span class="ltx_text ltx_font_italic">similarity equation</span>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">For generally solving the equation (1), make the substitution</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\frac{y}{x}:=t;\quad y=tx;\quad\frac{dy}{dx}=t+x\frac{dt}{dx}." display="block"><mrow><mrow><mrow><mfrac><mi>y</mi><mi>x</mi></mfrac><mo>:=</mo><mi>t</mi></mrow><mo rspace="12.5pt">;</mo><mrow><mrow><mi>y</mi><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo rspace="12.5pt">;</mo><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The equation takes the form</p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E2.m1" class="ltx_Math" alttext="\displaystyle t+x\frac{dt}{dx}=f(t)" display="inline"><mrow><mrow><mi>t</mi><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">which shows that any root (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/Equation</span>) <math id="p6.m1" class="ltx_Math" alttext="t_{\nu}" display="inline"><msub><mi>t</mi><mi>ν</mi></msub></math> of the equality  <math id="p6.m2" class="ltx_Math" alttext="f(t)=t" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>t</mi></mrow></math>  gives a singular solution   <math id="p6.m3" class="ltx_Math" alttext="y=t_{\nu}x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><msub><mi>t</mi><mi>ν</mi></msub><mo>⁢</mo><mi>x</mi></mrow></mrow></math>.
+The variables in (2) may be :
+</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{dx}{x}=\frac{dt}{f(t)\!-\!t}" display="block"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mi>x</mi></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">-</mo><mi>t</mi></mrow></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus one obtains  <math id="p6.m4" class="ltx_Math" alttext="\ln{|x|}=\int\!\frac{dt}{f(t)\!-\!t}+\ln{C}" display="inline"><mrow><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">-</mo><mi>t</mi></mrow></mfrac></mrow><mo>+</mo><mrow><mi>ln</mi><mo>⁡</mo><mi>C</mi></mrow></mrow></mrow></math>, whence the general solution of the homogeneous differential equation (1) is in a parametric form</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="x=Ce^{\int\!\frac{dt}{f(t)\!-\!t}},\quad y=Cte^{\int\!\frac{dt}{f(t)\!-\!t}}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mi>e</mi><mstyle scriptlevel="-1"><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mstyle scriptlevel="+1"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">-</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mstyle></msup></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>y</mi><mo>=</mo><mrow><mi>C</mi><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msup><mi>e</mi><mstyle scriptlevel="-1"><mrow><mo largeop="true" rspace="0.8pt" symmetric="true">∫</mo><mstyle scriptlevel="+1"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo rspace="0.8pt" stretchy="false">)</mo></mrow></mrow><mo rspace="0.8pt">-</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></mstyle></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">II.  Equation of the form  <span class="ltx_text ltx_font_italic">y<math id="p7.m1" class="ltx_Math" alttext="\,{}^{\prime}" display="inline"><mpadded lspace="1.7pt" width="+1.7pt"><msup><mi></mi><mo mathvariant="normal">′</mo></msup></mpadded></math>= f(ax+by+c)</span></span></p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">It’s a question of the equation</p>
+<table id="A0.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E3.m1" class="ltx_Math" alttext="\displaystyle\frac{dy}{dx}=f(ax+by+c)," display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">where <math id="p8.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, <math id="p8.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> and <math id="p8.m3" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are given constants.  If  <math id="p8.m4" class="ltx_Math" alttext="ax+by" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math> is constant, then <math id="p8.m5" class="ltx_Math" alttext="\frac{dy}{dx}" display="inline"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></math> is constant, and we see that the lines  <math id="p8.m6" class="ltx_Math" alttext="ax+by=" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mi></mi></mrow></math> constant  are isoclines of the intgral curves of (3).</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Let</p>
+<table id="A0.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E4.m1" class="ltx_Math" alttext="\displaystyle ax+by+c:=u" display="inline"><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mi>c</mi></mrow><mo>:=</mo><mi>u</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(4)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">be a new variable.  It changes the equation (3) to</p>
+<table id="A0.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.E5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.E5.m1" class="ltx_Math" alttext="\displaystyle\frac{du}{dx}=a+bf(u)." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac></mstyle><mo>=</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(5)</span></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Here, one can see that the real zeros <math id="p9.m1" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> of the right hand side yield lines (4) which are integral curves of (3), and thus we have singular solutions.  Moreover, one can separate the variables in (5) and integrate, obtaining <math id="p9.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> as a function of <math id="p9.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>.  Using still (4) gives also <math id="p9.m4" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.  The general solution is</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="x=\int\frac{du}{a+bf(u)}+C,\quad y=\frac{1}{b}\left(u-c-a\int\frac{du}{a+bf(u)%
+}-aC\right).\\
+" display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mrow><mo largeop="true" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>y</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mi>b</mi></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>u</mi><mo>-</mo><mi>c</mi><mo>-</mo><mrow><mi>a</mi><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>a</mi><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mfrac></mrow></mrow><mo>-</mo><mrow><mi>a</mi><mo>⁢</mo><mi>C</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example.</span>  In the nonlinear equation</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\frac{dy}{dx}=(x-y)^{2}," display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>y</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is of the type II, one cannot separate the variables <math id="p10.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p10.m2" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math>.  The substitution  <math id="p10.m3" class="ltx_Math" alttext="x-y:=u" display="inline"><mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo>:=</mo><mi>u</mi></mrow></math>  converts it to</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\frac{du}{dx}=1-u^{2}," display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mfrac><mo>=</mo><mrow><mn>1</mn><mo>-</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where one can separate the variables.  Since the right hand side has the zeros  <math id="p10.m4" class="ltx_Math" alttext="u=\pm 1" display="inline"><mrow><mi>u</mi><mo>=</mo><mrow><mo>±</mo><mn>1</mn></mrow></mrow></math>,  the given equation has the singular solutions <math id="p10.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> given by  <math id="p10.m6" class="ltx_Math" alttext="x-y=\pm 1" display="inline"><mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo>=</mo><mrow><mo>±</mo><mn>1</mn></mrow></mrow></math>.  Separating the variables <math id="p10.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p10.m8" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math>, one obtains</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="dx=\frac{du}{1-u^{2}}," display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mn>1</mn><mo>-</mo><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">whence</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="x=\int\frac{du}{(1+u)(1-u)}=\frac{1}{2}\int\left(\frac{1}{1+u}+\frac{1}{1-u}%
+\right)du=\frac{1}{2}\ln\left|\frac{1+u}{1-u}\right|+C." display="block"><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>+</mo><mi>u</mi></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>u</mi></mrow></mfrac></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>𝑑</mo><mi>u</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mi>ln</mi><mo>⁡</mo><mrow><mo>|</mo><mfrac><mrow><mn>1</mn><mo>+</mo><mi>u</mi></mrow><mrow><mn>1</mn><mo>-</mo><mi>u</mi></mrow></mfrac><mo>|</mo></mrow></mrow></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Accordingly, the given differential equation has the parametric solution</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="x=\ln\sqrt{\left|\frac{1\!+\!u}{1\!-\!u}\right|}+C,\quad y=\ln\sqrt{\left|%
+\frac{1\!+\!u}{1\!-\!u}\right|}-u\!+\!C." display="block"><mrow><mrow><mrow><mi>x</mi><mo>=</mo><mrow><mrow><mi>ln</mi><mo>⁡</mo><msqrt><mrow><mo>|</mo><mfrac><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mi>u</mi></mrow><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mi>u</mi></mrow></mfrac><mo>|</mo></mrow></msqrt></mrow><mo>+</mo><mi>C</mi></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mi>y</mi><mo>=</mo><mrow><mrow><mrow><mi>ln</mi><mo>⁡</mo><msqrt><mrow><mo>|</mo><mfrac><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">+</mo><mi>u</mi></mrow><mrow><mpadded width="-1.7pt"><mn>1</mn></mpadded><mo rspace="0.8pt">-</mo><mi>u</mi></mrow></mfrac><mo>|</mo></mrow></msqrt></mrow><mo>-</mo><mpadded width="-1.7pt"><mi>u</mi></mpadded></mrow><mo rspace="0.8pt">+</mo><mi>C</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"><span class="ltx_text ltx_font_smallcaps">E. Lindelöf:</span> <span class="ltx_text ltx_font_italic">Differentiali- ja integralilasku III 1</span>.  Mercatorin Kirjapaino Osakeyhtiö, Helsinki (1935).
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p11" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">ODE types reductible to the variables separable case</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ODETypesReductibleToTheVariablesSeparableCase</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:06:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:06:36</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">13</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">pahio (2872)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Topic</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34A09</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34A05</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SeparationOfVariables</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ODETypesSolvableByTwoQuadratures</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">TheoryForSeparationOfVariables</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">homogeneous differential equation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">similarity equation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:40:14 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

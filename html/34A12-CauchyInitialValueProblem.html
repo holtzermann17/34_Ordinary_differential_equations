@@ -1,0 +1,223 @@
+<!DOCTYPE html><html>
+<head>
+<title>Cauchy initial value problem</title>
+<!--Generated on Fri Feb  9 20:40:21 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Cauchy initial value problem</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math> be a subset of <math id="p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}\times\mathbb{R}" display="inline"><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>ℝ</mi></mrow></math>, <math id="p1.m3" class="ltx_Math" alttext="(x_{0},t_{0})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></math> a point of <math id="p1.m4" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>, and <math id="p1.m5" class="ltx_Math" alttext="f\colon D\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>D</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> be a function.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">We say that a function <math id="p2.m1" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a solution to the Cauchy (or initial value) problem</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="\begin{cases}x^{\prime}(t)=f(x(t),t)\\
+x(t_{0})=x_{0}\end{cases}" display="block"><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">if</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a differentiable function <math id="I1.i1.p1.m2" class="ltx_Math" alttext="x\colon I\to\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> defined on a interval <math id="I1.i1.p1.m3" class="ltx_Math" alttext="I\subset\mathbb{R}" display="inline"><mrow><mi>I</mi><mo>⊂</mo><mi>ℝ</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">one has <math id="I1.i2.p1.m1" class="ltx_Math" alttext="(x(t),t)\in D" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>D</mi></mrow></math> for all <math id="I1.i2.p1.m2" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math> and <math id="I1.i2.p1.m3" class="ltx_Math" alttext="t_{0}\in I" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>∈</mo><mi>I</mi></mrow></math>;</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">one has <math id="I1.i3.p1.m1" class="ltx_Math" alttext="x(t_{0})=x_{0}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math> and <math id="I1.i3.p1.m2" class="ltx_Math" alttext="x^{\prime}(t)=f(x(t),t)" display="inline"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="I1.i3.p1.m3" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math>.</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">We say that a solution <math id="p3.m1" class="ltx_Math" alttext="x\colon I\to\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is a <em class="ltx_emph ltx_font_italic">maximal solution</em> if it cannot be extended to a bigger interval. More precisely given any other solution <math id="p3.m2" class="ltx_Math" alttext="y\colon J\to\mathbb{R}^{n}" display="inline"><mrow><mi>y</mi><mo>:</mo><mrow><mi>J</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> defined on an interval <math id="p3.m3" class="ltx_Math" alttext="J\supset I" display="inline"><mrow><mi>J</mi><mo>⊃</mo><mi>I</mi></mrow></math> and such that <math id="p3.m4" class="ltx_Math" alttext="y(t)=x(t)" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="p3.m5" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math>, one has <math id="p3.m6" class="ltx_Math" alttext="I=J" display="inline"><mrow><mi>I</mi><mo>=</mo><mi>J</mi></mrow></math> (and hence <math id="p3.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="p3.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> are the same function).</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">We say that a solution <math id="p4.m1" class="ltx_Math" alttext="x\colon I\to\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is a <em class="ltx_emph ltx_font_italic">global solution</em> if <math id="p4.m2" class="ltx_Math" alttext="D\subset=\mathbb{R}^{n}\times I" display="inline"><mrow><mi>D</mi><mo>⊂</mo><mo>=</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo>×</mo><mi>I</mi></mrow></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We say that a solution <math id="p5.m1" class="ltx_Math" alttext="x\colon I\to\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is <em class="ltx_emph ltx_font_italic">unique</em> if given any other solution <math id="p5.m2" class="ltx_Math" alttext="y\colon I\to\mathbb{R}^{n}" display="inline"><mrow><mi>y</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> one has <math id="p5.m3" class="ltx_Math" alttext="x(t)=y(t)" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="p5.m4" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math> (i.e. <math id="p5.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is the unique solution defined on the interval <math id="p5.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>).</p>
+</div>
+<section id="S0.SS1" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.1 </span>Notation</h2>
+
+<div id="S0.SS1.p1" class="ltx_para">
+<p class="ltx_p">Usually the differential equation in (1) is simply written as <math id="S0.SS1.p1.m1" class="ltx_Math" alttext="x^{\prime}=f(x,t)" display="inline"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Also, depending on the topics, the name chosen for the function and for the variable, can change. Other common choices are <math id="S0.SS1.p1.m2" class="ltx_Math" alttext="y^{\prime}=f(y,t)" display="inline"><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> or <math id="S0.SS1.p1.m3" class="ltx_Math" alttext="y^{\prime}=f(y,x)" display="inline"><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+It is also common to write <math id="S0.SS1.p1.m4" class="ltx_Math" alttext="\dot{x}=f(x,t)" display="inline"><mrow><mover accent="true"><mi>x</mi><mo>˙</mo></mover><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> when the independent variable represents a time value.</p>
+</div>
+</section>
+<section id="S0.SS2" class="ltx_subsection">
+<h2 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">0.2 </span>Examples</h2>
+
+<div id="S0.SS2.p1" class="ltx_para">
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="I2.i1.p1.m1" class="ltx_Math" alttext="x(t)=\log t" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>log</mi><mo>⁡</mo><mi>t</mi></mrow></mrow></math> defined on <math id="I2.i1.p1.m2" class="ltx_Math" alttext="I=(0,+\infty)" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is the unique maximal solution to the Cauchy problem:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\begin{cases}x^{\prime}(t)=1/t\\
+x(1)=0.\end{cases}" display="block"><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>t</mi></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In this case <math id="I2.i1.p1.m3" class="ltx_Math" alttext="f(x,t)=1/t" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>/</mo><mi>t</mi></mrow></mrow></math>, <math id="I2.i1.p1.m4" class="ltx_Math" alttext="D=\{(x,t)\colon t\neq 0\}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>:</mo><mrow><mi>t</mi><mo>≠</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, <math id="I2.i1.p1.m5" class="ltx_Math" alttext="t_{0}=1" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn></mrow></math>, <math id="I2.i1.p1.m6" class="ltx_Math" alttext="x_{0}=0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">The function <math id="I2.i2.p1.m1" class="ltx_Math" alttext="x(t)=e^{t}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mi>t</mi></msup></mrow></math> is a global (and hence maximal), unique solution to the Cauchy problem:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\begin{cases}x^{\prime}(t)=x(t)\\
+x(0)=1.\end{cases}" display="block"><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">Consider the Cauchy problem</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\begin{cases}x^{\prime}(t)=\frac{3}{2}\sqrt[3]{x}\\
+x(0)=0.\end{cases}" display="block"><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mstyle displaystyle="false"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mroot><mi>x</mi><mn>3</mn></mroot></mrow></mrow></mtd><mtd></mtd></mtr><mtr><mtd columnalign="left"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></mtd><mtd></mtd></mtr></mtable></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The function <math id="I2.i3.p1.m1" class="ltx_Math" alttext="x(t)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> defined on <math id="I2.i3.p1.m2" class="ltx_Math" alttext="I=\mathbb{R}" display="inline"><mrow><mi>I</mi><mo>=</mo><mi>ℝ</mi></mrow></math> is a global solution.
+However the function <math id="I2.i3.p1.m3" class="ltx_Math" alttext="y(t)=\sqrt{t^{3}}" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><msup><mi>t</mi><mn>3</mn></msup></msqrt></mrow></math> defined on <math id="I2.i3.p1.m4" class="ltx_Math" alttext="I=[0,+\infty)" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is also a solution and so are the functions</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="z(t)=\begin{cases}\sqrt{(t-c)^{3}}&amp;\text{if $t\geq c$}\\
+0&amp;\text{if $t&lt;c$}.\end{cases}" display="block"><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><msqrt><msup><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><mi>c</mi></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup></msqrt></mtd><mtd columnalign="left"><mrow><mtext>if </mtext><mrow><mi>t</mi><mo>≥</mo><mi>c</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mtext>if </mtext><mrow><mi>t</mi><mo>&lt;</mo><mi>c</mi></mrow></mrow><mo>.</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for every <math id="I2.i3.p1.m5" class="ltx_Math" alttext="c\geq 0" display="inline"><mrow><mi>c</mi><mo>≥</mo><mn>0</mn></mrow></math>.
+So there are no unique solutions. Moreover <math id="I2.i3.p1.m6" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> is not a maximal solution.</p>
+</div>
+</li>
+</ol>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Cauchy initial value problem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CauchyInitialValueProblem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:57:18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:57:18</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">paolini (1187)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">paolini (1187)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">14</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">paolini (1187)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 34A12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Cauchy problem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">initial value problem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">InitialValueProblem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DifferentialEquation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CauchyKowalewskiTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">solution to the Cauchy problem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">solution to the initial value problem</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:40:21 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
