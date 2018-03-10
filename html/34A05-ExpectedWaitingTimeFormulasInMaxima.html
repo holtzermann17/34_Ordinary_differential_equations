@@ -18,15 +18,15 @@
 
 <div id="p1" class="ltx_para">
 <br class="ltx_break">
-<p class="ltx_p">Let’s express some well-known formulas for service waiting time,
+<p class="ltx_p">Let’s express some well-known <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">formulas</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Formula.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/logicallanguage"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a><a class="nnexus_concept" href="http://planetmath.org/firstorderlanguage"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> for service waiting time,
 for which telephone calls are a commonly-used example.
 Discussion here is based on a web page [1] which states the formulas.
 I’ll just copy the formulas verbatim and show how Maxima can carry out
-some interesting operations with them.</p>
+some interesting <a class="nnexus_concepts" href="javascript:void(0)" onclick="this.nextSibling.style.display='inline'">operations</a><sup style="display: none;"><a class="nnexus_concept" href="http://mathworld.wolfram.com/Operation.html"><img src="http://mathworld.wolfram.com/favicon_mathworld.png" alt="Mathworld"></img></a><a class="nnexus_concept" href="http://planetmath.org/operation"><img src="http://planetmath.org/sites/default/files/fab-favicon.ico" alt="Planetmath"></img></a></sup> with them.</p>
 </div>
 <div id="p2" class="ltx_para">
 <p class="ltx_p">The erlang.mac script makes use of a couple of Maxima add-ons.
-It puts the functions it defines in a namespace ”erlang”
+It puts the <a class="nnexus_concept" href="http://planetmath.org/function">functions</a> it defines in a namespace ”erlang”
 so I’ll write ”erlang<math id="p2.m1" class="ltx_Math" alttext="|" display="inline"><mo stretchy="false">|</mo></math>E_c” to refer to the function E_c in the namespace erlang.
 Also, the script assumes that quantities (e.g., time) come with units attached.
 </p>
@@ -70,7 +70,7 @@ erlang|E_c (0.2 ` call/s, 240 ` s/call, 55);
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">Let’s evaluate T_w, the expected waiting time, for given parameters.</p>
+<p class="ltx_p">Let’s evaluate T_w, the expected waiting time, for given <a class="nnexus_concept" href="http://planetmath.org/parametre">parameters</a>.</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 erlang|T_w (0.2 ` call/s, 240 ` s/call, 55);
 </pre>
@@ -82,7 +82,7 @@ erlang|T_w (0.2 ` call/s, 240 ` s/call, 55);
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">Let’s compute the probability that waiting time is less than or equal to 15 seconds.
+<p class="ltx_p">Let’s compute the <a class="nnexus_concept" href="http://mathworld.wolfram.com/Probability.html">probability</a> that waiting time is less than or equal to 15 seconds.
 </p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 erlang|W (0.2 ` call/s, 240 ` s/call, 55, 15 ` s/call);
@@ -105,8 +105,8 @@ erlang|W (0.2 ` call/s, 240 ` s/call, 55, 15 ` s/call);
 <div id="S2.p1" class="ltx_para">
 <p class="ltx_p">So far, so good; the numerical values agree with those stated on the web page.
 Let’s look at some symbolic operations.
-If some parameters are unknown, the functions return expressions in the unknown parameters.
-Given fixed values for call intensity and number of agents,
+If some parameters are unknown, the functions return <a class="nnexus_concept" href="http://planetmath.org/expression">expressions</a> in the unknown parameters.
+Given fixed values for call <a class="nnexus_concept" href="http://planetmath.org/poissonprocess">intensity</a> and number of agents,
 how does expected waiting time vary as a function of the average call duration?</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 foo : erlang|T_w (0.2 ` call/s, T_s ` s/call, 4);
@@ -140,7 +140,7 @@ erlang|W (0.2 ` call/s, 240 ` s/call, 55, t ` s/call);
 <td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
 </tr>
 </table>
-<p class="ltx_p">Let’s construct a function which takes just t as an argument. The other parameters are baked in.</p>
+<p class="ltx_p">Let’s construct a function which takes just t as an <a class="nnexus_concept" href="http://planetmath.org/argument">argument</a>. The other parameters are baked in.</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 W (t) := ''(erlang|W (0.2 ` call/s, 240 ` s/call, 55, t ` s/call));
 </pre>
@@ -156,7 +156,7 @@ W(t):=1-.2387*%e^-(.02917*t);
 plot2d (W, [t, 0, 50]);
 </pre>
 <img src="erlang1.wxm-1.png" id="S2.p3.g1" class="ltx_graphics" alt="">
-<p class="ltx_p">Another way to approach this is to construct a lambda expression (anonymous function).</p>
+<p class="ltx_p">Another way to approach this is to construct a <a class="nnexus_concept" href="http://planetmath.org/lambdacalculus">lambda expression</a> (anonymous function).</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 foo (a, b, c) := buildq ([a, b, c], lambda ([t], erlang|W (a, b, c, t ` s/call)));
 </pre>
@@ -193,7 +193,7 @@ bar (15);
 </tr>
 </table>
 <p class="ltx_p">Finally, let’s construct a memoizing function (called an ”array function” in Maxima).
-We can think of this as a family of functions of t which are indexed by the parameters.</p>
+We can think of this as a family of functions of t which are <a class="nnexus_concept" href="http://planetmath.org/indexingset">indexed by</a> the parameters.</p>
 <pre class="ltx_verbatim ltx_font_typewriter">
 baz [%lambda, T_s, m] (t) := erlang|W (%lambda ` call/s, T_s ` s/call, m, t ` s/call);
 </pre>
@@ -249,7 +249,7 @@ build_info();
 <td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Expected waiting time formulas in Maxima</td>
 </tr>
 <tr class="ltx_tr">
-<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l"><a class="nnexus_concept" href="http://planetmath.org/canonical">Canonical</a> name</th>
 <td class="ltx_td ltx_align_left ltx_border_r">ExpectedWaitingTimeFormulasInMaxima</td>
 </tr>
 <tr class="ltx_tr">
